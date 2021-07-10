@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-07-10T01:33:25.681Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="nfXG5lQgrN9ggTDMrGN5" version="14.8.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-10T01:35:49.085Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="mwTw6PG4UUXogRqDHU71" version="14.8.5" type="github">
   <diagram id="pyyLU4ealHvdAnWu1ua9" name="Page-1">
-    <mxGraphModel dx="1609" dy="713" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1822" dy="839" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -133,7 +133,7 @@
         <mxCell id="fTMt0gj1buSSYzd8ai15-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;fontSize=20;" edge="1" parent="1" source="fTMt0gj1buSSYzd8ai15-45" target="fTMt0gj1buSSYzd8ai15-60">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="fTMt0gj1buSSYzd8ai15-79" value="&lt;span style=&quot;font-size: 18px&quot;&gt;首先，需要进行扩容&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;" vertex="1" connectable="0" parent="fTMt0gj1buSSYzd8ai15-78">
+        <mxCell id="fTMt0gj1buSSYzd8ai15-79" value="&lt;span style=&quot;font-size: 18px&quot;&gt;首先，需要进行扩容并把原数组的元素copy到新数组中&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;" vertex="1" connectable="0" parent="fTMt0gj1buSSYzd8ai15-78">
           <mxGeometry x="-0.2667" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -171,7 +171,7 @@
         <mxCell id="fTMt0gj1buSSYzd8ai15-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;fontSize=15;" edge="1" parent="1" source="fTMt0gj1buSSYzd8ai15-60" target="fTMt0gj1buSSYzd8ai15-71">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="fTMt0gj1buSSYzd8ai15-59" value="在头部新增元素1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="fTMt0gj1buSSYzd8ai15-58">
+        <mxCell id="fTMt0gj1buSSYzd8ai15-59" value="然后，将原数组的元素copy到新的索引中" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="fTMt0gj1buSSYzd8ai15-58">
           <mxGeometry x="-0.25" y="4" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
