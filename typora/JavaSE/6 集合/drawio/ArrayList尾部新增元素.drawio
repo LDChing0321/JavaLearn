@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-07-10T01:42:37.577Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="PB32aaDme5Aa4khzX4vf" version="14.8.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-10T01:43:51.735Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="XBc-a-SuUNZ99awVfahM" version="14.8.5" type="github">
   <diagram id="pyyLU4ealHvdAnWu1ua9" name="Page-1">
-    <mxGraphModel dx="1609" dy="663" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2206" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -119,7 +119,7 @@
           <mxGeometry x="-210" y="280" width="210" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fTMt0gj1buSSYzd8ai15-41" value="ArrayList在头部新增元素0" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=20;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="300" y="55" width="250" height="30" as="geometry" />
+          <mxGeometry x="300" y="90" width="250" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fTMt0gj1buSSYzd8ai15-42" value="&lt;font style=&quot;vertical-align: inherit; font-size: 15px;&quot;&gt;&lt;font style=&quot;vertical-align: inherit; font-size: 15px;&quot;&gt;2&lt;/font&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=15;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="120" y="560" width="80" height="40" as="geometry" />
