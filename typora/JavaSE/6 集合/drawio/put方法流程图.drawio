@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-12T02:06:40.293Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="UI18W0ZOQyHZnDZXkUlz" version="14.8.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-12T02:11:00.320Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="jqH_riiEIDqUdXv0g6oS" version="14.8.5" type="github">
   <diagram id="LP_c_-AWWE6lzqFJ8R8d" name="第 1 页">
     <mxGraphModel dx="1008" dy="553" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -46,11 +46,40 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="nY4fQOfvEfhR7rY-UjDF-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=13;" edge="1" parent="1" source="nY4fQOfvEfhR7rY-UjDF-12" target="nY4fQOfvEfhR7rY-UjDF-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nY4fQOfvEfhR7rY-UjDF-20" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=13;fontStyle=1" vertex="1" connectable="0" parent="nY4fQOfvEfhR7rY-UjDF-19">
+          <mxGeometry x="-0.2886" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="nY4fQOfvEfhR7rY-UjDF-12" value="是否有相同的key" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;gradientColor=#b3b3b3;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="240" y="423.75" width="200" height="67.5" as="geometry" />
         </mxCell>
         <mxCell id="nY4fQOfvEfhR7rY-UjDF-15" value="覆盖该元素的值，return" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;" vertex="1" parent="1">
           <mxGeometry x="520" y="437.5" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nY4fQOfvEfhR7rY-UjDF-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=13;" edge="1" parent="1" source="nY4fQOfvEfhR7rY-UjDF-18" target="nY4fQOfvEfhR7rY-UjDF-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nY4fQOfvEfhR7rY-UjDF-18" value="逐级递归查找待插入的位置" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="560" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nY4fQOfvEfhR7rY-UjDF-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=13;" edge="1" parent="1" source="nY4fQOfvEfhR7rY-UjDF-23" target="nY4fQOfvEfhR7rY-UjDF-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nY4fQOfvEfhR7rY-UjDF-23" value="创建新元素并设置它的父元素" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="660" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nY4fQOfvEfhR7rY-UjDF-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=13;" edge="1" parent="1" source="nY4fQOfvEfhR7rY-UjDF-25" target="nY4fQOfvEfhR7rY-UjDF-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nY4fQOfvEfhR7rY-UjDF-25" value="维护红黑树平衡" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="760" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nY4fQOfvEfhR7rY-UjDF-27" value="结束" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="860" width="200" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
