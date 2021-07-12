@@ -94,3 +94,143 @@
 
 ### 类的层级关系
 
+```java
+public class TreeMap<K,V>
+    extends AbstractMap<K,V>
+    implements NavigableMap<K,V>, Cloneable, java.io.Serializable
+```
+
+### 类相关属性
+
+```java
+// 比较器用于维护此树形结构的顺序，如果比较器使用其键的自然顺序，则为null。
+private final Comparator<? super K> comparator;
+// 红黑树的根节点
+private transient Entry<K,V> root = null;
+// 红黑树的节点数量
+private transient int size = 0;
+// 对树的结构修改次数。
+private transient int modCount = 0;
+```
+
+### 构造函数
+
+```java
+// 无参数构造，比较器为null
+public TreeMap() {
+    comparator = null;
+}
+// 初始化一个比较器
+public TreeMap(Comparator<? super K> comparator) {
+    this.comparator = comparator;
+}
+// 根据传入的Map，初始化TreeMap
+public TreeMap(Map<? extends K, ? extends V> m) {
+    comparator = null;
+    putAll(m);
+}
+// 根据传入的SortedMap家族成员，初始化TreeMap
+public TreeMap(SortedMap<K, ? extends V> m) {
+    comparator = m.comparator();
+    try {
+        buildFromSorted(m.size(), m.entrySet().iterator(), null, null);
+    } catch (java.io.IOException cannotHappen) {
+    } catch (ClassNotFoundException cannotHappen) {
+    }
+}
+```
+
+### 常用方法原理
+
+我们先来看看put方法
+
+```java
+public V put(K key, V value) {
+    Entry<K,V> t = root;
+    if (t == null) {
+        compare(key, key); // type (and possibly null) check
+
+        root = new Entry<>(key, value, null);
+        size = 1;
+        modCount++;
+        return null;
+    }
+    int cmp;
+    Entry<K,V> parent;
+    // split comparator and comparable paths
+    Comparator<? super K> cpr = comparator;
+    if (cpr != null) {
+        do {
+            parent = t;
+            cmp = cpr.compare(key, t.key);
+            if (cmp < 0)
+                t = t.left;
+            else if (cmp > 0)
+                t = t.right;
+            else
+                return t.setValue(value);
+        } while (t != null);
+    }
+    else {
+        if (key == null)
+            throw new NullPointerException();
+        Comparable<? super K> k = (Comparable<? super K>) key;
+        do {
+            parent = t;
+            cmp = k.compareTo(t.key);
+            if (cmp < 0)
+                t = t.left;
+            else if (cmp > 0)
+                t = t.right;
+            else
+                return t.setValue(value);
+        } while (t != null);
+    }
+    Entry<K,V> e = new Entry<>(key, value, parent);
+    if (cmp < 0)
+        parent.left = e;
+    else
+        parent.right = e;
+    fixAfterInsertion(e);
+    size++;
+    modCount++;
+    return null;
+}
+```
+
+大概的流程是这样滴
+
+1. 首先，它去判断有没有根节点，若没有则初始化根节点。
+
+   ① 创建根节点之前，它会去判断key是否为null，为null则抛出空指针异常，这里可以知道TreeMap是不允许key为null的。
+
+   ② 创建一个根节点，它的父亲节点为null。
+
+   ③ 初始化工作结束，return。
+
+2. 开始遍历红黑树（**为了查找新增元素需要插入到什么位置**），这里分两种情况进行key的比较。
+
+   ① 使用的是自定义的比较器
+
+   ② 使用的是key默认的比较器
+
+   不管使用的哪种比较器，目的都是为了排序。由于TreeMap不允许key为null，所以在实现自定义比较的时候应该将null的这种情况也考虑进去。
+
+   首先，新增元素的key会和当前节点的key比较
+
+   - 如果小于当前节点的key，则将当前节点的**左子节点**赋值给**临时变量**，然后再根据临时变量递归往下比较，直到循环到叶子节点为止。
+   - 如果大于当前节点的key，则将当前节点的**右子节点**赋值给**临时变量**，然后再递归比较，直到循环到叶子节点为止。
+   - 如果等于当前节点的key，则覆盖该节点的值，然后return出去。
+   
+   循环结束后，临时变量存储的就是**新增元素的父元素。**
+   
+3. 创建新元素并指定父元素，并维护父元素和新元素的子节点关系，根据cmp变量判断是父元素的左子节点还是右子节点。
+
+   - 如果**小于0**，则是父元素的**左子节点**。
+
+   - 如果**大于0**，则是父元素的**右子节点**。
+
+4. 因为每次新增元素都可能导致红黑树不平衡，通过这个方法【fixAfterInsertion】去维护树的平衡。
+
+
+

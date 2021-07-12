@@ -55,14 +55,6 @@ public ArrayList(Collection<? extends E> c) {
 }
 ```
 
-## 特点
-
-1. ArratList是通过动态数组实现的，查询速度快，增加删除慢。
-
-2. 当容器容量不够是，将扩容增长到原来的0.5倍。
-
-3. 当操作数据需要频繁的查询，而增加删除较少的时候，建议使用ArrayList数据存储数据。
-
 ## 常用方法底层原理
 
 ​		每次增加数据的时候，需要判断是否需要扩容。如果当前容器为空的话，minCapacity取DEFAULT_CAPACITY和（size+1）的最大值。否则minCapacity取size+1。
@@ -109,13 +101,9 @@ private void grow(int minCapacity) {
 
 删除之前，会有一个数据越界的检查，如果index≥size的话，抛出数组越界的异常。
 
-要删除节点的索引的后一位开始到末尾节点都是需要移动的，移动到删除的节点位置。使用System.arraycopy的方法进行删除。
+要删除节点的索引的后一位开始到末尾节点的索引都是需要向前移动一位的。
 
 ```java
-private void rangeCheck(int index) {
-    if (index >= size)
-        throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
-}
 public E remove(int index) {
     rangeCheck(index);
 
@@ -130,7 +118,13 @@ public E remove(int index) {
 
     return oldValue;
 }
+private void rangeCheck(int index) {
+    if (index >= size)
+        throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
+}
 ```
 
-​		
+​	等讲到LinkedList的时候，会具体分析两者的特点以及效率问题	
+
+Thank!
 

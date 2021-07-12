@@ -293,9 +293,11 @@ public boolean remove(Object o) {
 
    
 
-2. LinkedList则不需要考虑扩容，但是随着新增元素的量增加，需要不断分配新的内存空间再进行引用；在获取元素的时候。
+2. LinkedList则不需要考虑扩容.
 
-   如果要获取的元素越靠近链表的中间，则效率越低。
+   但是随着**新增元素的量**增加，需要不断分配新的内存空间再进行引用；
+   
+   在获取元素的时候。如果要获取的元素越靠近链表的**中间**，则效率越低。
 
 经过上面分析之后，下面我们通过代码来实测一下
 
@@ -339,9 +341,42 @@ public static void main(String[] args) {
 
 ![](../../../photo/JavaSE/集合/LinkedList/新增100万元素效率2.png)
 
-**可以看出来，随着新增的元素越多，LinkedList的效率是不及ArrayList的。因为新增的元素越多，ArrayList需要扩容的频率就会呈一个下降的趋势，由于是在尾部新增的，所以ArrayList每次新增都不需要将元素copy到新的索引中**。**而LinkedList则需要不断地创建新的内存空间去引用。**
+<font style=background:yellow;color:black>**可以看出来，随着新增的元素越多，LinkedList的效率是不及ArrayList的。因为新增的元素越多，ArrayList需要扩容的频率就会呈一个下降的趋势，由于是在尾部新增的，所以ArrayList只有需要扩容的时候才会将元素copy到新的索引中**。**而LinkedList则需要不断地创建新的内存空间去引用。**</font>
 
 看一下如果在头部插入元素，两者又是怎样的效率呈现。
 
-很明显，ArrayList需要将所有的元素都copy到新的索引中。对于LinkedList来说，只需要维护first节点的前后指向即可。**所以在头部新增，LinkedList要优于ArrayList的**。
+首先，ArrayList如果在头部新增元素，有两种情况：
 
+1. 当数组容量**足够**时，在**原数组**先将元素copy到**新的索引**位置中，然后再将新增的元素插入到头部。
+2. 当数组容量**不够**时，先进行**扩容**，然后将**原数组**的元素copy到**新数组的新的索引**位置中，最后再将新增的元素插入到头部。
+
+![](../../../photo/JavaSE/集合/ArrayList/头部新增元素.png)
+
+<font style="background:yellow;color:black">很明显，不管ArrayList扩不扩容都需要将所有的元素都copy到新的索引中。对于LinkedList来说，只需要维护first节点的指向即可。**所以在头部新增，随着新增的数量增加LinkedList要略优于ArrayList的**</font>
+
+下面在两者的size均达到1000万的情况下，在头部新增元素，LinkedList是比ArrayList的效率高一点的，这点效率其实可以忽略不记。
+
+![](../../../photo/JavaSE/集合/LinkedList/头部插入元素效率.png)
+
+同样在数据1000万的情况下，在中间插入元素，LinkedList的效率肯定不及ArrayList的。
+
+![](../../../photo/JavaSE/集合/LinkedList/中间插入元素效率.png)
+
+插入讲完了，我们再看看删除的效率，其实通过上面的分析之后，两者删除的效率已经很明显了
+
+**在尾部删除**
+
+![](../../../photo/JavaSE/集合/LinkedList/尾部删除元素效率.png)
+
+**在中间删除**
+
+![](../../../photo/JavaSE/集合/LinkedList/中间删除元素效率.png)
+
+**在头部删除**
+
+![](../../../photo/JavaSE/集合/LinkedList/头部删除元素效率.png)
+
+两者如何选用？
+
+1. 如果只是将数据装载到容器中做一个临时存储，并且数据量在百万级别以下的，两者都可以选择，但一般我们开发中都使用ArrayList。如果达到了百万级别以上的，要使用ArrayList了，LinkedList需要频繁创建内存空间而ArrayList扩容的频率相对下降了。
+2. 如果需要频繁在容器做一些数据插入或者删除的动作，需要衡量是在头部、尾部还是中间位置。如果靠中间位置居多的话，可以使用ArrayList；不靠中间位置则可以使用LinkedList。
