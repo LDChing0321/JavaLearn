@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-14T16:07:46.824Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="WEB7WnzL2iaRJo89D78t" version="14.8.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-14T16:08:34.098Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="wqYp5NUZ-PPk3-n9MYBr" version="14.8.6" type="github">
   <diagram id="0WYaF49rz4EufcF2m3Ne" name="第 1 页">
     <mxGraphModel dx="1820" dy="663" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -151,7 +151,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="sAZ4AjUppSPbebDC3OBb-30" value="X是它父亲的左子节点？" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-30" value="X是它父亲的&lt;b&gt;&lt;i&gt;左子节点&lt;/i&gt;&lt;/b&gt;？" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="560" y="640" width="200" height="120" as="geometry" />
         </mxCell>
         <mxCell id="sAZ4AjUppSPbebDC3OBb-59" value="" style="group" parent="1" vertex="1" connectable="0">
@@ -169,7 +169,7 @@
         <mxCell id="sAZ4AjUppSPbebDC3OBb-56" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="sAZ4AjUppSPbebDC3OBb-59" source="sAZ4AjUppSPbebDC3OBb-52" target="sAZ4AjUppSPbebDC3OBb-53" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="sAZ4AjUppSPbebDC3OBb-54" value="3.&amp;nbsp;以X的爷爷左旋" style="rounded=0;whiteSpace=wrap;html=1;" parent="sAZ4AjUppSPbebDC3OBb-59" vertex="1">
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-54" value="3.&amp;nbsp;以X的爷爷&lt;b&gt;&lt;i&gt;左旋&lt;/i&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="sAZ4AjUppSPbebDC3OBb-59" vertex="1">
           <mxGeometry x="20" y="174.54545454545453" width="280" height="43.63636363636363" as="geometry" />
         </mxCell>
         <mxCell id="sAZ4AjUppSPbebDC3OBb-57" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="sAZ4AjUppSPbebDC3OBb-59" source="sAZ4AjUppSPbebDC3OBb-53" target="sAZ4AjUppSPbebDC3OBb-54" edge="1">
@@ -232,7 +232,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WPQpz8BpYPDQ5BXosQd4-13" value="X是它父亲的右子节点？" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="WPQpz8BpYPDQ5BXosQd4-13" value="X是它父亲的&lt;b&gt;&lt;i&gt;右子节点&lt;/i&gt;&lt;/b&gt;？" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="1280" y="640" width="200" height="120" as="geometry" />
         </mxCell>
         <mxCell id="WPQpz8BpYPDQ5BXosQd4-26" value="" style="group" vertex="1" connectable="0" parent="1">
@@ -250,7 +250,7 @@
         <mxCell id="WPQpz8BpYPDQ5BXosQd4-30" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WPQpz8BpYPDQ5BXosQd4-26" source="WPQpz8BpYPDQ5BXosQd4-28" target="WPQpz8BpYPDQ5BXosQd4-29">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="WPQpz8BpYPDQ5BXosQd4-31" value="3.&amp;nbsp;以X的爷爷右旋" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WPQpz8BpYPDQ5BXosQd4-26">
+        <mxCell id="WPQpz8BpYPDQ5BXosQd4-31" value="3.&amp;nbsp;以X的爷爷&lt;b&gt;&lt;i&gt;右旋&lt;/i&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WPQpz8BpYPDQ5BXosQd4-26">
           <mxGeometry x="20" y="174.54545454545453" width="280" height="43.63636363636363" as="geometry" />
         </mxCell>
         <mxCell id="WPQpz8BpYPDQ5BXosQd4-32" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WPQpz8BpYPDQ5BXosQd4-26" source="WPQpz8BpYPDQ5BXosQd4-29" target="WPQpz8BpYPDQ5BXosQd4-31">
@@ -265,7 +265,7 @@
         <mxCell id="WPQpz8BpYPDQ5BXosQd4-19" value="1. X的父亲元素赋值给X" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WPQpz8BpYPDQ5BXosQd4-38">
           <mxGeometry x="20" y="21.333333333333332" width="280" height="42.666666666666664" as="geometry" />
         </mxCell>
-        <mxCell id="WPQpz8BpYPDQ5BXosQd4-20" value="2.&amp;nbsp;以X左旋" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WPQpz8BpYPDQ5BXosQd4-38">
+        <mxCell id="WPQpz8BpYPDQ5BXosQd4-20" value="2.&amp;nbsp;以X&lt;b&gt;&lt;i&gt;左旋&lt;/i&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WPQpz8BpYPDQ5BXosQd4-38">
           <mxGeometry x="20" y="96" width="280" height="42.666666666666664" as="geometry" />
         </mxCell>
         <mxCell id="WPQpz8BpYPDQ5BXosQd4-21" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WPQpz8BpYPDQ5BXosQd4-38" source="WPQpz8BpYPDQ5BXosQd4-19" target="WPQpz8BpYPDQ5BXosQd4-20">
@@ -283,7 +283,7 @@
         <mxCell id="sAZ4AjUppSPbebDC3OBb-8" value="1. X的父亲元素赋值给X" style="rounded=0;whiteSpace=wrap;html=1;" parent="WPQpz8BpYPDQ5BXosQd4-42" vertex="1">
           <mxGeometry x="20" y="21.333333333333332" width="280" height="42.666666666666664" as="geometry" />
         </mxCell>
-        <mxCell id="sAZ4AjUppSPbebDC3OBb-33" value="2.&amp;nbsp;以X右旋" style="rounded=0;whiteSpace=wrap;html=1;" parent="WPQpz8BpYPDQ5BXosQd4-42" vertex="1">
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-33" value="2.&amp;nbsp;以X&lt;b&gt;&lt;i&gt;右旋&lt;/i&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="WPQpz8BpYPDQ5BXosQd4-42" vertex="1">
           <mxGeometry x="20" y="96" width="280" height="42.666666666666664" as="geometry" />
         </mxCell>
         <mxCell id="sAZ4AjUppSPbebDC3OBb-34" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WPQpz8BpYPDQ5BXosQd4-42" source="sAZ4AjUppSPbebDC3OBb-8" target="sAZ4AjUppSPbebDC3OBb-33" edge="1">
