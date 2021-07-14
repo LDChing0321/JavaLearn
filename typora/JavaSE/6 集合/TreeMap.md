@@ -232,5 +232,11 @@ public V put(K key, V value) {
 
 4. 因为每次新增元素都可能导致红黑树不平衡，通过这个方法【fixAfterInsertion】去维护树的平衡。
 
+   
+   
+   大致的流程图：
+   
+   ![](../../../photo/JavaSE/集合/TreeMap/put方法流程图.png)
+
 
 
