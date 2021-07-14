@@ -1,36 +1,64 @@
-<mxfile host="app.diagrams.net" modified="2021-07-14T02:54:45.782Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="P7rRfqJgSWGE9ox4g338" version="14.8.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-14T05:02:58.918Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="KXUloXu3m27ph77s6srH" version="14.8.6" type="github">
   <diagram id="0WYaF49rz4EufcF2m3Ne" name="第 1 页">
-    <mxGraphModel dx="834" dy="457" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1008" dy="553" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="sCpBqo6rIDwrRzXPLW1Z-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;" edge="1" parent="1" source="sCpBqo6rIDwrRzXPLW1Z-2" target="sCpBqo6rIDwrRzXPLW1Z-10">
+        <mxCell id="sCpBqo6rIDwrRzXPLW1Z-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;" parent="1" source="sCpBqo6rIDwrRzXPLW1Z-2" target="sCpBqo6rIDwrRzXPLW1Z-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="sCpBqo6rIDwrRzXPLW1Z-2" value="新增的元素为X" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="sCpBqo6rIDwrRzXPLW1Z-2" value="新增的元素为X" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontColor=#333333;" parent="1" vertex="1">
           <mxGeometry x="150" y="230" width="100" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="sCpBqo6rIDwrRzXPLW1Z-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;" edge="1" parent="1" source="sCpBqo6rIDwrRzXPLW1Z-8" target="sCpBqo6rIDwrRzXPLW1Z-10">
+        <mxCell id="sCpBqo6rIDwrRzXPLW1Z-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;" parent="1" source="sCpBqo6rIDwrRzXPLW1Z-8" target="sCpBqo6rIDwrRzXPLW1Z-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="sCpBqo6rIDwrRzXPLW1Z-8" value="&lt;font face=&quot;Tahoma&quot;&gt;起始点&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontStyle=1;spacingTop=0;spacing=0;fontFamily=Times New Roman;" vertex="1" parent="1">
+        <mxCell id="sCpBqo6rIDwrRzXPLW1Z-8" value="&lt;font face=&quot;Tahoma&quot;&gt;起始点&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontStyle=1;spacingTop=0;spacing=0;fontFamily=Times New Roman;" parent="1" vertex="1">
           <mxGeometry x="30" y="350" width="50" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="sCpBqo6rIDwrRzXPLW1Z-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;" edge="1" parent="1" source="sCpBqo6rIDwrRzXPLW1Z-10">
+        <mxCell id="sCpBqo6rIDwrRzXPLW1Z-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Times New Roman;" parent="1" source="sCpBqo6rIDwrRzXPLW1Z-10" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="370" y="359.9999999999999" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="sCpBqo6rIDwrRzXPLW1Z-22" value="条件成立？" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Times New Roman;" vertex="1" connectable="0" parent="sCpBqo6rIDwrRzXPLW1Z-21">
+        <mxCell id="sCpBqo6rIDwrRzXPLW1Z-22" value="条件成立？" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Times New Roman;" parent="sCpBqo6rIDwrRzXPLW1Z-21" vertex="1" connectable="0">
           <mxGeometry x="-0.2715" y="-2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="sCpBqo6rIDwrRzXPLW1Z-10" value="&lt;span&gt;X默认红色&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="sCpBqo6rIDwrRzXPLW1Z-10" value="&lt;span&gt;X默认红色&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="160" y="320" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="sCpBqo6rIDwrRzXPLW1Z-24" value="&lt;span&gt;X不为空&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span&gt;X不是根元素&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span&gt;X的父节点是红色&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="HmJ5I4ejVigGKdIhbigq-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sCpBqo6rIDwrRzXPLW1Z-24">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="520" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="430" y="490" />
+              <mxPoint x="430" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HmJ5I4ejVigGKdIhbigq-5" value="不成立" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HmJ5I4ejVigGKdIhbigq-4">
+          <mxGeometry x="-0.3576" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HmJ5I4ejVigGKdIhbigq-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sCpBqo6rIDwrRzXPLW1Z-24" target="HmJ5I4ejVigGKdIhbigq-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HmJ5I4ejVigGKdIhbigq-8" value="成立" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HmJ5I4ejVigGKdIhbigq-7">
+          <mxGeometry x="0.2081" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sCpBqo6rIDwrRzXPLW1Z-24" value="&lt;span&gt;X不为空&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span&gt;X不是根元素&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span&gt;X的父节点是红色&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="370" y="310" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="HmJ5I4ejVigGKdIhbigq-6" value="根节点设为黑色" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="600" y="340" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="HmJ5I4ejVigGKdIhbigq-9" value="根元素设为&lt;br&gt;黑色" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;gradientColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="390" y="520" width="80" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
