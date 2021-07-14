@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-07-14T05:16:50.126Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="AIiaW3U5uZahVrA3_pLT" version="14.8.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-14T05:33:26.463Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="1vKxR6tEZaum5JQQWUX8" version="14.8.6" type="github">
   <diagram id="0WYaF49rz4EufcF2m3Ne" name="第 1 页">
-    <mxGraphModel dx="1008" dy="553" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1408" dy="553" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -29,7 +29,7 @@
         <mxCell id="sCpBqo6rIDwrRzXPLW1Z-10" value="&lt;span&gt;X默认红色&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;gradientColor=#ea6b66;" parent="1" vertex="1">
           <mxGeometry x="160" y="320" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="HmJ5I4ejVigGKdIhbigq-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="sCpBqo6rIDwrRzXPLW1Z-24" edge="1">
+        <mxCell id="HmJ5I4ejVigGKdIhbigq-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="sCpBqo6rIDwrRzXPLW1Z-24" edge="1" target="HmJ5I4ejVigGKdIhbigq-12">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="600" y="360" as="targetPoint" />
           </mxGeometry>
@@ -53,7 +53,7 @@
         <mxCell id="HmJ5I4ejVigGKdIhbigq-9" value="根元素设为&lt;br&gt;黑色" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;gradientColor=#b3b3b3;" parent="1" vertex="1">
           <mxGeometry x="390" y="150" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="HmJ5I4ejVigGKdIhbigq-14" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="HmJ5I4ejVigGKdIhbigq-12" edge="1">
+        <mxCell id="HmJ5I4ejVigGKdIhbigq-14" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="1" source="HmJ5I4ejVigGKdIhbigq-12" edge="1" target="HmJ5I4ejVigGKdIhbigq-19">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="536.4705882352941" y="480" as="targetPoint" />
           </mxGeometry>
@@ -63,37 +63,150 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HmJ5I4ejVigGKdIhbigq-17" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="HmJ5I4ejVigGKdIhbigq-12" target="HmJ5I4ejVigGKdIhbigq-16" edge="1">
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-24" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="HmJ5I4ejVigGKdIhbigq-12" target="HmJ5I4ejVigGKdIhbigq-16">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="HmJ5I4ejVigGKdIhbigq-18" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HmJ5I4ejVigGKdIhbigq-17" vertex="1" connectable="0">
-          <mxGeometry x="-0.223" y="-3" relative="1" as="geometry">
+        <mxCell id="HmJ5I4ejVigGKdIhbigq-12" value="X的父亲是X的爷爷的左子节点？" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="820" y="310" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="HmJ5I4ejVigGKdIhbigq-16" value="X的爷爷的&lt;b&gt;右子节点&lt;/b&gt;&lt;br&gt;是红色？" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="1160" y="480" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-25" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="HmJ5I4ejVigGKdIhbigq-19" target="HmJ5I4ejVigGKdIhbigq-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-26" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="sAZ4AjUppSPbebDC3OBb-25">
+          <mxGeometry x="-0.0568" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HmJ5I4ejVigGKdIhbigq-12" value="X的父亲是X的爷爷的左子节点？" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="600" y="310" width="120" height="100" as="geometry" />
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-31" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="HmJ5I4ejVigGKdIhbigq-19" target="sAZ4AjUppSPbebDC3OBb-30">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="HmJ5I4ejVigGKdIhbigq-16" value="X的爷爷的&lt;b&gt;右子节点&lt;/b&gt;&lt;br&gt;是红色？" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="750" y="480" width="180" height="100" as="geometry" />
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-32" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="sAZ4AjUppSPbebDC3OBb-31">
+          <mxGeometry x="0.1529" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="HmJ5I4ejVigGKdIhbigq-19" value="X的爷爷的&lt;b&gt;左子节点&lt;/b&gt;&lt;br&gt;是红色？" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="430" y="480" width="180" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="HmJ5I4ejVigGKdIhbigq-20" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
-          <mxGeometry x="280" y="640" width="320" height="160" as="geometry" />
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-9" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="1470" y="810" width="320" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="HmJ5I4ejVigGKdIhbigq-21" value="X的父亲设为&lt;br&gt;黑色" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;" parent="1" vertex="1">
-          <mxGeometry x="300" y="650" width="80" height="80" as="geometry" />
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-10" value="X的父亲设为&lt;br&gt;黑色" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="1490" y="820" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="HmJ5I4ejVigGKdIhbigq-22" value="X设为&lt;br&gt;黑色" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;" parent="1" vertex="1">
-          <mxGeometry x="400" y="650" width="80" height="80" as="geometry" />
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-11" value="X设为&lt;br&gt;黑色" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="1590" y="820" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="HmJ5I4ejVigGKdIhbigq-23" value="X的爷爷设为&lt;br&gt;红色" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" parent="1" vertex="1">
-          <mxGeometry x="500" y="650" width="80" height="80" as="geometry" />
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-12" value="X的爷爷设为&lt;br&gt;红色" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" vertex="1" parent="1">
+          <mxGeometry x="1690" y="820" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="HmJ5I4ejVigGKdIhbigq-24" value="将X的爷爷赋值给临时变量&lt;b&gt;x（&lt;/b&gt;用于递归元素条件&lt;br&gt;判断&lt;b&gt;）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="300" y="740" width="280" height="40" as="geometry" />
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-13" value="将X的爷爷赋值给临时变量&lt;b&gt;x（&lt;/b&gt;用于递归元素条件&lt;br&gt;判断&lt;b&gt;）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1490" y="910" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-14" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="1470" y="1030" width="320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-15" value="X的父亲设为&lt;br&gt;黑色" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="1490" y="1040" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-16" value="X设为&lt;br&gt;黑色" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="1590" y="1040" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-17" value="X的爷爷设为&lt;br&gt;红色" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" vertex="1" parent="1">
+          <mxGeometry x="1690" y="1040" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-18" value="将X的爷爷赋值给临时变量&lt;b&gt;x（&lt;/b&gt;用于递归元素条件&lt;br&gt;判断&lt;b&gt;）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1490" y="1130" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-19" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="160" y="680" width="320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="HmJ5I4ejVigGKdIhbigq-20" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="sAZ4AjUppSPbebDC3OBb-19" vertex="1">
+          <mxGeometry width="320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="HmJ5I4ejVigGKdIhbigq-21" value="X的父亲设为&lt;br&gt;黑色" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;" parent="sAZ4AjUppSPbebDC3OBb-19" vertex="1">
+          <mxGeometry x="20" y="10" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="HmJ5I4ejVigGKdIhbigq-22" value="X设为&lt;br&gt;黑色" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;" parent="sAZ4AjUppSPbebDC3OBb-19" vertex="1">
+          <mxGeometry x="120" y="10" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="HmJ5I4ejVigGKdIhbigq-23" value="X的爷爷设为&lt;br&gt;红色" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" parent="sAZ4AjUppSPbebDC3OBb-19" vertex="1">
+          <mxGeometry x="220" y="10" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="HmJ5I4ejVigGKdIhbigq-24" value="将X的爷爷赋值给临时变量&lt;b&gt;X（&lt;/b&gt;用于递归元素条件&lt;br&gt;判断&lt;b&gt;）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="sAZ4AjUppSPbebDC3OBb-19" vertex="1">
+          <mxGeometry x="20" y="100" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HmJ5I4ejVigGKdIhbigq-20" target="sCpBqo6rIDwrRzXPLW1Z-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-23" value="递归判断，逐级往上遍历" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontStyle=1" vertex="1" connectable="0" parent="sAZ4AjUppSPbebDC3OBb-22">
+          <mxGeometry x="-0.0133" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-39" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sAZ4AjUppSPbebDC3OBb-30" target="sAZ4AjUppSPbebDC3OBb-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-40" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="sAZ4AjUppSPbebDC3OBb-39">
+          <mxGeometry x="-0.2098" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-50" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sAZ4AjUppSPbebDC3OBb-30" target="sAZ4AjUppSPbebDC3OBb-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-51" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="sAZ4AjUppSPbebDC3OBb-50">
+          <mxGeometry x="-0.0924" y="-2" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-30" value="X是它父亲的左子节点？" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="560" y="680" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-41" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="720" y="880" width="320" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-56" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sAZ4AjUppSPbebDC3OBb-52" target="sAZ4AjUppSPbebDC3OBb-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-52" value="1.&amp;nbsp;将X的父亲设为黑色" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="900" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-57" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sAZ4AjUppSPbebDC3OBb-53" target="sAZ4AjUppSPbebDC3OBb-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-53" value="2.&amp;nbsp;将X的爷爷设为红色" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="970" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-54" value="3.&amp;nbsp;以X的爷爷左旋" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="1040" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="280" y="880" width="320" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-8" value="1. X的父亲元素赋值给X" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="900" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-33" value="2.&amp;nbsp;以X右旋" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="970" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-34" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sAZ4AjUppSPbebDC3OBb-8" target="sAZ4AjUppSPbebDC3OBb-33">
+          <mxGeometry x="280" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-35" value="3.&amp;nbsp;将X的父亲设为黑色" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1040" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-36" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sAZ4AjUppSPbebDC3OBb-33" target="sAZ4AjUppSPbebDC3OBb-35">
+          <mxGeometry x="280" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-37" value="4.&amp;nbsp;将X的爷爷设为红色" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1110" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sAZ4AjUppSPbebDC3OBb-38" value="5.&amp;nbsp;以X的爷爷左旋" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1180" width="280" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
