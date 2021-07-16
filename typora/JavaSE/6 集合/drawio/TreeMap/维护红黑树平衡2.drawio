@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-16T05:32:38.209Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="D0WN0dWj6XxBbYKlPZRx" version="14.8.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-16T05:32:49.608Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="bRY2SirepVeJLtgFZ11C" version="14.8.6" type="github">
   <diagram id="RBuBmUdtF5p_911Tt1P1" name="第 1 页">
     <mxGraphModel dx="1408" dy="908" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -256,7 +256,7 @@
         <mxCell id="5Z_JWHFTvRfyE_uImuRY-54" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;rounded=1;glass=0;sketch=0;fontColor=#143642;strokeColor=#0F8B8D;fillColor=#FAE5C7;" parent="1" vertex="1">
           <mxGeometry x="1060" y="130" width="70" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="5Z_JWHFTvRfyE_uImuRY-55" value="由于10是根节点，&lt;br&gt;将10设为黑色。&lt;br&gt;（X的父元素10已经是根节点，无需递归）" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.08;rounded=1;fontStyle=1" parent="1" vertex="1">
+        <mxCell id="5Z_JWHFTvRfyE_uImuRY-55" value="由于10是根节点，&lt;br&gt;将10设为黑色。&lt;br&gt;此时X为7（X的父元素10已经是根节点，无需递归）" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.08;rounded=1;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="1260" y="-20" width="170" height="100" as="geometry" />
         </mxCell>
         <mxCell id="5Z_JWHFTvRfyE_uImuRY-59" value="&lt;font color=&quot;#143642&quot;&gt;&lt;b&gt;将7和16设为黑色，&lt;br&gt;10设为红色&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;rounded=1;position2=1;" parent="1" vertex="1">
