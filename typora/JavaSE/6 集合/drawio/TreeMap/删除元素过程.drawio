@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-19T07:09:29.304Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="BSD1gMKgYV_kDu6XZ0Ik" version="14.9.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-19T07:10:30.573Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="wKECVRB7ufT83PbbJZWA" version="14.9.0" type="github">
   <diagram id="dqTE0z3j5utBwTfhuuDI" name="第 1 页">
     <mxGraphModel dx="1317" dy="457" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -129,7 +129,7 @@
         <mxCell id="QXMiSGdsMHIv6WNnIhJc-92" value="2.&amp;nbsp;将&lt;b&gt;后继节点s&lt;/b&gt;赋值给&lt;b&gt;DE&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="QXMiSGdsMHIv6WNnIhJc-126">
           <mxGeometry x="21.25" y="62.49666666666667" width="297.5" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="QXMiSGdsMHIv6WNnIhJc-95" value="注：相当于把原来的&lt;b&gt;DE&lt;/b&gt;删除了，&lt;b&gt;DE&lt;/b&gt;重新指向后继节点" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="QXMiSGdsMHIv6WNnIhJc-126">
+        <mxCell id="QXMiSGdsMHIv6WNnIhJc-95" value="注：相当于把原来的&lt;b&gt;DE&lt;/b&gt;删除了，&lt;b&gt;这时DE指向后继节点&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="QXMiSGdsMHIv6WNnIhJc-126">
           <mxGeometry x="21.25" y="114.99666666666667" width="297.5" height="35" as="geometry" />
         </mxCell>
         <mxCell id="QXMiSGdsMHIv6WNnIhJc-127" value="" style="group" vertex="1" connectable="0" parent="1">
