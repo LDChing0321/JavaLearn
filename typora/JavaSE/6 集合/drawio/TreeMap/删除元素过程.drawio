@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-19T04:12:02.680Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="NU_unVHolC7nPO60ZaOG" version="14.9.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-19T05:02:16.263Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="X3lIn9AidCnqms60zt98" version="14.9.0" type="github">
   <diagram id="dqTE0z3j5utBwTfhuuDI" name="第 1 页">
     <mxGraphModel dx="1317" dy="457" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -44,11 +44,33 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="QXMiSGdsMHIv6WNnIhJc-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.333;entryY=-0.002;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QXMiSGdsMHIv6WNnIhJc-12" target="QXMiSGdsMHIv6WNnIhJc-98">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="480" />
+              <mxPoint x="600" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QXMiSGdsMHIv6WNnIhJc-101" value="不成立" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=0;" vertex="1" connectable="0" parent="QXMiSGdsMHIv6WNnIhJc-99">
+          <mxGeometry x="-0.3942" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="QXMiSGdsMHIv6WNnIhJc-12" value="&lt;b&gt;DLCE&lt;/b&gt;&amp;amp;&lt;b&gt;DRCE&lt;/b&gt;不为空" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="360" y="320" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="QXMiSGdsMHIv6WNnIhJc-84" value="这里定义几个变量：&lt;br&gt;DE（DeleteElement）：要删除的元素&lt;br&gt;DLCE（DeleteLeftChildElement）：要删除的元素的左子节点&lt;br&gt;DRCE（DeleteRightChildElement）：要删除的元素的右子节点" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-20" y="70" width="350" height="60" as="geometry" />
+        <mxCell id="QXMiSGdsMHIv6WNnIhJc-84" value="这里定义几个变量：&lt;br&gt;DE（DeleteElement）：要删除的元素&lt;br&gt;DLCE（DeleteLeftChildElement）：要删除的元素的左子节点&lt;br&gt;DRCE（DeleteRightChildElement）：要删除的元素的右子节点&lt;br&gt;replacement：临时替换变量" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="65" width="350" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="QXMiSGdsMHIv6WNnIhJc-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="QXMiSGdsMHIv6WNnIhJc-86">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="560" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="980" y="480" />
+              <mxPoint x="680" y="480" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="QXMiSGdsMHIv6WNnIhJc-86" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="820" y="280" width="320" height="160" as="geometry" />
@@ -61,6 +83,9 @@
         </mxCell>
         <mxCell id="QXMiSGdsMHIv6WNnIhJc-95" value="注：相当于把&lt;b&gt;DE&lt;/b&gt;删除了" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="840" y="394.99666666666667" width="280" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="QXMiSGdsMHIv6WNnIhJc-98" value="&lt;pre style=&quot;color: rgb(36 , 41 , 46) ; font-family: &amp;#34;jetbrains mono&amp;#34; , monospace ; font-size: 12px&quot;&gt;若DLCE不为空，临时变量replacement&lt;/pre&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="520" y="560" width="240" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
