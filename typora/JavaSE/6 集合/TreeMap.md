@@ -208,7 +208,7 @@ public V put(K key, V value) {
 
    ② 创建一个根节点，它的父亲节点为null。
 
-   ③ 初始化工作结束，return。
+   ③ 初始化工作结束。
 
 2. 开始遍历红黑树（**为了查找新增元素需要插入到什么位置**），这里分两种情况进行key的比较。
 
@@ -222,11 +222,11 @@ public V put(K key, V value) {
 
    - 如果小于当前节点的key，则将当前节点的**左子节点**赋值给**临时变量**，然后再根据临时变量递归往下比较，直到循环到叶子节点为止。
    - 如果大于当前节点的key，则将当前节点的**右子节点**赋值给**临时变量**，然后再递归比较，直到循环到叶子节点为止。
-   - 如果等于当前节点的key，则覆盖该节点的值，return。
+   - 如果等于当前节点的key，则覆盖该节点的值。
    
-   循环递归结束后，临时变量存储的就是**新增元素的父元素。**
+   循环结束后，临时变量存储的就是**新增元素的父元素。**
    
-3. 创建新元素并指定父元素，并维护父元素和新元素的子节点关系，根据cmp变量判断是父元素的左子节点还是右子节点。
+3. 创建新元素并指定父元素，并维护父元素和新元素的关系，根据cmp变量判断是父元素的左子节点还是右子节点。
 
    - 如果**小于0**，则是父元素的**左子节点**。
 
@@ -244,7 +244,7 @@ public V put(K key, V value) {
 
 ![](../../../photo/JavaSE/集合/TreeMap/维护红黑树平衡.png)
 
-​		还是不好理解？来看看下面这张图，基本包含了所有新增元素需要调整平衡的情况，再看不懂就要打屁股了。
+​		还是不好理解？来看看下面这张图，基本包含了所有新增元素需要调整平衡的情况。
 
 ![](../../../photo/JavaSE/集合/TreeMap/维护红黑树平衡2.png)
 
@@ -252,4 +252,141 @@ public V put(K key, V value) {
 
 ​		好了，插入元素到这里就告一段落了。下面讲讲比插入稍微复杂一点的删除元素操作。
 
-![]()
+![](../../../photo/JavaSE/集合/TreeMap/删除元素过程.png)
+
+附上源码
+
+```java
+public V remove(Object key) {
+    // 通过遍历获取到要删除的元素
+    Entry<K,V> p = getEntry(key);
+    if (p == null)
+        return null;
+    V oldValue = p.value;
+    deleteEntry(p);
+    return oldValue;
+}
+
+private void deleteEntry(Entry<K,V> p) {
+    modCount++;
+    size--;
+
+    // If strictly internal, copy successor's element to p and then make p
+    // point to successor.
+    // 要删除的元素（DE）有左右子元素
+    if (p.left != null && p.right != null) {
+        // 获取后继元素
+        Entry<K,V> s = successor(p);
+        // 后继元素的key和value赋值给DE
+        p.key = s.key;
+        p.value = s.value;
+        p = s;
+    } // p has 2 children
+
+    // Start fixup at replacement node, if it exists.
+    Entry<K,V> replacement = (p.left != null ? p.left : p.right);
+
+    if (replacement != null) {
+        // Link replacement to parent
+        replacement.parent = p.parent;
+        if (p.parent == null)
+            root = replacement;
+        else if (p == p.parent.left)
+            p.parent.left  = replacement;
+        else
+            p.parent.right = replacement;
+
+        // Null out links so they are OK to use by fixAfterDeletion.
+        p.left = p.right = p.parent = null;
+
+        // Fix replacement
+        if (p.color == BLACK)
+            fixAfterDeletion(replacement);
+    } else if (p.parent == null) { // return if we are the only node.
+        root = null;
+    } else { //  No children. Use self as phantom replacement and unlink.
+        if (p.color == BLACK)
+            fixAfterDeletion(p);
+
+        if (p.parent != null) {
+            if (p == p.parent.left)
+                p.parent.left = null;
+            else if (p == p.parent.right)
+                p.parent.right = null;
+            p.parent = null;
+        }
+    }
+}
+```
+
+删除元素分为三种情况：
+
+1. 该元素有左右子元素
+
+   ① 首先，它会去找到要删除元素（设为DE）的后继元素
+
+   ​		1）**当DE存在右子元素时**，就会去查找大于DE的所有元素中**最小**的那个。由于右子元素结构树的所有元素都是比DE大的，只要根据这个右子元素往左边逐级向下查找，最后那一个元素就是我们要的**后继元素**。
+
+   ​		2）**当DE不存在右子元素时**，这里需要说一下，通过remove方法是不会发生这种情况的。因为正常走**remove**方法能够调用**successor**这个方法的只有当**左右子元素**都不为空的情况下。**当DE不存在右子元素**的这种情况在迭代遍历元素的时候会用到（后面具体讲讲这种情况）。
+
+   ```java
+   static <K,V> TreeMap.Entry<K,V> successor(Entry<K,V> t) {
+       if (t == null)
+           return null;
+       // 1）当DE存在右子元素时
+       else if (t.right != null) {
+           // 获取DE的右子元素
+           Entry<K,V> p = t.right;
+           // 往左边逐级向下查找
+           while (p.left != null)
+               p = p.left;
+           // 最后一个左子元素（不包括叶子元素）
+           return p;
+       }
+       // 2）当DE不存在右子元素时
+       else {
+           // 获取DE的父元素
+           Entry<K,V> p = t.parent;
+          	// 用一个临时变量ch指向DE
+           Entry<K,V> ch = t;
+           // 父元素不为空 & ch是父元素的右子元素
+           // 这两个条件同时满足才进入循环
+           // 相当于逐级向上遍历，当找到父元素是爷爷元素的左子节点的时候
+           // 那这个爷爷元素就是我们要找的后继元素
+           while (p != null && ch == p.right) {
+               ch = p;
+               p = p.parent;
+           }
+           return p;
+       }
+   }
+   ```
+
+   ② 现在我们有两个已知元素（DE和DE的后继元素），将DE的key和value指向它后继元素的key和value（相当于删除了原来的DE元素，用后继元素代替了DE）。
+
+   ![](../../../photo/JavaSE/集合/TreeMap/DE与后继元素位置替换.png)
+
+   如果后继元素的颜色是黑色则需要修复红黑树，这里需要将后继元素与它原来的父元素断开关联（彻底断绝父子关系，重新当别人的儿子）。
+
+   ```java
+   // 修复红黑树
+   if (p.color == BLACK)
+       fixAfterDeletion(p);
+   // 与它原来的父元素断开关联
+   if (p.parent != null) {
+       if (p == p.parent.left)
+           p.parent.left = null;
+       else if (p == p.parent.right)
+           p.parent.right = null;
+       p.parent = null;
+   }
+   ```
+
+   重点说说红黑树的修复
+
+2. 该元素只有左子元素
+
+3. 该元素只有右子元素
+
+4. 该元素没有子元素
+
