@@ -232,6 +232,12 @@ void addEntry(int hash, K key, V value, int bucketIndex) {
 
     createEntry(hash, key, value, bucketIndex);
 }
+
+void createEntry(int hash, K key, V value, int bucketIndex) {
+    Entry<K,V> e = table[bucketIndex];
+    table[bucketIndex] = new Entry<>(hash, key, value, e);
+    size++;
+}
 ```
 
 ​		 7. resize

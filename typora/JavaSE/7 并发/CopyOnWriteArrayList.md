@@ -213,6 +213,7 @@ private boolean remove(Object o, Object[] snapshot, int index) {
                 // 遍历找到索引下标
                 if (current[i] != snapshot[i] && eq(o, current[i])) {
                     index = i;
+                    // 退出标记位
                     break findIndex;
                 }
             }
@@ -224,6 +225,7 @@ private boolean remove(Object o, Object[] snapshot, int index) {
             if (index < 0)
                 return false;
         }
+        // 新建一个数组进行数据的拷贝
         Object[] newElements = new Object[len - 1];
         System.arraycopy(current, 0, newElements, 0, index);
         System.arraycopy(current, index + 1,
@@ -236,3 +238,98 @@ private boolean remove(Object o, Object[] snapshot, int index) {
     }
 }
 ```
+
+​		其他方法也没什么好说的，我们来看看它的迭代器**COWIterator**
+
+​		它有两个成员属性**snapshot**和**cursor**，当获取**COWIterator**迭代器的时候，它内部会将这两个属性初始化。**snapshot**是当前**array**的一个副本快照，**cursor**是一个从0开始的游标参数。从源码可以知道它的迭代器是不支持新增和删除操作的，始终会抛出一个异常**UnsupportedOperationException**。
+
+​		这里会有个问题，如果在获取到迭代器的时候，突然有其他线程对**array**进行修改操作，迭代器这时还是使用原本过时的那个副本快照。对于这点，它的实时性不那么好，但是最终能达到数据一致性。
+
+```java
+static final class COWIterator<E> implements ListIterator<E> {
+    /** Snapshot of the array */
+    private final Object[] snapshot;
+    /** Index of element to be returned by subsequent call to next.  */
+    private int cursor;
+
+    private COWIterator(Object[] elements, int initialCursor) {
+        cursor = initialCursor;
+        snapshot = elements;
+    }
+
+    public boolean hasNext() {
+        return cursor < snapshot.length;
+    }
+
+    public boolean hasPrevious() {
+        return cursor > 0;
+    }
+
+    @SuppressWarnings("unchecked")
+    public E next() {
+        if (! hasNext())
+            throw new NoSuchElementException();
+        return (E) snapshot[cursor++];
+    }
+
+    @SuppressWarnings("unchecked")
+    public E previous() {
+        if (! hasPrevious())
+            throw new NoSuchElementException();
+        return (E) snapshot[--cursor];
+    }
+
+    public int nextIndex() {
+        return cursor;
+    }
+
+    public int previousIndex() {
+        return cursor-1;
+    }
+
+    /**
+     * Not supported. Always throws UnsupportedOperationException.
+     * @throws UnsupportedOperationException always; {@code remove}
+     *         is not supported by this iterator.
+     */
+    public void remove() {
+        throw new UnsupportedOperationException();
+    }
+
+    /**
+     * Not supported. Always throws UnsupportedOperationException.
+     * @throws UnsupportedOperationException always; {@code set}
+     *         is not supported by this iterator.
+     */
+    public void set(E e) {
+        throw new UnsupportedOperationException();
+    }
+
+    /**
+     * Not supported. Always throws UnsupportedOperationException.
+     * @throws UnsupportedOperationException always; {@code add}
+     *         is not supported by this iterator.
+     */
+    public void add(E e) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void forEachRemaining(Consumer<? super E> action) {
+        Objects.requireNonNull(action);
+        Object[] elements = snapshot;
+        final int size = elements.length;
+        for (int i = cursor; i < size; i++) {
+            @SuppressWarnings("unchecked") E e = (E) elements[i];
+            action.accept(e);
+        }
+        cursor = size;
+    }
+}
+```
+
+### 总结
+
+1. **内存消耗**。通过上面源码剖析，在每次add、remove、set的时候都需要开辟一块新的内存空间用来保存源数组的克隆副本，如果数据量很大几百上千万，这样是很耗费内存的。
+2. **数据一致性**。在通过迭代器遍历数据的时候，同时其他线程的介入修改了数据，并且未能实时同步到主内存，导致迭代器在遍历的时候还是读取过时的数据。
+
