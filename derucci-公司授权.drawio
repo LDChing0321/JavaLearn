@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-19T07:11:42.186Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="i28_ZRWS7GCVapfLTBUr" version="15.7.4" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-19T07:18:17.326Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="YX2ayUnWy-fZX_Z3D0xj" version="15.7.4" type="github">
   <diagram id="Jb6BtzAFee-MTP4sCL8y" name="第 1 页">
     <mxGraphModel dx="1038" dy="579" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -229,11 +229,11 @@
         <mxCell id="CeYGE881BVg8qvL_C_48-41" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.hybrid;fontSize=15;" vertex="1" parent="1">
           <mxGeometry x="607" y="1710" width="58" height="52" as="geometry" />
         </mxCell>
-        <mxCell id="CeYGE881BVg8qvL_C_48-42" value="&lt;font color=&quot;#080808&quot;&gt;先是公司绑定任意个角色，&amp;nbsp;账号再绑定到公司&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#82b366;fillColor=#d5e8d4;fontSize=15;spacingTop=2;" vertex="1" parent="1">
-          <mxGeometry x="259" y="1785" width="320" height="30" as="geometry" />
+        <mxCell id="CeYGE881BVg8qvL_C_48-42" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;color: rgb(8 , 8 , 8)&quot;&gt;1. 从前端采集公司绑定任意角色的关联数据存关联表（公司-角色关联表）。&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;color: rgb(8 , 8 , 8)&quot;&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;2. 采集 账号 绑定任意公司 存关联表（账号-公司关联表）。&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;注：如果公司有绑定角色的前提下，存 【账号 - 公司】&amp;nbsp;和 【账号&amp;amp;公司 -&amp;nbsp;角色】&amp;nbsp;两张关联表；否则只存第一张表。&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#82b366;fillColor=#d5e8d4;fontSize=15;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="34" y="1770" width="770" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="CeYGE881BVg8qvL_C_48-43" value="&lt;font color=&quot;#080808&quot;&gt;从前端采集账号绑定公司的关联数据存关联表（账号-公司关联表），&lt;br&gt;在这关联的基础上继续采集 账号&amp;amp;公司&amp;nbsp;绑定任意角色&amp;nbsp;存关联表（账号&amp;amp;公司 -&amp;nbsp;角色关联表）&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#82b366;fillColor=#d5e8d4;fontSize=15;spacingTop=0;spacingBottom=0;spacing=8;" vertex="1" parent="1">
-          <mxGeometry x="98" y="1595" width="630" height="60" as="geometry" />
+        <mxCell id="CeYGE881BVg8qvL_C_48-43" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;color: rgb(8 , 8 , 8)&quot;&gt;1. 从前端采集账号绑定公司的关联数据存关联表（账号-公司关联表）。&lt;/span&gt;&lt;/div&gt;&lt;font color=&quot;#080808&quot;&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;2. 在这关联的基础上继续采集 账号&amp;amp;公司&amp;nbsp;绑定任意角色&amp;nbsp;存关联表（账号&amp;amp;公司 -&amp;nbsp;角色关联表）。&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#82b366;fillColor=#d5e8d4;fontSize=15;spacingTop=0;spacingBottom=0;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="83" y="1595" width="660" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
