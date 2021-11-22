@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-22T03:47:58.782Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="qVUMGQLkWDB5T3QlRXXS" version="15.8.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-22T03:53:14.208Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="vOzo5CiCzQ5oOtIjmCz-" version="15.8.2" type="github">
   <diagram id="RpOcGAhP9OW58Pb7BM2l" name="第 1 页">
     <mxGraphModel dx="1038" dy="579" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -53,16 +53,25 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="3kDM5itjokiOEmdZeM92-12" value="权限管理审计" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="880" width="120" height="40" as="geometry" />
+          <mxGeometry x="80" y="680" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="3kDM5itjokiOEmdZeM92-13" value="账号-角色" style="ellipse;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="280" y="640" width="80" height="40" as="geometry" />
+        <mxCell id="3kDM5itjokiOEmdZeM92-62" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3kDM5itjokiOEmdZeM92-13" target="3kDM5itjokiOEmdZeM92-59">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="3kDM5itjokiOEmdZeM92-14" value="账号-资源" style="ellipse;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="280" y="880" width="80" height="40" as="geometry" />
+        <mxCell id="3kDM5itjokiOEmdZeM92-13" value="角色" style="ellipse;whiteSpace=wrap;html=1;rounded=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="270" y="560" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3kDM5itjokiOEmdZeM92-65" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3kDM5itjokiOEmdZeM92-14" target="3kDM5itjokiOEmdZeM92-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3kDM5itjokiOEmdZeM92-14" value="资源" style="ellipse;whiteSpace=wrap;html=1;rounded=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="270" y="680" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3kDM5itjokiOEmdZeM92-66" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="3kDM5itjokiOEmdZeM92-15" target="3kDM5itjokiOEmdZeM92-59">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="3kDM5itjokiOEmdZeM92-15" value="应用组" style="ellipse;whiteSpace=wrap;html=1;rounded=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="280" y="1080" width="80" height="40" as="geometry" />
+          <mxGeometry x="270" y="800" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="3kDM5itjokiOEmdZeM92-20" value="绑定" style="ellipse;whiteSpace=wrap;html=1;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="400" y="80" width="80" height="40" as="geometry" />
@@ -81,6 +90,24 @@
         </mxCell>
         <mxCell id="3kDM5itjokiOEmdZeM92-30" value="解绑" style="ellipse;whiteSpace=wrap;html=1;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="400" y="480" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3kDM5itjokiOEmdZeM92-60" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="430" y="620" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="3kDM5itjokiOEmdZeM92-59" value="" style="ellipse;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="3kDM5itjokiOEmdZeM92-60">
+          <mxGeometry width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="3kDM5itjokiOEmdZeM92-54" value="新增" style="ellipse;whiteSpace=wrap;html=1;rounded=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="3kDM5itjokiOEmdZeM92-60">
+          <mxGeometry x="30" y="30" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3kDM5itjokiOEmdZeM92-55" value="修改" style="ellipse;whiteSpace=wrap;html=1;rounded=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="3kDM5itjokiOEmdZeM92-60">
+          <mxGeometry x="130" y="30" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3kDM5itjokiOEmdZeM92-56" value="停启用" style="ellipse;whiteSpace=wrap;html=1;rounded=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="3kDM5itjokiOEmdZeM92-60">
+          <mxGeometry x="30" y="90" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3kDM5itjokiOEmdZeM92-57" value="删除" style="ellipse;whiteSpace=wrap;html=1;rounded=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="3kDM5itjokiOEmdZeM92-60">
+          <mxGeometry x="130" y="90" width="80" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
