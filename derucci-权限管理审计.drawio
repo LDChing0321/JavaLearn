@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-11-22T07:16:27.872Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="b9g5f6bI-wr1JwHbpJIv" version="15.8.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-22T07:19:53.727Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="JlPPI2ydxKBYC5mXcTyF" version="15.8.2" type="github">
   <diagram id="RpOcGAhP9OW58Pb7BM2l" name="第 1 页">
-    <mxGraphModel dx="1211" dy="579" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="835" dy="399" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -156,7 +156,7 @@
           <mxGeometry x="70" y="750" width="170" height="70" as="geometry" />
         </mxCell>
         <mxCell id="3kDM5itjokiOEmdZeM92-82" value="audit_account_permission_manage" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=1;shadow=0;glass=0;sketch=0;fontSize=15;strokeColor=default;" vertex="1" parent="1">
-          <mxGeometry x="310" y="760" width="370" height="760" as="geometry">
+          <mxGeometry x="310" y="760" width="370" height="700" as="geometry">
             <mxRectangle x="200" y="760" width="70" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -208,7 +208,7 @@
         <mxCell id="3kDM5itjokiOEmdZeM92-111" value="+ operator: varchar(100) #操作人&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;shadow=0;glass=0;sketch=0;fontSize=15;" vertex="1" parent="3kDM5itjokiOEmdZeM92-82">
           <mxGeometry y="460" width="370" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="3kDM5itjokiOEmdZeM92-112" value="+ remark: longtext #&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;shadow=0;glass=0;sketch=0;fontSize=15;" vertex="1" parent="3kDM5itjokiOEmdZeM92-82">
+        <mxCell id="3kDM5itjokiOEmdZeM92-112" value="+ remark: longtext #实际增减的权限&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;shadow=0;glass=0;sketch=0;fontSize=15;" vertex="1" parent="3kDM5itjokiOEmdZeM92-82">
           <mxGeometry y="490" width="370" height="30" as="geometry" />
         </mxCell>
         <mxCell id="3kDM5itjokiOEmdZeM92-113" value="+ uid: varchar(100) #登录账号&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;shadow=0;glass=0;sketch=0;fontSize=15;" vertex="1" parent="3kDM5itjokiOEmdZeM92-82">
@@ -228,12 +228,6 @@
         </mxCell>
         <mxCell id="3kDM5itjokiOEmdZeM92-119" value="+ app_name: varchar(100) #应用名称&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;shadow=0;glass=0;sketch=0;fontSize=15;" vertex="1" parent="3kDM5itjokiOEmdZeM92-82">
           <mxGeometry y="670" width="370" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="3kDM5itjokiOEmdZeM92-118" value="+ prev_permission: longtext #之前具备的权限&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;shadow=0;glass=0;sketch=0;fontSize=15;" vertex="1" parent="3kDM5itjokiOEmdZeM92-82">
-          <mxGeometry y="700" width="370" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="3kDM5itjokiOEmdZeM92-120" value="+ current_permission: longtext #当前具备的权限&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;shadow=0;glass=0;sketch=0;fontSize=15;" vertex="1" parent="3kDM5itjokiOEmdZeM92-82">
-          <mxGeometry y="730" width="370" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
