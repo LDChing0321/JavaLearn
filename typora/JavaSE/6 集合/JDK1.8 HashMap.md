@@ -1,16 +1,10 @@
 # JDK1.8 HashMap
 
+
+
 ## 介绍
 
-​		HashMap 1.8主要对1.7进行了优化调整，减少了Hash冲突，提高哈希表的存取效率。主要作了以下调整：			
-
-1. 数据结构：1.7是数组+链表，而1.8则是数组+链表+红黑树。
-2. 链表的插入法：1.7使用头插法，而1.8则是尾插法。
-3. 扩容顺序：1.7是先扩容后插入的，而1.8则是先插入后扩容
-
-
-
-​		
+​		相信看过HashMap1.7的朋友应该知道，1.7底层的设计是动态数组+链表的结构，而1.8基于它之上引入了红黑树的概念。为什么要引入红黑树？对比1.7引入红黑树有哪些好处？我们将带着这些问题从源码的层面去找出答案。			
 
 ## 类层级关系
 
@@ -20,6 +14,8 @@ public class HashMap<K,V> extends AbstractMap<K,V>
 ```
 
 ## 成员属性
+
+​		相比1.7多了**TREEIFY_THRESHOLD**、**UNTREEIFY_THRESHOLD**、**MIN_TREEIFY_CAPACITY**这几个属性，也是红黑树几个关键的属性。
 
 ```java
 // 默认初始容量 - 必须是 2 的幂。
@@ -91,48 +87,80 @@ static final int tableSizeFor(int cap) {
 }
 ```
 
-## 方法分析
+## 常用方法
 
-### 		put
+​		当我们put一个元素的时候，它会根据我们传入的key去做hash运算，hash运算步骤如下：
+
+1. 取key的hashCode值（根据key的数据类型调用对应的hashCode方法，此处以String类型为例）。
+2. 将hashCode值进行无符号右移16位。
+3. 将hashCode值与右移之后的结果进行异或运算得到hash值。
+
+​        右移16位的作用是为了减少碰撞，更好的避免hash冲突，作异或运算主要是能够保留hashcode的高16位与低16位各自的特征。那为什么需要将高16位也参与到运算中呢？我们可以看到HashMap源码是通过**(n-1)&hash** 去计算存储下标的，那如果**n**（数组大小）的值还不到16位呢？那是不是hash的高16位是没有参与运算的，所以让高16位参与运算主要是计算存储下标时能够更加均匀分布。
+
+![](../../../photo/JavaSE/集合/HashMap/计算下标值.png)
 
 ```java
 public V put(K key, V value) {
     return putVal(hash(key), key, value, false, true);
 }
 
+static final int hash(Object key) {
+    int h;
+    // h是key的hashcode值， 与它自身的hashcode无符号右移之后 做异或运算
+    return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
+}
+// 此为String类的hashCode方法
+public int hashCode() {
+    int h = hash;
+    if (h == 0 && value.length > 0) {
+        char val[] = value;
+        for (int i = 0; i < value.length; i++) {
+            h = 31 * h + val[i];
+        }
+        hash = h;
+    }
+    return h;
+} 
+```
+
+​		我们具体来看看put的步骤
+
+```java
 final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
                boolean evict) {
     Node<K,V>[] tab; Node<K,V> p; int n, i;
     // 如果tab为空，则初始化哈希表
     if ((tab = table) == null || (n = tab.length) == 0)
-        // 利用n记录哈希表的length
+        // 用n记录resize后哈希表的大小
         n = (tab = resize()).length;
     // 根据哈希表的长度-1 与 hash值 做 与运算
     // 例如哈希表长度为32，则计算 31 & hash
-    // 该索引位为空才可赋值
+    // 如果该索引位上为空，才可赋值（在该索引位上新建一个节点）
     if ((p = tab[i = (n - 1) & hash]) == null)
         tab[i] = newNode(hash, key, value, null);
     else {
-        // 该索引位已经存在值
+        // 如果该索引位上不为空，说明该位置上 已经存在一个节点或者一条链表
         Node<K,V> e; K k;
-        // ①该索引位上的hash值与新计算出来的hash值相等
-        // ②该索引位上的key与新的key相等
+        // ① 该索引位上的hash值与新计算出来的hash值相等
+        // ② 该索引位上的key与新的key相等
         // 满足①和②则进行覆盖
+        // 不管是一个节点或者一条链表都会覆盖
         if (p.hash == hash &&
             ((k = p.key) == key || (key != null && key.equals(k))))
             e = p;
+        // 如果索引位上的元素类型是TreeNode，即此时链表已经转换为红黑树了。
         else if (p instanceof TreeNode)
-            // 如果索引位上的元素类型是TreeNode，即此时链表已经转换为红黑树了。
             // 使用红黑树的方式插入元素
             e = ((TreeNode<K,V>)p).putTreeVal(this, tab, hash, key, value);
         else {
             // 开始遍历链表
-          	// 此时链表的长度是小于8的
+          	// 此时链表的长度是小于8的，还没有转化为红黑树
             for (int binCount = 0; ; ++binCount) {
                 // 如果e是空的话，说明链表的当前元素是最后一个元素
                 // 遍历到链表的最后都没有匹配到相同的key，则在链表的末尾新增一个元素
                 if ((e = p.next) == null) {
                     // 如果p.next为空，则根据key、value初始化一个新的元素赋值给p.next
+                    // 这里可以看出采用的是尾插法
                     p.next = newNode(hash, key, value, null);
                     // 链表增加了元素，需判断链表的长度是否达到了8
                     if (binCount >= TREEIFY_THRESHOLD - 1) // -1 for 1st
@@ -141,15 +169,16 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
                     // 跳出循环，此时的e为空
                     break;
                 }
-                // 链表中存在相同的key
+                // e不为空的情况
+                // 遍历过程中，发现链表中存在相同的key
                 if (e.hash == hash &&
-                    ((k = e.key) == key || (key != null && key.equals(k))))
+                    ((k = e.key) == key || (key != null && key.equals(k)))) // **
                     // 跳出循环，执行（existing mapping for key）
                     break;
                 p = e;
             }
         }
-        // 覆盖哈希表中已经存在的key
+        // 覆盖哈希表中已经存在的key，即上面标记为**处
         if (e != null) { // existing mapping for key
             V oldValue = e.value;
             if (!onlyIfAbsent || oldValue == null)
@@ -158,25 +187,52 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
             return oldValue;
         }
     }
+    // 记录操作次数
     ++modCount;
     // 新增元素之后如果超过扩容阈值，需要进行扩容。
     // 注意1.7是先扩容再插入元素，而1.8是先插入元素再扩容
     if (++size > threshold)
-        resize();
+        resize(); 
     afterNodeInsertion(evict);
     return null;
 }
 ```
 
+​		总结大概的流程：		
+
+1.  首先，判断哈希表是否需要初始化（表的初始化工作）
+
+2.  接着， 计算新节点的索引位记为new_index。 
+
+3.  如果new_index在当前哈希表上不存在一个节点或链表，则新建一个节点放到该索引位上；
+
+    	否则，遍历该位的链表，判断与第一个节点是否相等，相等则覆盖该位置的链表；
+
+   ​	 不相等则判断第一个节点是否是红黑树类型，是则以红黑树的方式插入节点；
+
+   ​	 不是红黑树则以普通链表的方式插入节点。
+
+   ​	 普通插入时，遍历链表并判断链表中有无相同的节点，相同则要覆盖。普通最主要的是要检查链表长度是否达到了红黑树的阈值8，达到了就要将链表转化为红黑树。
+
+​				
+
+​				
+
+​				
+
+
+
+
+
 经过上面put的源码解析，可以大概知道1.7和1.8的不同之处。
 
- 1）**1.8**的特性还是链表+红黑树，链表长度达到8的时候会将链表转化为红黑树。
+ 1）**1.8**的底层数据结构是链表+红黑树，链表长度达到8的时候会将链表转化为红黑树。
 
  2）**1.8**是先插入元素再扩容，**1.7**是先扩容再插入元素。
 
  3）**1.8**采用链表尾插法，**1.7**采用链表头插法。
 
- 4）hash运算不同。**1.7**使用了**9次**扰动处理=**4次**位运算+**5次**异或；**1.8**只用了**2次**扰动处理=1**次位运算**+**1次**异或。效率上来说应该是1.8占优势，从hash冲突的概率来说暂时不晓得。但是冲突的解决思路**1.7**采用**数组+链表**，**1.8**采用**数组+链表+红黑树**，时间复杂度从O（n）变成O（nlogN）从而提高了效率。总体1.8还是基于1.7做了相应的优化的。
+ 4）hash运算不同。**1.7**使用了**9次**扰动处理=**4次**位运算+**5次**异或；**1.8**只用了**2次**扰动处理=1**次位运算**+**1次**异或。效率上来说应该是1.8占优势，从hash冲突的概率来说暂时不晓得。但是冲突的解决思路**1.7**采用**数组+链表**，**1.8**采用**数组+链表+红黑树**，时间复杂度从O（n）变成O（nlogN）从而提高了效率。总体1.8还是基于1.7做了相应的优化的。·
 
 转化为红黑树主要是这个方法**treeifyBin**，它的实现逻辑是怎样的呢？
 
@@ -222,7 +278,7 @@ final void treeifyBin(Node<K,V>[] tab, int hash) {
 ```java
 final void treeify(Node<K,V>[] tab) {
     TreeNode<K,V> root = null;
-    // 此时的x是双向链表的头节点
+    // 此时的x是双向链表的头节点4
     for (TreeNode<K,V> x = this, next; x != null; x = next) {
         // x的next节点
         next = (TreeNode<K,V>)x.next;
@@ -715,6 +771,6 @@ static <K, V> HashMap.TreeNode<K, V> balanceDeletion(HashMap.TreeNode<K, V> root
                 }
             }
         }
-    }
-}
+    
 ```
+
