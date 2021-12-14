@@ -175,6 +175,7 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
                     ((k = e.key) == key || (key != null && key.equals(k)))) // **
                     // 跳出循环，执行（existing mapping for key）
                     break;
+                // 指向下一个节点
                 p = e;
             }
         }
@@ -206,33 +207,101 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
 
 3.  如果new_index在当前哈希表上不存在一个节点或链表，则新建一个节点放到该索引位上；
 
-    	否则，遍历该位的链表，判断与第一个节点是否相等，相等则覆盖该位置的链表；
-
-   ​	 不相等则判断第一个节点是否是红黑树类型，是则以红黑树的方式插入节点；
+    ​	 不相等则判断第一个节点是否是红黑树类型，是则以红黑树的方式插入节点；
 
    ​	 不是红黑树则以普通链表的方式插入节点。
 
-   ​	 普通插入时，遍历链表并判断链表中有无相同的节点，相同则要覆盖。普通最主要的是要检查链表长度是否达到了红黑树的阈值8，达到了就要将链表转化为红黑树。
-
-​				
-
-​				
-
-​				
+   ​	 普通插入时，遍历链表并判断链表中有无相同的节点，相同则要覆盖。最主要的是要检查链表长度是否达到了红黑树的阈值8，达到了就要将链表转化为红黑树。
 
 
 
+​		经过上面put的源码解析，可以知道1.7和1.8的不同之处。
 
-
-经过上面put的源码解析，可以大概知道1.7和1.8的不同之处。
-
- 1）**1.8**的底层数据结构是链表+红黑树，链表长度达到8的时候会将链表转化为红黑树。
+ 1）**1.8**的底层数据结构是数组+链表+红黑树，链表长度达到8的时候会将链表转化为红黑树；1.7是没有红黑树的。
 
  2）**1.8**是先插入元素再扩容，**1.7**是先扩容再插入元素。
 
  3）**1.8**采用链表尾插法，**1.7**采用链表头插法。
 
- 4）hash运算不同。**1.7**使用了**9次**扰动处理=**4次**位运算+**5次**异或；**1.8**只用了**2次**扰动处理=1**次位运算**+**1次**异或。效率上来说应该是1.8占优势，从hash冲突的概率来说暂时不晓得。但是冲突的解决思路**1.7**采用**数组+链表**，**1.8**采用**数组+链表+红黑树**，时间复杂度从O（n）变成O（nlogN）从而提高了效率。总体1.8还是基于1.7做了相应的优化的。·
+ 4）hash运算不同。**1.7**使用了4次**位运算+**5次**异或；**1.8**只用了**2次**扰动处理=1**次位运算**+**1次**异或。效率上来说应该是1.8占优势，从hash冲突的概率来说暂时不晓得。但是冲突的解决思路**1.7**采用**数组+链表**，**1.8**采用**数组+链表+红黑树**，时间复杂度从O（n）变成O（nlogN）从而提高了效率。总体1.8还是基于1.7做了相应的优化的。
+
+​		我们新增一个节点，计算出这个节点的索引位上已经有一个类型是红黑树的链表，这个时候就要根据红黑树的方式插入节点了，看看具体是怎么实现的。
+
+```java
+final TreeNode<K,V> putTreeVal(HashMap<K,V> map, Node<K,V>[] tab,
+                               int h, K k, V v) {
+    Class<?> kc = null;
+    boolean searched = false;
+    // 从红黑树的根节点开始遍历
+    TreeNode<K,V> root = (parent != null) ? root() : this;
+    for (TreeNode<K,V> p = root;;) {
+        int dir, ph; K pk;
+        // 此时树节点的hash 大于 新节点的hash
+        if ((ph = p.hash) > h)
+            // 此时，新节点插入的方向是左边
+            dir = -1;
+        // 此时树节点的hash 小于 新节点的hash
+        else if (ph < h)
+            // 此时，新节点插入的方向是右边
+            dir = 1;
+        // 新节点与此时树节点 的key相同，覆盖其值
+        else if ((pk = p.key) == k || (k != null && k.equals(pk)))
+            // 直接返回此时的树节点
+            return p;
+        // 走到这步，说明此时树节点和新节点的key 的内存地址以及两者的equals均不相等
+        else if ((kc == null &&
+                  (kc = comparableClassFor(k)) == null) ||
+                 (dir = compareComparables(kc, k, pk)) == 0) {
+            // 新节点没有实现Comparable接口 
+           	// 或者 
+            // 实现了Comparable接口 并与 新节点是同类（通过==比较后类相同）
+            
+          	// 这里主要是搜寻树结构中是否有equals方法比较后相同的节点
+		   // 找到之后返回出去
+            if (!searched) {
+                TreeNode<K,V> q, ch;
+                searched = true;
+                // 先从树的左侧开始搜寻，左侧如果找到立即返回，不再搜寻右侧树
+                if (((ch = p.left) != null &&
+                     (q = ch.find(h, k, kc)) != null) ||
+                    ((ch = p.right) != null &&
+                     (q = ch.find(h, k, kc)) != null))
+                    return q;
+            }
+            // 走到这里，说明上一步没有search到相同的节点。 
+            // 这个方法是最终确认要插入的节点是位于树的左侧还是右侧，
+            // 调用本地方法生成hashcode再比较。
+            dir = tieBreakOrder(k, pk);
+        }
+	    // 这一步， 插入的方向已经确定了。
+        TreeNode<K,V> xp = p;
+     	// 方向确定之后， 判断左子节点或右子节点是否为空， 不为空则需要进行下一次的遍历
+        // 为空，则进行插入的逻辑
+        if ((p = (dir <= 0) ? p.left : p.right) == null) {
+            // 当前树节点的next节点
+            Node<K,V> xpn = xp.next;
+            // 新建一个树节点，并设置新节点的 xpn节点（当前树节点的next节点）
+            TreeNode<K,V> x = map.newTreeNode(h, k, v, xpn);
+            if (dir <= 0)
+                // 置于左侧
+                xp.left = x;
+            else
+                // 置于右侧
+                xp.right = x;
+            // 当前树节点的next节点 重新指定为 此时的新节点
+            xp.next = x;
+            // 新节点的parent、prev均指向当前树节点（xp）
+            x.parent = x.prev = xp;
+            if (xpn != null)
+                 // 当前树节点的next节点的prev指向当前新节点
+                ((TreeNode<K,V>)xpn).prev = x;
+            // 维护红黑树平衡
+            moveRootToFront(tab, balanceInsertion(root, x));
+            return null;
+        }
+    }
+}
+```
 
 转化为红黑树主要是这个方法**treeifyBin**，它的实现逻辑是怎样的呢？
 
@@ -273,7 +342,7 @@ final void treeifyBin(Node<K,V>[] tab, int hash) {
 }
 ```
 
-以下是树化的过程
+​		以下是树化的过程
 
 ```java
 final void treeify(Node<K,V>[] tab) {
@@ -315,17 +384,17 @@ final void treeify(Node<K,V>[] tab) {
                 else if (ph < h)
                     // 否则，为右侧
                     dir = 1;
-                // 如果hash值相等
-                // 如果当前链表节点的key实现了comparable接口，并且当前树节点和链表节点是相同Class的实例，					那么通过comparable的方式再比较两者
-                // 这里是指hash相同
+               	// 走到这步，说明此时树节点和新节点的key 的内存地址以及两者的equals均不相等
                 else if ((kc == null &&
                           (kc = comparableClassFor(k)) == null) ||
                          (dir = compareComparables(kc, k, pk)) == 0)
-                    // 计算对应的位置
+                    // 这个方法是最终确认要插入的节点是位于树的左侧还是右侧，
+           		   	// 调用本地方法生成hashcode再比较。
                     dir = tieBreakOrder(k, pk);
 				
                 // 如果dir 小于等于0 ： 当前链表节点一定放置在当前树节点的左侧，但不一定是该树节点的左孩				子，也可能是左孩子的右孩子 或者 更深层次的节点。
                 // 如果dir 大于0 ： 当前链表节点一定放置在当前树节点的右侧，但不一定是该树节点的右孩子，也					可能是右孩子的左孩子 或者 更深层次的节点。
+                // 按上述方式逐层递归，直到找到要插入树节点的位置（即当前树节点的左或右子节点为空）
                 // 挂载之后，还需要重新把树进行平衡。平衡之后，就可以针对下一个链表节点进行处理了。
                 TreeNode<K,V> xp = p;
                 if ((p = (dir <= 0) ? p.left : p.right) == null) {
@@ -343,6 +412,7 @@ final void treeify(Node<K,V>[] tab) {
         }
     }
 	// 重新指定红黑树的root节点
+	// 用来将root节点放入到哈希槽中，保证其处于哈希桶的头部
     moveRootToFront(tab, root);
 }
 ```
