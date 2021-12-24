@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-24T08:30:24.953Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="QqEbnDgsS9kiwcv_BqfI" version="15.9.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-24T08:32:42.566Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="Wec4DzpRPRXBERqTgnie" version="15.9.6" type="github">
   <diagram id="UgWwUjzvCQ6DFLD37Q7z" name="第 1 页">
     <mxGraphModel dx="865" dy="483" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -83,8 +83,32 @@
         <mxCell id="teVdkq-L4--7aLtD-7wO-44" value="新建一个节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="602.5" y="668" width="107" height="58" as="geometry" />
         </mxCell>
+        <mxCell id="teVdkq-L4--7aLtD-7wO-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="teVdkq-L4--7aLtD-7wO-69" target="teVdkq-L4--7aLtD-7wO-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="teVdkq-L4--7aLtD-7wO-72" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="teVdkq-L4--7aLtD-7wO-71">
+          <mxGeometry x="0.1089" y="4" relative="1" as="geometry">
+            <mxPoint x="-6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="teVdkq-L4--7aLtD-7wO-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="teVdkq-L4--7aLtD-7wO-69">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="109.66669718424487" y="834.6666768391929" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="teVdkq-L4--7aLtD-7wO-74" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="teVdkq-L4--7aLtD-7wO-73">
+          <mxGeometry x="-0.0772" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="teVdkq-L4--7aLtD-7wO-69" value="判断新节点与&lt;br&gt;存在的节点（首节点）&lt;br&gt;的hash和key&lt;br&gt;是否同时相等？" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="154" y="668" width="184" height="113" as="geometry" />
+        </mxCell>
+        <mxCell id="teVdkq-L4--7aLtD-7wO-70" value="临时节点记录该&lt;br&gt;存在的节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="342" y="835" width="107" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="teVdkq-L4--7aLtD-7wO-76" value="判断存在的节点&lt;br&gt;是否是红黑树&lt;br&gt;类型" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="46" y="835" width="127" height="113" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
