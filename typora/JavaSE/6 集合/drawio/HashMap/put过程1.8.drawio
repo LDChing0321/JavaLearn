@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-24T08:34:46.532Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="vVPPQf3AyOEyDWxUK41m" version="15.9.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-24T08:35:57.746Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="7agcL0zm_FTUwSihxkr4" version="15.9.6" type="github">
   <diagram id="UgWwUjzvCQ6DFLD37Q7z" name="第 1 页">
     <mxGraphModel dx="1438" dy="579" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -129,7 +129,7 @@
         <mxCell id="teVdkq-L4--7aLtD-7wO-78" value="以红黑树的方式&lt;br&gt;插入新节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="196" y="1001" width="107" height="58" as="geometry" />
         </mxCell>
-        <mxCell id="teVdkq-L4--7aLtD-7wO-81" value="临时节点记录该&lt;br&gt;存在的节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="teVdkq-L4--7aLtD-7wO-81" value="遍历当前节点链表&lt;br&gt;以普通链表的方式&lt;br&gt;插入" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="-75" y="1001" width="107" height="58" as="geometry" />
         </mxCell>
       </root>
