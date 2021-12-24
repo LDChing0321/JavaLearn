@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-24T08:54:34.282Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="ZKvRt9GoPMQr-5upgBCl" version="15.9.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-24T08:55:09.569Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="HKZCN8QHw7FICtiVL6c8" version="15.9.6" type="github">
   <diagram id="UgWwUjzvCQ6DFLD37Q7z" name="第 1 页">
     <mxGraphModel dx="1438" dy="579" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -141,11 +141,11 @@
         <mxCell id="teVdkq-L4--7aLtD-7wO-84" value="1. 从单链表首节点的next节点&lt;br&gt;开始遍历&lt;br&gt;2.&amp;nbsp;在尾处插入新节点&lt;br&gt;3.&amp;nbsp;当链表长度达到8转红黑树，&lt;br&gt;跳出循环&lt;br&gt;4.&amp;nbsp;遍历过程key相同则覆盖，&lt;br&gt;跳出循环&amp;nbsp;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.loud_callout;strokeWidth=1;flipH=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="-306" y="818" width="238" height="183" as="geometry" />
         </mxCell>
-        <mxCell id="teVdkq-L4--7aLtD-7wO-85" value="重复的key，将覆盖前的&lt;br&gt;value返回出去" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="32" y="1154" width="163" height="110" as="geometry" />
+        <mxCell id="teVdkq-L4--7aLtD-7wO-85" value="判断链表中是否&lt;br&gt;有重复的key" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="32" y="1154" width="155" height="93" as="geometry" />
         </mxCell>
         <mxCell id="teVdkq-L4--7aLtD-7wO-88" value="对应左处上一步的第四点" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.loud_callout;strokeWidth=1;flipH=0;rotation=10;" vertex="1" parent="1">
-          <mxGeometry x="208" y="1119" width="194" height="98" as="geometry" />
+          <mxGeometry x="203" y="1118" width="194" height="98" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
