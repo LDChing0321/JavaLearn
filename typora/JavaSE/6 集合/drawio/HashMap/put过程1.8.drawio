@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-24T08:56:45.783Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="t3hq7p3DGGVoJGHnCiRP" version="15.9.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-24T08:59:49.638Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="ThZV6XJWtGrOkxfO2lcL" version="15.9.6" type="github">
   <diagram id="UgWwUjzvCQ6DFLD37Q7z" name="第 1 页">
     <mxGraphModel dx="1438" dy="579" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -151,7 +151,7 @@
         </mxCell>
         <mxCell id="teVdkq-L4--7aLtD-7wO-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="teVdkq-L4--7aLtD-7wO-85">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="110" y="1441" as="targetPoint" />
+            <mxPoint x="110" y="1397" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="teVdkq-L4--7aLtD-7wO-93" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="teVdkq-L4--7aLtD-7wO-92">
@@ -165,16 +165,44 @@
         <mxCell id="teVdkq-L4--7aLtD-7wO-88" value="对应左处上一步的第四点" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.loud_callout;strokeWidth=1;flipH=0;rotation=10;" vertex="1" parent="1">
           <mxGeometry x="203" y="1118" width="194" height="98" as="geometry" />
         </mxCell>
-        <mxCell id="teVdkq-L4--7aLtD-7wO-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#000000;" edge="1" parent="1" source="teVdkq-L4--7aLtD-7wO-89">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="109" y="1401" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="250" y="1401" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="teVdkq-L4--7aLtD-7wO-89" value="将覆盖前的value&lt;br&gt;返回出去" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="196" y="1301" width="107" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="teVdkq-L4--7aLtD-7wO-98" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="teVdkq-L4--7aLtD-7wO-96" target="teVdkq-L4--7aLtD-7wO-97">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="teVdkq-L4--7aLtD-7wO-96" value="更新modCount值" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="56" y="1398" width="107" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="teVdkq-L4--7aLtD-7wO-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="teVdkq-L4--7aLtD-7wO-97" target="teVdkq-L4--7aLtD-7wO-99">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="teVdkq-L4--7aLtD-7wO-101" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="teVdkq-L4--7aLtD-7wO-100">
+          <mxGeometry x="0.1747" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="teVdkq-L4--7aLtD-7wO-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="teVdkq-L4--7aLtD-7wO-97">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110" y="1751.800048828125" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="teVdkq-L4--7aLtD-7wO-104" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="teVdkq-L4--7aLtD-7wO-102">
+          <mxGeometry x="0.3591" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="teVdkq-L4--7aLtD-7wO-97" value="判断是否需要&lt;br&gt;扩容" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="32" y="1522" width="155" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="teVdkq-L4--7aLtD-7wO-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="teVdkq-L4--7aLtD-7wO-99" target="teVdkq-L4--7aLtD-7wO-103">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="teVdkq-L4--7aLtD-7wO-99" value="扩容逻辑" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="203" y="1658" width="107" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="teVdkq-L4--7aLtD-7wO-103" value="结束" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#e51400;strokeColor=#B20000;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="56" y="1753" width="107" height="58" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
