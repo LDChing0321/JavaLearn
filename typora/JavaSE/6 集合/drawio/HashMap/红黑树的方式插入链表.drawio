@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-27T09:47:43.115Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="9AnTvrSv8F1tGbZzjInN" version="16.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-27T09:48:04.129Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="jtaPHqOarPg0iZiXGoB5" version="16.0.3" type="github">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="第 1 页">
     <mxGraphModel dx="1038" dy="579" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -67,7 +67,7 @@
           <mxGeometry x="688" y="457.5" width="156" height="69" as="geometry" />
         </mxCell>
         <mxCell id="jCqdZaaTeLMqU4wdfYjT-67" value="此时树节点和新节点&lt;br&gt;的key 的内存地址以及&lt;br&gt;两者的equals均不相等？" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="347.31" y="929" width="185.38" height="127" as="geometry" />
+          <mxGeometry x="347.32" y="902" width="185.38" height="127" as="geometry" />
         </mxCell>
         <mxCell id="jCqdZaaTeLMqU4wdfYjT-72" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
           <mxGeometry x="440.01" y="647" as="geometry" />
@@ -80,11 +80,17 @@
             <mxPoint x="-33" y="-1" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="jCqdZaaTeLMqU4wdfYjT-78" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jCqdZaaTeLMqU4wdfYjT-73" target="jCqdZaaTeLMqU4wdfYjT-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="jCqdZaaTeLMqU4wdfYjT-73" value="当前节点和新节点&lt;br&gt;的key 以及equals&lt;br&gt;均相等？" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="347.32" y="684" width="185.38" height="127" as="geometry" />
         </mxCell>
         <mxCell id="jCqdZaaTeLMqU4wdfYjT-75" value="直接返回&lt;br&gt;当前的树节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="628" y="718.5" width="107" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="jCqdZaaTeLMqU4wdfYjT-79" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="440" y="851" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
