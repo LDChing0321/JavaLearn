@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-27T09:48:04.129Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="jtaPHqOarPg0iZiXGoB5" version="16.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-27T12:13:05.140Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="uNDERkankTSyTPbXeQan" version="16.0.3" type="github">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="第 1 页">
     <mxGraphModel dx="1038" dy="579" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -66,6 +66,9 @@
         <mxCell id="jCqdZaaTeLMqU4wdfYjT-64" value="1指红黑树的右侧" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.loud_callout;strokeWidth=1;flipH=0;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="688" y="457.5" width="156" height="69" as="geometry" />
         </mxCell>
+        <mxCell id="jCqdZaaTeLMqU4wdfYjT-81" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jCqdZaaTeLMqU4wdfYjT-67" target="jCqdZaaTeLMqU4wdfYjT-80">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="jCqdZaaTeLMqU4wdfYjT-67" value="此时树节点和新节点&lt;br&gt;的key 的内存地址以及&lt;br&gt;两者的equals均不相等？" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="347.32" y="902" width="185.38" height="127" as="geometry" />
         </mxCell>
@@ -91,6 +94,25 @@
         </mxCell>
         <mxCell id="jCqdZaaTeLMqU4wdfYjT-79" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
           <mxGeometry x="440" y="851" as="geometry" />
+        </mxCell>
+        <mxCell id="jCqdZaaTeLMqU4wdfYjT-80" value="" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="642" y="936.5" width="107" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="jCqdZaaTeLMqU4wdfYjT-82" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="580.9999999999998" y="824" as="geometry">
+            <mxPoint x="1" y="140" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jCqdZaaTeLMqU4wdfYjT-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.04;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="jCqdZaaTeLMqU4wdfYjT-83">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="582.7999877929688" y="957.4000244140625" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="583" y="885" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jCqdZaaTeLMqU4wdfYjT-83" value="1指红黑树的右侧" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.loud_callout;strokeWidth=1;flipH=0;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="649" y="803" width="206" height="82" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
