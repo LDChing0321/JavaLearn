@@ -105,13 +105,13 @@ static final int tableSizeFor(int cap) {
 
 ## 常用方法
 
-​		当我们put一个元素的时候，它会根据我们传入的key去做hash运算，hash运算步骤如下：
+​		当我们进行put操作的时候，它会根据传入的key去做hash运算，hash运算步骤如下：
 
-1. 取key的hashCode值（根据key的数据类型调用对应的hashCode方法，此处以String类型为例）。
+1. 取key的hashCode值（根据key的数据类型调用对应的hashCode方法，此处以String类型为例），**1.7版本的hash算法比1.8的稍微复杂点，而1.8之所以逻辑简单是因为作者已经引入了红黑树去解决效率问题了，考虑到两者效率平衡的问题，所以也就没必要去增加hash逻辑的复杂度**。
 2. 将hashCode值进行无符号右移16位。
-3. 将hashCode值与右移之后的结果进行异或运算得到hash值。
+3. 将原hashCode值与右移之后的结果进行异或运算得到hash值。
 
-​        右移16位的作用是为了减少碰撞，更好的避免hash冲突，作异或运算主要是能够保留hashcode的高16位与低16位各自的特征。那为什么需要将高16位也参与到运算中呢？我们可以看到HashMap源码是通过**(n-1)&hash** 去计算存储下标的，那如果**n**（数组大小）的值还不到16位呢？那是不是hash的高16位是没有参与运算的，所以让高16位参与运算主要是计算存储下标时能够更加均匀分布。
+​        右移16位的作用是为了减少碰撞，更好的避免hash冲突，其主要原因是能够保留hashcode的高16位与低16位各自的特征。那为什么需要将高16位也参与到运算中呢？我们可以看到HashMap源码是通过**(n-1)&hash** 去计算存储下标的，那如果**n**（数组大小）的值还不到16位呢？那是不是hash的高16位是没有参与运算的，所以让高16位参与运算主要是计算存储下标时能够更加均匀分布。
 
 ![](../../../photo/JavaSE/集合/HashMap/计算下标值.png)
 
@@ -156,6 +156,7 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
         tab[i] = newNode(hash, key, value, null);
     else {
         // 如果该索引位上不为空，说明该位置上 已经存在一个节点或者一条链表
+        // 假如表中存在相同的key，则用e存储下来
         Node<K,V> e; K k;
         // ① 该索引位上的hash值与新计算出来的hash值相等
         // ② 该索引位上的key与新的key相等
@@ -186,12 +187,12 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
                     break;
                 }
                 // e不为空的情况
-                // 遍历过程中，发现链表中存在相同的key
+                // 即遍历过程中，发现链表中存在相同的key
                 if (e.hash == hash &&
                     ((k = e.key) == key || (key != null && key.equals(k)))) // **
                     // 跳出循环，执行（existing mapping for key）
                     break;
-                // 指向下一个节点
+                // 指向下一个节点，继续遍历
                 p = e;
             }
         }
@@ -229,30 +230,30 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
 
  3）**1.8**采用链表尾插法，**1.7**采用链表头插法。
 
- 4）hash运算不同。**1.7**使用了4次**位运算+**5次**异或；**1.8**只用了**2次**扰动处理=1**次位运算**+**1次**异或。效率上来说应该是1.8占优势，从hash冲突的概率来说暂时不晓得。但是冲突的解决思路**1.7**采用**数组+链表**，**1.8**采用**数组+链表+红黑树**，时间复杂度从O（n）变成O（nlogN）从而提高了效率。
+ 4）hash运算不同。1.7使用了4次位运算和5次异或；1.8只用了2次扰动处理：1次位运算+1次异或。可以看出1.7更注重在hash算法层面去分配索引位，1.8则是增加红黑树结构去解决冲突问题。时间复杂度从O（n）变成O（nlogN）从而提高了效率。
 
-​		当我们新增一个节点，计算出这个节点的索引位上已经有一个类型是红黑树的链表，这个时候就要根据红黑树的方式插入节点了，看看具体是怎么实现的。
+​		当我们新增一个节点，计算出这个节点的索引位上已经有一个类型是红黑树的链表，这时候就要根据红黑树的方式插入节点了，看看具体是怎么实现的。
 
 ```java
 final TreeNode<K,V> putTreeVal(HashMap<K,V> map, Node<K,V>[] tab,
                                int h, K k, V v) {
     Class<?> kc = null;
     boolean searched = false;
-    // 从红黑树的根节点开始遍历
+    // 从当前索引位的红黑树的根节点开始遍历
     TreeNode<K,V> root = (parent != null) ? root() : this;
     for (TreeNode<K,V> p = root;;) {
         int dir, ph; K pk;
-        // 此时树节点的hash 大于 新节点的hash
+        // 当前这个树节点的hash 大于 新节点的hash
         if ((ph = p.hash) > h)
-            // 此时，新节点插入的方向是左边
+            // 此时，新节点应该插入的方向是左边
             dir = -1;
-        // 此时树节点的hash 小于 新节点的hash
+        // 当前这个树节点的hash 小于 新节点的hash
         else if (ph < h)
             // 此时，新节点插入的方向是右边
             dir = 1;
         // 新节点与此时树节点 的key相同，覆盖其值
         else if ((pk = p.key) == k || (k != null && k.equals(pk)))
-            // 直接返回此时的树节点
+            // 直接返回当前的这个树节点
             return p;
         else if ((kc == null &&
                   (kc = comparableClassFor(k)) == null) ||
@@ -266,7 +267,7 @@ final TreeNode<K,V> putTreeVal(HashMap<K,V> map, Node<K,V>[] tab,
             if (!searched) {
                 TreeNode<K,V> q, ch;
                 searched = true;
-                // 先从树的左侧开始搜寻，左侧如果找到立即返回，不再搜寻右侧树
+                // 从树的根节点沿着左侧开始搜寻，左侧如果找到立即返回，不再搜寻右侧树
                 if (((ch = p.left) != null &&
                      (q = ch.find(h, k, kc)) != null) ||
                     ((ch = p.right) != null &&
@@ -275,17 +276,17 @@ final TreeNode<K,V> putTreeVal(HashMap<K,V> map, Node<K,V>[] tab,
             }
             // 走到这里，说明上一步没有search到相同的节点。 
             // 这个方法是最终确认要插入的节点是位于树的左侧还是右侧，
-            // 调用本地方法生成hashcode再比较。
+            // 调用JNI接口生成hashcode再比较。
             dir = tieBreakOrder(k, pk);
         }
-	    // 这一步， 插入的方向已经确定了。
+	    // 走到这一步， 插入的方向已经确定了。
         TreeNode<K,V> xp = p;
      	// 方向确定之后， 判断左子节点或右子节点是否为空， 不为空则需要进行下一次的遍历
         // 为空，则进行插入的逻辑
         if ((p = (dir <= 0) ? p.left : p.right) == null) {
             // 当前树节点的next节点
             Node<K,V> xpn = xp.next;
-            // 新建一个树节点，并设置新节点的 xpn节点（当前树节点的next节点）
+            // 新建一个树节点，并设置新节点的next节点为 xpn节点
             TreeNode<K,V> x = map.newTreeNode(h, k, v, xpn);
             if (dir <= 0)
                 // 置于左侧
