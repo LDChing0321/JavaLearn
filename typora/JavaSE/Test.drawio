@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-28T14:58:34.093Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="8QcY78lmHbMFt9djdbKE" version="17.4.6" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-04-28T14:59:33.394Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="rimRlZooTxR5sZqmsh1X" version="17.4.6" type="github" pages="2">
   <diagram id="LdE40355D-7quFn5KWwU" name="第 1 页">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -278,17 +278,16 @@
         <mxCell id="zK0JB5UmWUD31sr2L6r0-15" value="-1指红黑树的左侧" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.loud_callout;strokeWidth=1;flipH=0;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="910" y="60" width="156" height="69" as="geometry" />
         </mxCell>
-        <mxCell id="zK0JB5UmWUD31sr2L6r0-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="zK0JB5UmWUD31sr2L6r0-19" edge="1">
+        <mxCell id="zK0JB5UmWUD31sr2L6r0-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
+            <mxPoint x="532.6999999999998" y="965.5" as="sourcePoint" />
             <mxPoint x="642" y="965.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="zK0JB5UmWUD31sr2L6r0-19" value="此时树节点和新节点&lt;br&gt;的key 的内存地址以及&lt;br&gt;两者的equals均不相等？" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="347.32" y="902" width="185.38" height="127" as="geometry" />
-        </mxCell>
-        <mxCell id="zK0JB5UmWUD31sr2L6r0-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" target="zK0JB5UmWUD31sr2L6r0-19" edge="1">
+        <mxCell id="zK0JB5UmWUD31sr2L6r0-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="440.01" y="811" as="sourcePoint" />
+            <mxPoint x="440.01" y="902" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="zK0JB5UmWUD31sr2L6r0-26" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="1" vertex="1" connectable="0">
@@ -322,6 +321,9 @@
         </mxCell>
         <mxCell id="FbdlxM0_w59YbgBz8KEU-11" value="return p" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="600" y="733.75" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="FbdlxM0_w59YbgBz8KEU-14" value="判断pk==k&lt;br&gt;或者k.equals(pk)" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="368.63" y="904" width="142.75" height="118" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
