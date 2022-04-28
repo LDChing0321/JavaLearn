@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-28T14:57:02.203Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="_GmQrD9wZIqywADMvA0P" version="17.4.6" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-04-28T14:57:45.998Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="q4uQJ1ZUWRLphX33kkCV" version="17.4.6" type="github" pages="2">
   <diagram id="LdE40355D-7quFn5KWwU" name="第 1 页">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -221,7 +221,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="_XUWw9iirg62B8aHpQUU" name="第 2 页">
-    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -297,8 +297,8 @@
         <mxCell id="zK0JB5UmWUD31sr2L6r0-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#E6FFCC;" parent="1" source="zK0JB5UmWUD31sr2L6r0-33" target="zK0JB5UmWUD31sr2L6r0-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="zK0JB5UmWUD31sr2L6r0-33" value="&lt;b style=&quot;line-height: 2&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;此处定义几个关键变量：&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;dir：记录新节点该存到树的哪个方向，-1左边1右边&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;ph：遍历树的时候，记录树的当前节点的hash值&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;pk：遍历树的时候，记录树的当前节点的key值&lt;br&gt;&amp;nbsp;h：新节点的hash值&lt;br&gt;&amp;nbsp;k：新节点的key值&lt;br&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;shadow=1;fontColor=#333333;align=left;spacingTop=0;spacingRight=3;" parent="1" vertex="1">
-          <mxGeometry x="560" y="5" width="290" height="150" as="geometry" />
+        <mxCell id="zK0JB5UmWUD31sr2L6r0-33" value="&lt;b style=&quot;line-height: 2&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;此处定义几个关键变量：&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;dir：记录新节点该存到树的哪个方向，-1左边1右边&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt; p：遍历树的时候，记录树的当前节点&lt;br/&gt; &lt;/span&gt;ph：遍历树的时候，记录树的当前节点的hash值&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;pk：遍历树的时候，记录树的当前节点的key值&lt;br&gt;&amp;nbsp;h：新节点的hash值&lt;br&gt;&amp;nbsp;k：新节点的key值&lt;br&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;shadow=1;fontColor=#333333;align=left;spacingTop=0;spacingRight=3;" parent="1" vertex="1">
+          <mxGeometry x="560" y="-7.5" width="290" height="175" as="geometry" />
         </mxCell>
         <mxCell id="FbdlxM0_w59YbgBz8KEU-1" value="将-1赋值给&lt;br&gt;临时变量dir" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="1110" y="60" width="107" height="58" as="geometry" />
