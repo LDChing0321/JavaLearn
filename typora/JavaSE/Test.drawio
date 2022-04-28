@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-28T15:14:28.775Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="eWEdNNC1ByCvpCuT2jab" version="17.4.6" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-04-28T15:29:28.737Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="QgR6omZYIDU7lzsUTW2o" version="17.4.6" type="github" pages="2">
   <diagram id="LdE40355D-7quFn5KWwU" name="第 1 页">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -317,8 +317,11 @@
         <mxCell id="FbdlxM0_w59YbgBz8KEU-11" value="找到相同的节点，&lt;br&gt;直接返回p" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="580" y="633.75" width="110" height="50.5" as="geometry" />
         </mxCell>
-        <mxCell id="FbdlxM0_w59YbgBz8KEU-18" value="判断当前节点与&lt;br&gt;新节点是同类" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="368.63" y="760" width="142.75" height="118" as="geometry" />
+        <mxCell id="FbdlxM0_w59YbgBz8KEU-18" value="（判断新节点没有&lt;br&gt;实现Comparable接口&lt;br&gt;）&lt;br&gt;或者&lt;br&gt;（k和pk的compareTo&lt;br&gt;等于0&lt;br&gt;）" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="327.15999999999997" y="760" width="225.68" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="FbdlxM0_w59YbgBz8KEU-19" value="" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.loud_callout;strokeWidth=1;flipH=0;shadow=1;direction=north;" vertex="1" parent="1">
+          <mxGeometry x="120" y="730" width="220" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
