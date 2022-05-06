@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-06T15:20:51.124Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36" etag="eRAs3MlawtP1vO7hqmQC" version="18.0.0" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-06T15:24:45.156Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36" etag="Rh0U985xAcb6XfzSUNWE" version="18.0.0" type="github" pages="2">
   <diagram id="LdE40355D-7quFn5KWwU" name="第 1 页">
     <mxGraphModel dx="1038" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -343,6 +343,14 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="aFWPYGM-jgjA2MqFWnX_-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aFWPYGM-jgjA2MqFWnX_-5" target="aFWPYGM-jgjA2MqFWnX_-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aFWPYGM-jgjA2MqFWnX_-16" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFWPYGM-jgjA2MqFWnX_-15">
+          <mxGeometry x="-0.3194" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="aFWPYGM-jgjA2MqFWnX_-5" value="使用find函数在&lt;br&gt;树上查找&lt;br&gt;是否有key与k相等&lt;br&gt;的节点" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="620" y="791" width="142.75" height="118" as="geometry" />
         </mxCell>
@@ -354,6 +362,12 @@
         </mxCell>
         <mxCell id="aFWPYGM-jgjA2MqFWnX_-12" value="返回之后，&lt;br&gt;用新节点的值&lt;br&gt;覆盖旧节点的值" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.loud_callout;strokeWidth=1;flipH=0;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="690" y="560" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aFWPYGM-jgjA2MqFWnX_-14" value="使用tieBreakOrder函数返回-1或1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="636.38" y="960" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="aFWPYGM-jgjA2MqFWnX_-17" value="这里最终能确定&lt;br&gt;插入的方向是在树的&lt;br&gt;左侧还是右侧" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.loud_callout;strokeWidth=1;flipH=0;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="746.38" y="880" width="183.62" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
