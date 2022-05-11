@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-05-06T15:47:19.419Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36" etag="eu9mXl13JPAYceUXlSYe" version="18.0.0" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-11T13:11:04.689Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36" etag="HX_6UZ7qYNs-CsC3Y-Js" version="18.0.1" type="github" pages="2">
   <diagram id="LdE40355D-7quFn5KWwU" name="第 1 页">
-    <mxGraphModel dx="1038" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -221,7 +221,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="_XUWw9iirg62B8aHpQUU" name="第 2 页">
-    <mxGraphModel dx="716" dy="777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1185" dy="1035" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -314,12 +314,12 @@
         <mxCell id="FbdlxM0_w59YbgBz8KEU-11" value="找到相同的节点，&lt;br&gt;直接返回该节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="580" y="633.75" width="110" height="50.5" as="geometry" />
         </mxCell>
-        <mxCell id="aFWPYGM-jgjA2MqFWnX_-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FbdlxM0_w59YbgBz8KEU-18">
+        <mxCell id="aFWPYGM-jgjA2MqFWnX_-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="FbdlxM0_w59YbgBz8KEU-18" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="620" y="850.0344827586207" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFWPYGM-jgjA2MqFWnX_-3" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFWPYGM-jgjA2MqFWnX_-2">
+        <mxCell id="aFWPYGM-jgjA2MqFWnX_-3" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="aFWPYGM-jgjA2MqFWnX_-2" vertex="1" connectable="0">
           <mxGeometry x="-0.3103" y="-1" relative="1" as="geometry">
             <mxPoint y="-1" as="offset" />
           </mxGeometry>
@@ -327,7 +327,7 @@
         <mxCell id="FbdlxM0_w59YbgBz8KEU-18" value="（判断新节点没有&lt;br&gt;实现Comparable接口&lt;br&gt;）&lt;br&gt;或者&lt;br&gt;（k和pk的compareTo&lt;br&gt;等于0&lt;br&gt;）" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="327.15999999999997" y="760" width="225.68" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="aFWPYGM-jgjA2MqFWnX_-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aFWPYGM-jgjA2MqFWnX_-5" target="aFWPYGM-jgjA2MqFWnX_-8">
+        <mxCell id="aFWPYGM-jgjA2MqFWnX_-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="aFWPYGM-jgjA2MqFWnX_-5" target="aFWPYGM-jgjA2MqFWnX_-8" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="790" y="850" />
@@ -335,38 +335,38 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFWPYGM-jgjA2MqFWnX_-10" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFWPYGM-jgjA2MqFWnX_-9">
+        <mxCell id="aFWPYGM-jgjA2MqFWnX_-10" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="aFWPYGM-jgjA2MqFWnX_-9" vertex="1" connectable="0">
           <mxGeometry x="-0.2891" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFWPYGM-jgjA2MqFWnX_-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aFWPYGM-jgjA2MqFWnX_-5" target="aFWPYGM-jgjA2MqFWnX_-14">
+        <mxCell id="aFWPYGM-jgjA2MqFWnX_-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="aFWPYGM-jgjA2MqFWnX_-5" target="aFWPYGM-jgjA2MqFWnX_-14" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="aFWPYGM-jgjA2MqFWnX_-16" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFWPYGM-jgjA2MqFWnX_-15">
+        <mxCell id="aFWPYGM-jgjA2MqFWnX_-16" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="aFWPYGM-jgjA2MqFWnX_-15" vertex="1" connectable="0">
           <mxGeometry x="-0.3194" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFWPYGM-jgjA2MqFWnX_-5" value="使用find函数在&lt;br&gt;树上查找&lt;br&gt;是否有key与k相等&lt;br&gt;的节点" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
+        <mxCell id="aFWPYGM-jgjA2MqFWnX_-5" value="调用find函数在&lt;br&gt;树上查找&lt;br&gt;是否有key与k相等&lt;br&gt;的节点" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="620" y="791" width="142.75" height="118" as="geometry" />
         </mxCell>
-        <mxCell id="aFWPYGM-jgjA2MqFWnX_-8" value="在树上找到相同的节点，直接返回该节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
+        <mxCell id="aFWPYGM-jgjA2MqFWnX_-8" value="在树上找到相同的节点，直接返回该节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="840" y="824.75" width="110" height="50.5" as="geometry" />
         </mxCell>
-        <mxCell id="aFWPYGM-jgjA2MqFWnX_-14" value="使用tieBreakOrder函数返回-1或1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+        <mxCell id="aFWPYGM-jgjA2MqFWnX_-14" value="调用tieBreakOrder函数返回-1或1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="636.38" y="960" width="110" height="50.5" as="geometry" />
         </mxCell>
-        <mxCell id="aFWPYGM-jgjA2MqFWnX_-19" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;这里最终能确定&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;插入的方向是在树的&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;左侧还是右侧&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;" vertex="1" parent="1">
+        <mxCell id="aFWPYGM-jgjA2MqFWnX_-19" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;这里最终能确定&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;插入的方向是在树的&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;左侧还是右侧&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="505" y="900" width="130" height="81" as="geometry" />
         </mxCell>
-        <mxCell id="aFWPYGM-jgjA2MqFWnX_-20" value="&lt;span style=&quot;&quot;&gt;返回之后，&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;用新节点的值&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;覆盖旧节点的值&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.08;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.25;rounded=1;" vertex="1" parent="1">
+        <mxCell id="aFWPYGM-jgjA2MqFWnX_-20" value="&lt;span style=&quot;&quot;&gt;返回之后，&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;用新节点的值&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;覆盖旧节点的值&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.08;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.25;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="670" y="550" width="130" height="83.75" as="geometry" />
         </mxCell>
-        <mxCell id="aFWPYGM-jgjA2MqFWnX_-21" value="&lt;span style=&quot;&quot;&gt;返回之后，&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;用新节点的值&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;覆盖旧节点的值&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=35;position=0.17;position2=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;" vertex="1" parent="1">
+        <mxCell id="aFWPYGM-jgjA2MqFWnX_-21" value="&lt;span style=&quot;&quot;&gt;返回之后，&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;用新节点的值&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;覆盖旧节点的值&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=35;position=0.17;position2=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="950" y="745" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="aFWPYGM-jgjA2MqFWnX_-22" value="这里可以这样理解：&lt;br&gt;1. 通过前面的判断都为false，既明确不了插入的方向，也没有找到所谓相同的节点。需要通过特殊的手段去判断是否有相同的节点以及最后插入的方向。&lt;br&gt;2.&amp;nbsp;没有实现Comparable接口，说明判断不了大小，所以需要使用特殊手段。&lt;br&gt;3.&amp;nbsp;实现了Comparable接口，并且判断相等&lt;br&gt;" style="shape=callout;whiteSpace=wrap;perimeter=calloutPerimeter;rounded=1;position2=0.92;base=60;fontSize=8;align=left;html=1;" vertex="1" parent="1">
+        <mxCell id="aFWPYGM-jgjA2MqFWnX_-22" value="这里可以这样理解：&lt;br&gt;1. 通过前面的判断都为false，既明确不了插入的方向，也没有找到所谓相同的节点。需要通过特殊的手段去判断是否有相同的节点以及最后插入的方向。&lt;br&gt;2.&amp;nbsp;没有实现Comparable接口，说明判断不了大小，所以需要使用特殊手段。&lt;br&gt;3.&amp;nbsp;实现了Comparable接口，并且判断相等&lt;br&gt;" style="shape=callout;whiteSpace=wrap;perimeter=calloutPerimeter;rounded=1;position2=0.92;base=60;fontSize=8;align=left;html=1;" parent="1" vertex="1">
           <mxGeometry x="137.26" y="690" width="231.37" height="140" as="geometry" />
         </mxCell>
       </root>
