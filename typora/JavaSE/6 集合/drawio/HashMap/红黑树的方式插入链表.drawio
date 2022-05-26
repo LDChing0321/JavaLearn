@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-26T05:00:38.783Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="FCWyl-5zFDs9FnjuIrPK" version="18.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-26T05:02:15.082Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="9ApSQeQ_HS_d-YdqtagF" version="18.0.3" type="github">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="第 1 页">
     <mxGraphModel dx="1093" dy="976" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -162,8 +162,25 @@
         <mxCell id="ToSzjQ9twE04Xiy9Cd_i-40" value="先从左子树开始查找&lt;br&gt;左子树查不到再从右子树查找" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=35;position=0.17;position2=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="690" y="710" width="160" height="80" as="geometry" />
         </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-41" target="ToSzjQ9twE04Xiy9Cd_i-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="1280" />
+              <mxPoint x="40" y="1280" />
+              <mxPoint x="40" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-48" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ToSzjQ9twE04Xiy9Cd_i-47">
+          <mxGeometry x="-0.8898" y="-4" relative="1" as="geometry">
+            <mxPoint x="-60" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="ToSzjQ9twE04Xiy9Cd_i-41" value="根据dir判断子节点&lt;br&gt;是否是叶子节点" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="365" y="1050" width="150.01" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-49" value="&lt;font color=&quot;#000000&quot;&gt;继续遍历下一个节点&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="1190" width="130" height="81" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
