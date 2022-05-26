@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-26T05:08:10.248Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="4PFTGBuVLAi-6_oGRdc_" version="18.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-26T05:08:44.764Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="orbVQJBFGo4JkwJdHAtE" version="18.0.3" type="github">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="第 1 页">
     <mxGraphModel dx="1093" dy="976" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -203,8 +203,14 @@
         <mxCell id="ToSzjQ9twE04Xiy9Cd_i-56" value="将该节点置于&lt;br&gt;树左侧or右侧" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="640" y="1350" width="110" height="50.5" as="geometry" />
         </mxCell>
-        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-58" value="将该节点置于&lt;br&gt;树左侧or右侧" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-61" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;" edge="1" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-58" target="ToSzjQ9twE04Xiy9Cd_i-60">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-58" value="将新节点置于&lt;br&gt;树左侧or右侧" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="640" y="1440" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-60" value="将新节点置于&lt;br&gt;树左侧or右侧" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="1540" width="110" height="50.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
