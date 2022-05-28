@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-28T09:07:39.789Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="oQM0w9l2-LEid15tfCmS" version="18.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-28T09:08:41.304Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="s4G5krAn3zCwUoE0xXca" version="18.1.2" type="github" pages="2">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="第 1 页">
     <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -139,19 +139,19 @@
         <mxCell id="ToSzjQ9twE04Xiy9Cd_i-35" value="调用tieBreakOrder函数返回-1或1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="636.38" y="960" width="110" height="50.5" as="geometry" />
         </mxCell>
-        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-36" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;这里最终能确定&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;插入的方向是在树的&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;左侧还是右侧&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;" parent="1" vertex="1">
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-36" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;这里最终能确定&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;插入的方向是在树的&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;左侧还是右侧&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;arcSize=50;" parent="1" vertex="1">
           <mxGeometry x="505" y="900" width="130" height="81" as="geometry" />
         </mxCell>
-        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-37" value="&lt;span style=&quot;&quot;&gt;返回之后，&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;用新节点的值&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;覆盖旧节点的值&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.08;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.25;rounded=1;" parent="1" vertex="1">
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-37" value="&lt;span style=&quot;&quot;&gt;返回之后，&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;用新节点的值&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;覆盖旧节点的值&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.08;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.25;rounded=1;arcSize=50;" parent="1" vertex="1">
           <mxGeometry x="670" y="550" width="130" height="83.75" as="geometry" />
         </mxCell>
-        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-38" value="&lt;span style=&quot;&quot;&gt;返回之后，&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;用新节点的值&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;覆盖旧节点的值&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=35;position=0.17;position2=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;" parent="1" vertex="1">
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-38" value="&lt;span style=&quot;&quot;&gt;返回之后，&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;用新节点的值&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;覆盖旧节点的值&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=35;position=0.17;position2=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;arcSize=50;" parent="1" vertex="1">
           <mxGeometry x="950" y="745" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-39" value="这里可以这样理解：&lt;br&gt;1. 通过前面的判断都为false，明确不了插入的方向。&lt;br&gt;2.&amp;nbsp;没有实现Comparable接口，说明判断不了大小。&lt;br&gt;3.&amp;nbsp;实现了Comparable接口，但是判断相等了。&lt;br&gt;&lt;br&gt;以上都是确认不了最后插入的方向的，需要进一步调用&lt;b&gt;find&lt;/b&gt;以及&lt;span style=&quot;font-size: 12px; text-align: center;&quot;&gt;&lt;b&gt;tieBreakOrder&lt;/b&gt;&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;perimeter=calloutPerimeter;rounded=1;position2=0.92;base=60;fontSize=8;align=left;html=1;spacingLeft=5;" parent="1" vertex="1">
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-39" value="这里可以这样理解：&lt;br&gt;1. 通过前面的判断都为false，明确不了插入的方向。&lt;br&gt;2.&amp;nbsp;没有实现Comparable接口，说明判断不了大小。&lt;br&gt;3.&amp;nbsp;实现了Comparable接口，但是判断相等了。&lt;br&gt;&lt;br&gt;以上都是确认不了最后插入的方向的，需要进一步调用&lt;b&gt;find&lt;/b&gt;以及&lt;span style=&quot;font-size: 12px; text-align: center;&quot;&gt;&lt;b&gt;tieBreakOrder&lt;/b&gt;&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;perimeter=calloutPerimeter;rounded=1;position2=0.92;base=60;fontSize=8;align=left;html=1;spacingLeft=5;arcSize=50;" parent="1" vertex="1">
           <mxGeometry x="101.37" y="635" width="258.63" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-40" value="先从左子树开始查找&lt;br&gt;左子树查不到再从右子树查找" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=35;position=0.17;position2=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;align=left;" parent="1" vertex="1">
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-40" value="先从左子树开始查找&lt;br&gt;左子树查不到再从右子树查找" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=35;position=0.17;position2=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;align=left;arcSize=50;" parent="1" vertex="1">
           <mxGeometry x="690" y="710" width="160" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ToSzjQ9twE04Xiy9Cd_i-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-41" target="ToSzjQ9twE04Xiy9Cd_i-4" edge="1">
@@ -209,7 +209,7 @@
         <mxCell id="ToSzjQ9twE04Xiy9Cd_i-66" value="新节点的&lt;br&gt;parent、prev指针&lt;br&gt;均指向p节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="990" y="1360" width="110" height="50.5" as="geometry" />
         </mxCell>
-        <mxCell id="RIEqcqRqiT2REE9FG_Aa-1" value="&lt;font color=&quot;#000000&quot;&gt;还没到叶子节点，&lt;br&gt;继续遍历树。&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.48;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;size=31;position=0.34;" vertex="1" parent="1">
+        <mxCell id="RIEqcqRqiT2REE9FG_Aa-1" value="&lt;font color=&quot;#000000&quot;&gt;还没到叶子节点，&lt;br&gt;继续遍历树。&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.48;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;size=31;position=0.34;arcSize=50;" vertex="1" parent="1">
           <mxGeometry x="230" y="1180" width="145" height="91" as="geometry" />
         </mxCell>
       </root>
@@ -283,7 +283,7 @@
             <mxPoint x="75" y="-39" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="XfUMqNSp-pS8bQQtBo7P-5" value="为了定位&lt;b&gt;X&lt;/b&gt;节点&lt;br&gt;应插到红黑树的什么位置" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.92;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.46;rounded=1;base=40;" vertex="1" parent="1">
+        <mxCell id="XfUMqNSp-pS8bQQtBo7P-5" value="为了定位&lt;b&gt;X&lt;/b&gt;节点&lt;br&gt;应插到红黑树的什么位置" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.92;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.46;rounded=1;base=40;arcSize=50;" vertex="1" parent="1">
           <mxGeometry x="320" y="330" width="140" height="83.75" as="geometry" />
         </mxCell>
         <mxCell id="_92k-g-UB1QdcxpgBvdA-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XfUMqNSp-pS8bQQtBo7P-8" target="_92k-g-UB1QdcxpgBvdA-1">
@@ -360,10 +360,10 @@
         <mxCell id="9LAJJUCd0vyuO-yhYrKG-1" value="调用tieBreakOrder函数返回-1或1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="690" y="945" width="110" height="50.5" as="geometry" />
         </mxCell>
-        <mxCell id="fw-9h_oAGyVtK52jHPNP-1" value="这里可以这样理解：&lt;br&gt;1. 通过前面的判断都为false，&lt;b&gt;明确不了插入的方向&lt;/b&gt;。&lt;br&gt;2.&amp;nbsp;如果没有实现Comparable接口，说明判断不了大小。&lt;br&gt;3.&amp;nbsp;如果实现了Comparable接口，但是&lt;b&gt;X&lt;/b&gt;和&lt;b&gt;P&lt;/b&gt;节点通过compareTo比较后相等。&lt;br&gt;&lt;br&gt;&lt;b&gt;所以需要调用&lt;span style=&quot;font-size: 12px; text-align: center;&quot;&gt;tieBreakOrder方法最终确认方向&lt;/span&gt;。&lt;/b&gt;" style="shape=callout;whiteSpace=wrap;perimeter=calloutPerimeter;rounded=1;position2=0.92;base=60;fontSize=8;align=left;html=1;spacingLeft=5;" vertex="1" parent="1">
+        <mxCell id="fw-9h_oAGyVtK52jHPNP-1" value="这里可以这样理解：&lt;br&gt;1. 通过前面的判断都为false，&lt;b&gt;明确不了插入的方向&lt;/b&gt;。&lt;br&gt;2.&amp;nbsp;如果没有实现Comparable接口，说明判断不了大小。&lt;br&gt;3.&amp;nbsp;如果实现了Comparable接口，但是&lt;b&gt;X&lt;/b&gt;和&lt;b&gt;P&lt;/b&gt;节点通过compareTo比较后相等。&lt;br&gt;&lt;br&gt;&lt;b&gt;所以需要调用&lt;span style=&quot;font-size: 12px; text-align: center;&quot;&gt;tieBreakOrder方法最终确认方向&lt;/span&gt;。&lt;/b&gt;" style="shape=callout;whiteSpace=wrap;perimeter=calloutPerimeter;rounded=1;position2=0.92;base=60;fontSize=8;align=left;html=1;spacingLeft=5;arcSize=50;" vertex="1" parent="1">
           <mxGeometry x="171.37" y="750" width="258.63" height="195" as="geometry" />
         </mxCell>
-        <mxCell id="u2nyA11PK9-M45zMJX91-1" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;这里最终能确定&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;插入的方向是在树的&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;左侧还是右侧&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.31;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;" vertex="1" parent="1">
+        <mxCell id="u2nyA11PK9-M45zMJX91-1" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;这里最终能确定&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;插入的方向是在树的&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;左侧还是右侧&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.31;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;arcSize=50;" vertex="1" parent="1">
           <mxGeometry x="750" y="860" width="130" height="81" as="geometry" />
         </mxCell>
         <mxCell id="u2nyA11PK9-M45zMJX91-2" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" vertex="1" connectable="0" parent="1">
@@ -385,7 +385,7 @@
         <mxCell id="u2nyA11PK9-M45zMJX91-4" value="根据&lt;b&gt;P&lt;/b&gt;节点的子节点&lt;br&gt;是否是叶子节点" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="435" y="1140" width="140" height="117" as="geometry" />
         </mxCell>
-        <mxCell id="JsRuw0BC5I0hKBZqFxt8-1" value="&lt;font color=&quot;#000000&quot;&gt;最终都是插入到树的尾部（也就是叶子节点处）&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.14;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;size=31;position=0.34;" vertex="1" parent="1">
+        <mxCell id="JsRuw0BC5I0hKBZqFxt8-1" value="&lt;font color=&quot;#000000&quot;&gt;最终都是插入到树的尾部（也就是叶子节点处）&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.14;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;size=31;position=0.34;arcSize=50;" vertex="1" parent="1">
           <mxGeometry x="528" y="1070" width="145" height="91" as="geometry" />
         </mxCell>
         <mxCell id="wzp0JyrelYg7ehW3GnsF-3" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" vertex="1" connectable="0" parent="1">
@@ -393,7 +393,7 @@
             <mxPoint x="75" y="-39" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wzp0JyrelYg7ehW3GnsF-4" value="&lt;font color=&quot;#000000&quot;&gt;还没到叶子节点，&lt;br&gt;继续遍历树。&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.48;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;size=31;position=0.34;" vertex="1" parent="1">
+        <mxCell id="wzp0JyrelYg7ehW3GnsF-4" value="&lt;font color=&quot;#000000&quot;&gt;还没到叶子节点，&lt;br&gt;继续遍历树。&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.48;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;size=31;position=0.34;arcSize=50;" vertex="1" parent="1">
           <mxGeometry x="200" y="1090" width="145" height="91" as="geometry" />
         </mxCell>
         <mxCell id="br2Pd9OeSPJqRSXdV3tl-1" value="将&lt;b&gt;X&lt;/b&gt;节点置于&lt;br&gt;&lt;b&gt;P&lt;/b&gt;节点左侧or右侧" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
@@ -403,6 +403,9 @@
           <mxGeometry x="430" y="1320" as="geometry">
             <mxPoint x="75" y="-39" as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="br2Pd9OeSPJqRSXdV3tl-4" value="&lt;font color=&quot;#000000&quot;&gt;还没到叶子节点，&lt;br&gt;继续遍历树。&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.72;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;size=31;position=0.34;direction=east;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="295" y="1250" width="145" height="91" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
