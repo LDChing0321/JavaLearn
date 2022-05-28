@@ -1,5 +1,5 @@
-<mxfile host="app.diagrams.net" modified="2022-05-28T13:51:18.053Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="_Tbuh6aEEg5X-3HnX-s5" version="18.1.2" type="github" pages="2">
-  <diagram id="zdUhX8Ku0VIpOmGv64NR" name="第 1 页">
+<mxfile host="app.diagrams.net" modified="2022-05-28T13:54:47.580Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="rHTrq_VmbaC27fNo0Oig" version="18.1.2" type="github" pages="2">
+  <diagram id="zdUhX8Ku0VIpOmGv64NR" name="以树的方式插入新节点">
     <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -182,7 +182,7 @@
             <mxPoint x="9" y="-3" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-41" value="根据dir判断子节点&lt;br&gt;是否是叶子节点" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" parent="1" vertex="1">
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-41" value="判断&lt;b&gt;P&lt;/b&gt;的子节点&lt;br&gt;是否是叶子节点" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="365" y="1050" width="150.01" height="140" as="geometry" />
         </mxCell>
         <mxCell id="ToSzjQ9twE04Xiy9Cd_i-63" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-53" target="ToSzjQ9twE04Xiy9Cd_i-62" edge="1">
@@ -212,10 +212,13 @@
         <mxCell id="RIEqcqRqiT2REE9FG_Aa-1" value="&lt;font color=&quot;#000000&quot;&gt;还没到叶子节点，&lt;br&gt;继续遍历树。&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.48;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;size=31;position=0.34;arcSize=50;" vertex="1" parent="1">
           <mxGeometry x="230" y="1180" width="145" height="91" as="geometry" />
         </mxCell>
+        <mxCell id="-W7lw1sjd2rW3jSuxHZ_-1" value="&lt;font color=&quot;#000000&quot;&gt;由dir变量决定&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.62;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="790" y="1180" width="106.38" height="70" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="8IX0xICDOeVCng08NkD_" name="第 2 页">
+  <diagram id="8IX0xICDOeVCng08NkD_" name="将双链表树化的过程">
     <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
