@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-28T15:19:28.425Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="UFXVZ6y2GO56iUXKkWnF" version="18.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-28T15:32:20.239Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="AriNewSoZX_0aams1S7e" version="18.1.2" type="github" pages="2">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="以树的方式插入新节点">
     <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -211,7 +211,7 @@
         <mxCell id="ToSzjQ9twE04Xiy9Cd_i-65" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-62" target="ToSzjQ9twE04Xiy9Cd_i-64" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-62" value="将新节点置于&lt;br&gt;树左侧or右侧" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-62" value="将&lt;b&gt;X&lt;/b&gt;节点设为&lt;br&gt;P的左子节点或&lt;br&gt;右子节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="810" y="1250" width="110" height="50.5" as="geometry" />
         </mxCell>
         <mxCell id="ToSzjQ9twE04Xiy9Cd_i-67" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-64" target="ToSzjQ9twE04Xiy9Cd_i-66" edge="1">
