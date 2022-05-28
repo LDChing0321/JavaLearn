@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-28T14:01:53.709Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="H1g0aGENCnJtleIBHPUY" version="18.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-28T14:03:53.251Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="mBpQA9qeJVhp8qsedikO" version="18.1.2" type="github" pages="2">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="以树的方式插入新节点">
     <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -60,8 +60,22 @@
         <mxCell id="ToSzjQ9twE04Xiy9Cd_i-16" value="&lt;b style=&quot;line-height: 2&quot;&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;此处定义几个关键变量：&lt;br&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;dir：记录新节点该存到树的哪个方向，-1左边1右边&lt;br&gt;&lt;span style=&quot;&quot;&gt; p：遍历树的时候，记录树的当前节点&lt;br&gt;&lt;/span&gt;&lt;b style=&quot;line-height: 2;&quot;&gt;xpn：&lt;/b&gt;&lt;b style=&quot;line-height: 2;&quot;&gt;遍历树的时候，记录树的当前节点的next节点&lt;/b&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt; &lt;/span&gt;ph：遍历树的时候，记录树的当前节点的hash值&lt;br&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;pk：遍历树的时候，记录树的当前节点的key值&lt;br&gt;&amp;nbsp;h：新节点的hash值&lt;br&gt;&amp;nbsp;k：新节点的key值&lt;br&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;shadow=1;fontColor=#333333;align=left;spacingTop=0;spacingRight=3;spacingLeft=5;" parent="1" vertex="1">
           <mxGeometry x="570" y="-23.75" width="290" height="207.5" as="geometry" />
         </mxCell>
+        <mxCell id="60ou2k-gRf1tX57QMtze-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="1120" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1080" y="309" />
+              <mxPoint x="1080" y="1120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="ToSzjQ9twE04Xiy9Cd_i-18" value="将-1赋值给变量dir" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="580" y="283.25" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="60ou2k-gRf1tX57QMtze-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1080" y="479" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="ToSzjQ9twE04Xiy9Cd_i-19" value="将1赋值给变量dir" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="580" y="453.75" width="110" height="50.5" as="geometry" />
