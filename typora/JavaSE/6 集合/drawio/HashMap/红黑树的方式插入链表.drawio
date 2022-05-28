@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-28T09:00:12.523Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="gcCPS8mNoXHApL0e8Q8s" version="18.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-28T09:01:07.755Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="mtSPpuRVe98ethl00TcM" version="18.1.2" type="github" pages="2">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="第 1 页">
     <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -295,6 +295,11 @@
         <mxCell id="XfUMqNSp-pS8bQQtBo7P-8" value="&lt;b&gt;P&lt;/b&gt;的hash大于&lt;br&gt;&lt;b&gt;X&lt;/b&gt;的hash" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="435" y="520" width="140" height="117" as="geometry" />
         </mxCell>
+        <mxCell id="u2nyA11PK9-M45zMJX91-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="_92k-g-UB1QdcxpgBvdA-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="920" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="_92k-g-UB1QdcxpgBvdA-1" value="将 -1 赋值给变量dir" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="640" y="553.25" width="110" height="50.5" as="geometry" />
         </mxCell>
@@ -317,6 +322,14 @@
             <mxPoint x="75" y="-39" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="u2nyA11PK9-M45zMJX91-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="_92k-g-UB1QdcxpgBvdA-8" target="u2nyA11PK9-M45zMJX91-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="920" y="759" />
+              <mxPoint x="920" y="1199" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="_92k-g-UB1QdcxpgBvdA-8" value="将1赋值给变量dir" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="640" y="733.25" width="110" height="50.5" as="geometry" />
         </mxCell>
@@ -328,12 +341,20 @@
         <mxCell id="9LAJJUCd0vyuO-yhYrKG-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C9PF1MDUCBnescyi0RLy-1" target="9LAJJUCd0vyuO-yhYrKG-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="u2nyA11PK9-M45zMJX91-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C9PF1MDUCBnescyi0RLy-1" target="u2nyA11PK9-M45zMJX91-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="C9PF1MDUCBnescyi0RLy-1" value="（判断&lt;b&gt;X&lt;/b&gt;节点&lt;b&gt;没有&lt;br&gt;实现Comparable接口&lt;/b&gt;&lt;br&gt;）&lt;br&gt;或者&lt;br&gt;（&lt;b&gt;P和X&lt;/b&gt;&lt;b&gt;的hash&lt;/b&gt;值的&lt;b&gt;compareTo&lt;br&gt;等于0&lt;/b&gt;&lt;br&gt;）" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="392.15999999999997" y="880" width="225.68" height="180" as="geometry" />
         </mxCell>
         <mxCell id="C9PF1MDUCBnescyi0RLy-3" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" vertex="1" connectable="0" parent="1">
           <mxGeometry x="430" y="880" as="geometry">
             <mxPoint x="75" y="-39" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u2nyA11PK9-M45zMJX91-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="9LAJJUCd0vyuO-yhYrKG-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="840" y="1200" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="9LAJJUCd0vyuO-yhYrKG-1" value="调用tieBreakOrder函数返回-1或1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
@@ -349,6 +370,9 @@
           <mxGeometry x="565" y="1007" as="geometry">
             <mxPoint x="75" y="-39" as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="u2nyA11PK9-M45zMJX91-4" value="&lt;b&gt;P&lt;/b&gt;的hash小于&lt;br&gt;&lt;b&gt;X&lt;/b&gt;的hash" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="435" y="1140" width="140" height="117" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
