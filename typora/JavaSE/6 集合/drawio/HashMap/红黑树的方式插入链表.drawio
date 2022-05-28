@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-28T14:09:20.957Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="23P67Tcs2ZHzA9NxdmXZ" version="18.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-28T14:27:08.266Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="pEU56b4PvkV1TCk6LUgh" version="18.1.2" type="github" pages="2">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="以树的方式插入新节点">
     <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -57,7 +57,7 @@
         <mxCell id="ToSzjQ9twE04Xiy9Cd_i-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#E6FFCC;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-16" target="ToSzjQ9twE04Xiy9Cd_i-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-16" value="&lt;b style=&quot;line-height: 2&quot;&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;此处定义几个关键变量：&lt;br&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;dir：记录新节点该存到树的哪个方向，-1左边1右边&lt;br&gt;&lt;span style=&quot;&quot;&gt; p：遍历树的时候，记录树的当前节点&lt;br&gt;&lt;/span&gt;&lt;b style=&quot;line-height: 2;&quot;&gt;xpn：&lt;/b&gt;&lt;b style=&quot;line-height: 2;&quot;&gt;遍历树的时候，记录树的当前节点的next节点&lt;/b&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt; &lt;/span&gt;ph：遍历树的时候，记录树的当前节点的hash值&lt;br&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;pk：遍历树的时候，记录树的当前节点的key值&lt;br&gt;&amp;nbsp;h：新节点的hash值&lt;br&gt;&amp;nbsp;k：新节点的key值&lt;br&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;shadow=1;fontColor=#333333;align=left;spacingTop=0;spacingRight=3;spacingLeft=5;" parent="1" vertex="1">
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-16" value="&lt;b style=&quot;line-height: 2&quot;&gt;定义几个关键变量：&lt;br&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;dir：记录新节点该存到树的哪个方向，-1左边1右边&lt;br&gt;&lt;span style=&quot;&quot;&gt; p：遍历树的时候，记录树的当前节点&lt;br&gt;&lt;/span&gt;&lt;b style=&quot;line-height: 2;&quot;&gt;xpn：&lt;/b&gt;&lt;b style=&quot;line-height: 2;&quot;&gt;遍历树的时候，记录树的当前节点的next节点&lt;/b&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt; &lt;/span&gt;ph：遍历树的时候，记录树的当前节点的hash值&lt;br&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;pk：遍历树的时候，记录树的当前节点的key值&lt;br&gt;&amp;nbsp;h：新节点的hash值&lt;br&gt;&amp;nbsp;k：新节点的key值&lt;br&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;shadow=1;fontColor=#333333;align=left;spacingTop=0;spacingRight=3;spacingLeft=5;" parent="1" vertex="1">
           <mxGeometry x="570" y="-23.75" width="290" height="207.5" as="geometry" />
         </mxCell>
         <mxCell id="60ou2k-gRf1tX57QMtze-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-18">
@@ -275,7 +275,7 @@
             <mxPoint x="505" y="200" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8QUyuR0opw-kdZgjMK2--1" value="遍历双向链表" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=hexagon;perimeter=hexagonPerimeter2;arcSize=6;size=0.27;shadow=1;labelBorderColor=none;fontSize=12;strokeColor=#d6b656;strokeWidth=1;labelPosition=center;align=center;fillColor=#fff2cc;" vertex="1" parent="1">
+        <mxCell id="8QUyuR0opw-kdZgjMK2--1" value="遍历双向链表的&lt;br&gt;每一个节点" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=hexagon;perimeter=hexagonPerimeter2;arcSize=6;size=0.27;shadow=1;labelBorderColor=none;fontSize=12;strokeColor=#d6b656;strokeWidth=1;labelPosition=center;align=center;fillColor=#fff2cc;" vertex="1" parent="1">
           <mxGeometry x="440" y="80" width="130" height="60" as="geometry" />
         </mxCell>
         <mxCell id="AUt5_7fp4ncVTTA5tlyv-1" value="start" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;labelBorderColor=none;strokeColor=#82b366;perimeterSpacing=1;fillColor=#d5e8d4;shadow=1;fontSize=14;" vertex="1" parent="1">
@@ -311,7 +311,7 @@
         <mxCell id="l4fTg1E8nHqioUrn_UJD-2" value="初始化root节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="650" y="233.5" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="LF_rM7iiAP3z61eL3DeO-1" value="&lt;b style=&quot;line-height: 2&quot;&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;此处定义几个关键变量：&lt;br&gt;X：遍历双链表时用来表示当前节点&lt;br&gt;P：遍历红黑树时用来表示当前节点&lt;br&gt;dir：用来记录双链表的节点应该插到红黑树的什么方向，-1左侧 1右侧&lt;br&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;shadow=1;fontColor=#333333;align=left;spacingTop=0;spacingRight=3;spacingLeft=5;" vertex="1" parent="1">
+        <mxCell id="LF_rM7iiAP3z61eL3DeO-1" value="&lt;b style=&quot;line-height: 2&quot;&gt;定义几个关键变量：&lt;br&gt;X：遍历双链表时用来表示当前节点&lt;br&gt;P：遍历红黑树时用来表示当前节点&lt;br&gt;dir：用来记录双链表的节点应该插到红黑树的什么方向，-1左侧 1右侧&lt;br&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;shadow=1;fontColor=#333333;align=left;spacingTop=0;spacingRight=3;spacingLeft=5;" vertex="1" parent="1">
           <mxGeometry x="640" y="-105" width="210" height="150" as="geometry" />
         </mxCell>
         <mxCell id="vfVzHcRrd4xRn05cb-74-1" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" vertex="1" connectable="0" parent="1">
