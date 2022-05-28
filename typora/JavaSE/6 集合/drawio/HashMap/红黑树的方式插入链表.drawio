@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-28T08:59:42.417Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="37xYA5vMj34oTNdQ9_86" version="18.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-28T08:59:55.668Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="LlBevwVkdPgJ6Wph0a5y" version="18.1.2" type="github" pages="2">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="第 1 页">
     <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -261,7 +261,7 @@
         <mxCell id="l4fTg1E8nHqioUrn_UJD-2" value="初始化root节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="650" y="233.5" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="LF_rM7iiAP3z61eL3DeO-1" value="&lt;b style=&quot;line-height: 2&quot;&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;此处定义几个关键变量：&lt;br&gt;X：遍历双链表时用来表示当前节点&lt;br&gt;P：遍历红黑树时用来表示当前节点&lt;br&gt;dir：用来记录双链表的节点应该插到红黑树的什么方向，-1左边 1右边&lt;br&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;shadow=1;fontColor=#333333;align=left;spacingTop=0;spacingRight=3;spacingLeft=5;" vertex="1" parent="1">
+        <mxCell id="LF_rM7iiAP3z61eL3DeO-1" value="&lt;b style=&quot;line-height: 2&quot;&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;此处定义几个关键变量：&lt;br&gt;X：遍历双链表时用来表示当前节点&lt;br&gt;P：遍历红黑树时用来表示当前节点&lt;br&gt;dir：用来记录双链表的节点应该插到红黑树的什么方向，-1左侧 1右侧&lt;br&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;shadow=1;fontColor=#333333;align=left;spacingTop=0;spacingRight=3;spacingLeft=5;" vertex="1" parent="1">
           <mxGeometry x="640" y="-105" width="210" height="150" as="geometry" />
         </mxCell>
         <mxCell id="vfVzHcRrd4xRn05cb-74-1" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" vertex="1" connectable="0" parent="1">
