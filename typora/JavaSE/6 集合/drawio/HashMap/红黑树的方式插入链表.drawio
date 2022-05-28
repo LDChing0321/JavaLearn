@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-28T08:58:27.023Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="TxmYTQhkBbNW2jh6Hu9F" version="18.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-28T08:59:42.417Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="37xYA5vMj34oTNdQ9_86" version="18.1.2" type="github" pages="2">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="第 1 页">
     <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -341,6 +341,9 @@
         </mxCell>
         <mxCell id="fw-9h_oAGyVtK52jHPNP-1" value="这里可以这样理解：&lt;br&gt;1. 通过前面的判断都为false，&lt;b&gt;明确不了插入的方向&lt;/b&gt;。&lt;br&gt;2.&amp;nbsp;如果没有实现Comparable接口，说明判断不了大小。&lt;br&gt;3.&amp;nbsp;如果实现了Comparable接口，但是&lt;b&gt;X&lt;/b&gt;和&lt;b&gt;P&lt;/b&gt;节点通过compareTo比较后相等。&lt;br&gt;&lt;br&gt;&lt;b&gt;所以需要调用&lt;span style=&quot;font-size: 12px; text-align: center;&quot;&gt;tieBreakOrder方法最终确认方向&lt;/span&gt;。&lt;/b&gt;" style="shape=callout;whiteSpace=wrap;perimeter=calloutPerimeter;rounded=1;position2=0.92;base=60;fontSize=8;align=left;html=1;spacingLeft=5;" vertex="1" parent="1">
           <mxGeometry x="171.37" y="750" width="258.63" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="u2nyA11PK9-M45zMJX91-1" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;这里最终能确定&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;插入的方向是在树的&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;左侧还是右侧&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.31;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="860" width="130" height="81" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
