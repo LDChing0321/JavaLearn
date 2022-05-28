@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-28T08:47:04.679Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="P1SxbfTcYi4HBr_SfMTQ" version="18.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-28T08:47:37.771Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="1c7HJWZarjioX52Bcuj7" version="18.1.2" type="github" pages="2">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="第 1 页">
     <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -306,6 +306,9 @@
         <mxCell id="_92k-g-UB1QdcxpgBvdA-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_92k-g-UB1QdcxpgBvdA-5" target="_92k-g-UB1QdcxpgBvdA-8">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="C9PF1MDUCBnescyi0RLy-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_92k-g-UB1QdcxpgBvdA-5" target="C9PF1MDUCBnescyi0RLy-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="_92k-g-UB1QdcxpgBvdA-5" value="&lt;b&gt;P&lt;/b&gt;的hash小于&lt;br&gt;&lt;b&gt;X&lt;/b&gt;的hash" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="435" y="700" width="140" height="117" as="geometry" />
         </mxCell>
@@ -319,6 +322,14 @@
         </mxCell>
         <mxCell id="_92k-g-UB1QdcxpgBvdA-10" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" vertex="1" connectable="0" parent="1">
           <mxGeometry x="526" y="795" as="geometry">
+            <mxPoint x="75" y="-39" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C9PF1MDUCBnescyi0RLy-1" value="（判断新节点没有&lt;br&gt;实现Comparable接口&lt;br&gt;）&lt;br&gt;或者&lt;br&gt;（k和pk的compareTo&lt;br&gt;等于0&lt;br&gt;）" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="392.15999999999997" y="880" width="225.68" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="C9PF1MDUCBnescyi0RLy-3" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="430" y="880" as="geometry">
             <mxPoint x="75" y="-39" as="offset" />
           </mxGeometry>
         </mxCell>
