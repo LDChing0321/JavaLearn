@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-28T08:49:08.436Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="oplvpEuLfWfY5gMHoYp-" version="18.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-28T08:49:34.468Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="jmNE2pNsGRgnvEO1z-es" version="18.1.2" type="github" pages="2">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="第 1 页">
     <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -325,6 +325,9 @@
             <mxPoint x="75" y="-39" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="9LAJJUCd0vyuO-yhYrKG-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C9PF1MDUCBnescyi0RLy-1" target="9LAJJUCd0vyuO-yhYrKG-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="C9PF1MDUCBnescyi0RLy-1" value="（判断&lt;b&gt;X&lt;/b&gt;节点&lt;b&gt;没有&lt;br&gt;实现Comparable接口&lt;/b&gt;&lt;br&gt;）&lt;br&gt;或者&lt;br&gt;（&lt;b&gt;P的hash&lt;/b&gt;和&lt;b&gt;X的hash&lt;/b&gt;的&lt;b&gt;compareTo&lt;br&gt;等于0&lt;/b&gt;&lt;br&gt;）" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="392.15999999999997" y="880" width="225.68" height="180" as="geometry" />
         </mxCell>
@@ -332,6 +335,12 @@
           <mxGeometry x="430" y="880" as="geometry">
             <mxPoint x="75" y="-39" as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="9LAJJUCd0vyuO-yhYrKG-1" value="调用tieBreakOrder函数返回-1或1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="944.75" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="fw-9h_oAGyVtK52jHPNP-1" value="这里可以这样理解：&lt;br&gt;1. 通过前面的判断都为false，既明确不了插入的方向，也没有找到所谓相同的节点。需要通过特殊的手段去判断是否有相同的节点以及最后插入的方向。&lt;br&gt;2.&amp;nbsp;没有实现Comparable接口，说明判断不了大小，所以需要使用特殊手段。&lt;br&gt;3.&amp;nbsp;实现了Comparable接口，并且判断相等&lt;br&gt;" style="shape=callout;whiteSpace=wrap;perimeter=calloutPerimeter;rounded=1;position2=0.92;base=60;fontSize=8;align=left;html=1;" vertex="1" parent="1">
+          <mxGeometry x="171.37" y="795" width="258.63" height="150" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
