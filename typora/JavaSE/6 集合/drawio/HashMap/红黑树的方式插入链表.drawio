@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-28T08:39:11.850Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="Tuuxen7a2tvAJImn5rYs" version="18.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-28T08:40:03.829Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="TLM676EFHtkSeXE4i9A_" version="18.1.2" type="github" pages="2">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="第 1 页">
     <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -250,6 +250,14 @@
         <mxCell id="l4fTg1E8nHqioUrn_UJD-1" value="红黑树的&lt;br&gt;root节点为空？" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="435" y="200" width="140" height="117" as="geometry" />
         </mxCell>
+        <mxCell id="XfUMqNSp-pS8bQQtBo7P-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="l4fTg1E8nHqioUrn_UJD-2" target="8QUyuR0opw-kdZgjMK2--1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="259" />
+              <mxPoint x="880" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="l4fTg1E8nHqioUrn_UJD-2" value="初始化root节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="650" y="233.5" width="110" height="50" as="geometry" />
         </mxCell>
@@ -272,7 +280,7 @@
             <mxPoint x="75" y="-39" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="XfUMqNSp-pS8bQQtBo7P-5" value="为了定位X节点&lt;br&gt;应插到红黑树的什么位置" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.92;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.46;rounded=1;base=40;" vertex="1" parent="1">
+        <mxCell id="XfUMqNSp-pS8bQQtBo7P-5" value="为了定位&lt;b&gt;X&lt;/b&gt;节点&lt;br&gt;应插到红黑树的什么位置" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.92;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.46;rounded=1;base=40;" vertex="1" parent="1">
           <mxGeometry x="320" y="330" width="140" height="83.75" as="geometry" />
         </mxCell>
       </root>
