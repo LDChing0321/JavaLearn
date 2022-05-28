@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-28T09:09:11.602Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="fut0zF_VVktiRB_nAtXs" version="18.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-28T09:10:23.712Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="k6hLtfqhLY25X4kX8TDr" version="18.1.2" type="github" pages="2">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="第 1 页">
     <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -396,6 +396,9 @@
         <mxCell id="wzp0JyrelYg7ehW3GnsF-4" value="&lt;font color=&quot;#000000&quot;&gt;还没到叶子节点，&lt;br&gt;继续遍历树。&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.48;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;size=31;position=0.34;arcSize=50;" vertex="1" parent="1">
           <mxGeometry x="200" y="1090" width="145" height="91" as="geometry" />
         </mxCell>
+        <mxCell id="4XWoEAdEVMXU1tTWXodI-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="br2Pd9OeSPJqRSXdV3tl-1" target="4XWoEAdEVMXU1tTWXodI-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="br2Pd9OeSPJqRSXdV3tl-1" value="将&lt;b&gt;X&lt;/b&gt;节点置于&lt;br&gt;&lt;b&gt;P&lt;/b&gt;节点左侧or右侧" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="450" y="1320" width="110" height="50.5" as="geometry" />
         </mxCell>
@@ -406,6 +409,15 @@
         </mxCell>
         <mxCell id="br2Pd9OeSPJqRSXdV3tl-4" value="&lt;font color=&quot;#000000&quot;&gt;通过dir变量判断&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.17;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;size=31;position=0.34;direction=east;arcSize=50;" vertex="1" parent="1">
           <mxGeometry x="560" y="1240" width="113.13" height="71" as="geometry" />
+        </mxCell>
+        <mxCell id="zsDDDvySWAVa7Z1gNkOe-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4XWoEAdEVMXU1tTWXodI-1" target="zsDDDvySWAVa7Z1gNkOe-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4XWoEAdEVMXU1tTWXodI-1" value="插入后维护树的平衡" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="1440" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="zsDDDvySWAVa7Z1gNkOe-2" value="end" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;labelBorderColor=none;strokeColor=#b85450;perimeterSpacing=1;fillColor=#f8cecc;shadow=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="465" y="1560" width="80" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
