@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-28T08:40:03.829Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="TLM676EFHtkSeXE4i9A_" version="18.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-28T08:45:31.844Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="YHXdLhpirAO3OvfCaqqQ" version="18.1.2" type="github" pages="2">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="第 1 页">
     <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -261,7 +261,7 @@
         <mxCell id="l4fTg1E8nHqioUrn_UJD-2" value="初始化root节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="650" y="233.5" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="LF_rM7iiAP3z61eL3DeO-1" value="&lt;b style=&quot;line-height: 2&quot;&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;此处定义几个关键变量：&lt;br&gt;X：遍历双链表时用来表示当前节点&lt;br&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;shadow=1;fontColor=#333333;align=left;spacingTop=0;spacingRight=3;spacingLeft=5;" vertex="1" parent="1">
+        <mxCell id="LF_rM7iiAP3z61eL3DeO-1" value="&lt;b style=&quot;line-height: 2&quot;&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;此处定义几个关键变量：&lt;br&gt;X：遍历双链表时用来表示当前节点&lt;br&gt;P：遍历红黑树时用来表示当前节点&lt;br&gt;dir：用来记录双链表的节点应该插到红黑树的什么方向，-1左边 1右边&lt;br&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;shadow=1;fontColor=#333333;align=left;spacingTop=0;spacingRight=3;spacingLeft=5;" vertex="1" parent="1">
           <mxGeometry x="640" y="-200" width="210" height="150" as="geometry" />
         </mxCell>
         <mxCell id="vfVzHcRrd4xRn05cb-74-1" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" vertex="1" connectable="0" parent="1">
@@ -271,6 +271,9 @@
         </mxCell>
         <mxCell id="XfUMqNSp-pS8bQQtBo7P-1" value="① root为黑色&lt;br&gt;②&amp;nbsp;父节点为空" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.08;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.25;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="710" y="149.75" width="130" height="83.75" as="geometry" />
+        </mxCell>
+        <mxCell id="XfUMqNSp-pS8bQQtBo7P-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XfUMqNSp-pS8bQQtBo7P-2" target="XfUMqNSp-pS8bQQtBo7P-8">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="XfUMqNSp-pS8bQQtBo7P-2" value="从root节点开始遍历&lt;br&gt;红黑树" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=hexagon;perimeter=hexagonPerimeter2;arcSize=6;size=0.27;shadow=1;labelBorderColor=none;fontSize=12;strokeColor=#d6b656;strokeWidth=1;labelPosition=center;align=center;fillColor=#fff2cc;" vertex="1" parent="1">
           <mxGeometry x="435" y="398" width="140" height="60" as="geometry" />
@@ -282,6 +285,15 @@
         </mxCell>
         <mxCell id="XfUMqNSp-pS8bQQtBo7P-5" value="为了定位&lt;b&gt;X&lt;/b&gt;节点&lt;br&gt;应插到红黑树的什么位置" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.92;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.46;rounded=1;base=40;" vertex="1" parent="1">
           <mxGeometry x="320" y="330" width="140" height="83.75" as="geometry" />
+        </mxCell>
+        <mxCell id="_92k-g-UB1QdcxpgBvdA-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XfUMqNSp-pS8bQQtBo7P-8" target="_92k-g-UB1QdcxpgBvdA-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XfUMqNSp-pS8bQQtBo7P-8" value="&lt;b&gt;P&lt;/b&gt;的hash大于&lt;br&gt;&lt;b&gt;X&lt;/b&gt;的hash" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="435" y="520" width="140" height="117" as="geometry" />
+        </mxCell>
+        <mxCell id="_92k-g-UB1QdcxpgBvdA-1" value="将-1赋值给变量dir" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="553.25" width="110" height="50.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
