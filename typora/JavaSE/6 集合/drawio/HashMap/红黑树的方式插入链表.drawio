@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-28T14:08:21.011Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="o_9FajKdxzYFCTwmNJnP" version="18.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-28T14:08:39.453Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="xY-hnhsWLZlN9H8FGVK6" version="18.1.2" type="github" pages="2">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="以树的方式插入新节点">
     <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -443,9 +443,6 @@
             <mxPoint x="75" y="-39" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wzp0JyrelYg7ehW3GnsF-4" value="&lt;font color=&quot;#000000&quot;&gt;还没到叶子节点，&lt;br&gt;继续遍历树。&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.48;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;size=31;position=0.34;arcSize=50;" vertex="1" parent="1">
-          <mxGeometry x="200" y="1090" width="145" height="91" as="geometry" />
-        </mxCell>
         <mxCell id="4XWoEAdEVMXU1tTWXodI-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="br2Pd9OeSPJqRSXdV3tl-1" target="4XWoEAdEVMXU1tTWXodI-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -508,6 +505,9 @@
           <mxGeometry x="430" y="1740" as="geometry">
             <mxPoint x="75" y="-39" as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="9wDaVN7cd1f7MJ63gkr5-1" value="&lt;font color=&quot;#000000&quot;&gt;还没到叶子节点，继续遍历树。&lt;b&gt;注意这里是沿着dir的方向遍历子节点&lt;/b&gt;&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.48;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;size=31;position=0.34;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="210" y="1100" width="145" height="91" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
