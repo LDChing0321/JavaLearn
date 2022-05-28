@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-28T14:00:07.130Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="5X3OnyGXedmiTooGOOw9" version="18.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-28T14:01:11.695Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="_MnaAxuwOHpOzL1apAKS" version="18.1.2" type="github" pages="2">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="以树的方式插入新节点">
     <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -218,11 +218,29 @@
         <mxCell id="-W7lw1sjd2rW3jSuxHZ_-1" value="&lt;font color=&quot;#000000&quot;&gt;由dir变量决定&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.62;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;arcSize=50;" vertex="1" parent="1">
           <mxGeometry x="790" y="1180" width="106.38" height="70" as="geometry" />
         </mxCell>
+        <mxCell id="qNMWkGHTYpmidPYAk0oT-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qNMWkGHTYpmidPYAk0oT-1" target="qNMWkGHTYpmidPYAk0oT-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="qNMWkGHTYpmidPYAk0oT-1" value="将&lt;b&gt;xpn&lt;/b&gt;节点的prev&lt;br&gt;指针指向&lt;b&gt;X&lt;/b&gt;节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="810" y="1360" width="110" height="50.5" as="geometry" />
         </mxCell>
         <mxCell id="qNMWkGHTYpmidPYAk0oT-3" value="&lt;font color=&quot;#000000&quot;&gt;这里主要是要保持&lt;br&gt;双链表的结构&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.48;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;size=31;position=0.34;arcSize=50;direction=west;" vertex="1" parent="1">
           <mxGeometry x="800" y="1420" width="137.5" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="yDkrHDWFnHSs4GKFZ4fX-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qNMWkGHTYpmidPYAk0oT-4" target="yDkrHDWFnHSs4GKFZ4fX-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qNMWkGHTYpmidPYAk0oT-4" value="插入后维护树的平衡" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="1360" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="xJHsxlTGz9r2ElkWNAb2-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yDkrHDWFnHSs4GKFZ4fX-1" target="xJHsxlTGz9r2ElkWNAb2-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yDkrHDWFnHSs4GKFZ4fX-1" value="将树的根节点设为&lt;br&gt;哈希表的首节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="1360" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="xJHsxlTGz9r2ElkWNAb2-1" value="end" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;labelBorderColor=none;strokeColor=#b85450;perimeterSpacing=1;fillColor=#f8cecc;shadow=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="485" y="1490" width="80" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
