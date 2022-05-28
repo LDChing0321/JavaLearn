@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-28T09:08:43.480Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="hTSSzbcmn5mBT9H263lU" version="18.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-28T09:09:11.602Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="fut0zF_VVktiRB_nAtXs" version="18.1.2" type="github" pages="2">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="第 1 页">
     <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -404,8 +404,8 @@
             <mxPoint x="75" y="-39" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="br2Pd9OeSPJqRSXdV3tl-4" value="&lt;font color=&quot;#000000&quot;&gt;还没到叶子节点，&lt;br&gt;继续遍历树。&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.72;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;size=31;position=0.34;direction=east;arcSize=50;" vertex="1" parent="1">
-          <mxGeometry x="295" y="1250" width="145" height="91" as="geometry" />
+        <mxCell id="br2Pd9OeSPJqRSXdV3tl-4" value="&lt;font color=&quot;#000000&quot;&gt;通过dir变量判断&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.17;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;size=31;position=0.34;direction=east;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="560" y="1240" width="113.13" height="71" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
