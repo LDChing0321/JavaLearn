@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-28T08:57:11.949Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="o4NQA7LA883Jh1KKk78K" version="18.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-28T08:58:02.257Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="oF3OtxORB0gpCuEpyQMT" version="18.1.2" type="github" pages="2">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="第 1 页">
     <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -148,7 +148,7 @@
         <mxCell id="ToSzjQ9twE04Xiy9Cd_i-38" value="&lt;span style=&quot;&quot;&gt;返回之后，&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;用新节点的值&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;覆盖旧节点的值&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=35;position=0.17;position2=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="950" y="745" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-39" value="这里可以这样理解：&lt;br&gt;1. 通过前面的判断都为false，明确不了插入的方向，也没有找到相同的节点。&lt;br&gt;2.&amp;nbsp;没有实现Comparable接口，说明判断不了大小。&lt;br&gt;3.&amp;nbsp;实现了Comparable接口，并且判断相等。&lt;br&gt;&lt;br&gt;以上都是确认不了最后插入的方向的，需要进一步调用&lt;b&gt;find&lt;/b&gt;以及&lt;span style=&quot;font-size: 12px; text-align: center;&quot;&gt;&lt;b&gt;tieBreakOrder&lt;/b&gt;&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;perimeter=calloutPerimeter;rounded=1;position2=0.92;base=60;fontSize=8;align=left;html=1;spacingLeft=5;" parent="1" vertex="1">
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-39" value="这里可以这样理解：&lt;br&gt;1. 通过前面的判断都为false，明确不了插入的方向。&lt;br&gt;2.&amp;nbsp;没有实现Comparable接口，说明判断不了大小。&lt;br&gt;3.&amp;nbsp;实现了Comparable接口，并且判断相等。&lt;br&gt;&lt;br&gt;以上都是确认不了最后插入的方向的，需要进一步调用&lt;b&gt;find&lt;/b&gt;以及&lt;span style=&quot;font-size: 12px; text-align: center;&quot;&gt;&lt;b&gt;tieBreakOrder&lt;/b&gt;&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;perimeter=calloutPerimeter;rounded=1;position2=0.92;base=60;fontSize=8;align=left;html=1;spacingLeft=5;" parent="1" vertex="1">
           <mxGeometry x="101.37" y="635" width="258.63" height="190" as="geometry" />
         </mxCell>
         <mxCell id="ToSzjQ9twE04Xiy9Cd_i-40" value="先从左子树开始查找&lt;br&gt;左子树查不到再从右子树查找" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=35;position=0.17;position2=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;align=left;" parent="1" vertex="1">
