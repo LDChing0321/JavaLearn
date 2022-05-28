@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-28T08:36:51.013Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="FUG8b5azzeZz6Akp-ucS" version="18.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-28T08:37:58.390Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="LlQZvy0qP7uIXZrn-j7Z" version="18.1.2" type="github" pages="2">
   <diagram id="zdUhX8Ku0VIpOmGv64NR" name="第 1 页">
     <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -244,6 +244,9 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="XfUMqNSp-pS8bQQtBo7P-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="l4fTg1E8nHqioUrn_UJD-1" target="XfUMqNSp-pS8bQQtBo7P-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="l4fTg1E8nHqioUrn_UJD-1" value="红黑树的&lt;br&gt;root节点为空？" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="435" y="200" width="140" height="117" as="geometry" />
         </mxCell>
@@ -260,6 +263,14 @@
         </mxCell>
         <mxCell id="XfUMqNSp-pS8bQQtBo7P-1" value="① root为黑色&lt;br&gt;②&amp;nbsp;父节点为空" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.08;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.25;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="710" y="149.75" width="130" height="83.75" as="geometry" />
+        </mxCell>
+        <mxCell id="XfUMqNSp-pS8bQQtBo7P-2" value="从root节点开始遍历&lt;br&gt;红黑树" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=hexagon;perimeter=hexagonPerimeter2;arcSize=6;size=0.27;shadow=1;labelBorderColor=none;fontSize=12;strokeColor=#d6b656;strokeWidth=1;labelPosition=center;align=center;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="435" y="398" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XfUMqNSp-pS8bQQtBo7P-4" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="430" y="398" as="geometry">
+            <mxPoint x="75" y="-39" as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
