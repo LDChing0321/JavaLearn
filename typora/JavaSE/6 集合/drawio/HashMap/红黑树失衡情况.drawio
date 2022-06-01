@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-01T15:54:23.830Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36" etag="6EJ37jFGQJlq5qnUjrWR" version="18.1.3" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-06-01T15:58:09.983Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36" etag="AeaPnNSwmT_Ix5xR6m5e" version="18.1.3" type="github" pages="4">
   <diagram id="JgPNVKbQDWaYk1uZFIfq" name="右右情况">
     <mxGraphModel dx="2588" dy="1172" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -324,6 +324,9 @@
         <mxCell id="FOiHKr_y1tp2jw3hAKZk-1" value="&lt;b style=&quot;font-size: 20px;&quot;&gt;17&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="320" y="1120" width="80" height="80" as="geometry" />
         </mxCell>
+        <mxCell id="ua8S04jW0TS6bfohotHY-1" value="2.自身元素通过右旋从父亲的&lt;b&gt;右子元素变成左子元素&lt;/b&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=20;rounded=1;arcSize=50;position2=0.19;size=40;position=0.48;direction=east;" vertex="1" parent="1">
+          <mxGeometry x="260" y="880" width="240" height="120" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -646,14 +649,11 @@
         <mxCell id="V0jYTuYZfvPkq9IpEZNo-14" value="&lt;b style=&quot;font-size: 20px;&quot;&gt;13&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="120" y="1000" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="fbx-_dB5fvkMeIgCQNXx-1" value="1.以父亲元素左旋之后" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=20;rounded=1;arcSize=50;position2=0.05;size=40;position=0.48;direction=east;rotation=40;" vertex="1" parent="1">
-          <mxGeometry x="203.57" y="1080" width="210" height="80" as="geometry" />
+        <mxCell id="fbx-_dB5fvkMeIgCQNXx-1" value="1.以父亲元素左旋之后" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=20;rounded=1;arcSize=50;position2=0.33;size=40;position=0.48;direction=east;rotation=5;" vertex="1" parent="1">
+          <mxGeometry x="155" y="730" width="210" height="80" as="geometry" />
         </mxCell>
         <mxCell id="gbRafn0SzFihTevaJ4WJ-1" value="&lt;b style=&quot;font-size: 20px;&quot;&gt;12&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="40" y="1120" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="v2faBe7o3XHgGAcXOdbR-1" value="2.自身元素通过左旋从父亲的&lt;b&gt;右子元素变成左子元素&lt;/b&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=20;rounded=1;arcSize=50;position2=0.19;size=40;position=0.48;direction=west;" vertex="1" parent="1">
-          <mxGeometry x="-110" y="1200" width="240" height="120" as="geometry" />
         </mxCell>
         <mxCell id="v2faBe7o3XHgGAcXOdbR-2" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=20;" edge="1" parent="1" source="v2faBe7o3XHgGAcXOdbR-4" target="v2faBe7o3XHgGAcXOdbR-7">
           <mxGeometry relative="1" as="geometry" />
@@ -745,6 +745,9 @@
         </mxCell>
         <mxCell id="QL8h41aDKi6bTnIVSb8Q-17" value="&lt;b style=&quot;font-size: 20px;&quot;&gt;15&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="640" y="1560" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6yn-_qiKQ8wSqtX5wcaL-1" value="2.自身元素晋升了，成为元素12的父元素" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=20;rounded=1;arcSize=50;position2=0;size=40;position=0.14;direction=east;rotation=25;" vertex="1" parent="1">
+          <mxGeometry x="208.67" y="1010" width="186.33" height="97.83" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
