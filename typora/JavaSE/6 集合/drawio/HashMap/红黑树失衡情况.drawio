@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-01T15:49:48.273Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36" etag="axGfQQYrh5u1-k5CAzbX" version="18.1.3" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-06-01T15:50:13.048Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36" etag="WfS5wUZanF7tKLlPWp_I" version="18.1.3" type="github" pages="4">
   <diagram id="JgPNVKbQDWaYk1uZFIfq" name="右右情况">
     <mxGraphModel dx="2588" dy="1172" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -274,7 +274,7 @@
           <mxGeometry x="400" y="480" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="u15F6ag2bgrvFi-wP2GW-1" value="新增元素2，导致破坏性质4" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=20;rounded=1;arcSize=50;position2=0.25;" vertex="1" parent="1">
-          <mxGeometry x="770" y="80" width="250" height="100" as="geometry" />
+          <mxGeometry x="770" y="100" width="250" height="80" as="geometry" />
         </mxCell>
         <mxCell id="u15F6ag2bgrvFi-wP2GW-2" value="&lt;b style=&quot;font-size: 20px;&quot;&gt;2&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="320" y="600" width="80" height="80" as="geometry" />
@@ -283,7 +283,7 @@
           <mxGeometry x="470" y="560" width="180" height="100" as="geometry" />
         </mxCell>
         <mxCell id="9Ik5pgOVSDd5iqZkWWlQ-1" value="父亲是爷爷的&lt;b&gt;左孩子&lt;/b&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=20;rounded=1;arcSize=50;position2=0.74;size=40;position=0.48;direction=east;" vertex="1" parent="1">
-          <mxGeometry x="230" y="390" width="210" height="100" as="geometry" />
+          <mxGeometry x="250" y="410" width="190" height="80" as="geometry" />
         </mxCell>
         <mxCell id="CZ6yneZzkc3d-oCUzsNb-1" value="新元素默认是红色，并且是父亲的&lt;b&gt;左孩子&lt;/b&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=20;rounded=1;arcSize=50;position2=0.19;size=40;position=0.48;direction=west;" vertex="1" parent="1">
           <mxGeometry x="190" y="680" width="210" height="100" as="geometry" />
@@ -463,7 +463,7 @@
           <mxGeometry x="680" y="360" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ReLBtTrDtoF5MdALBXYQ-1" value="新增元素13，导致破坏性质4" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=20;rounded=1;arcSize=50;position2=0.42;" vertex="1" parent="1">
-          <mxGeometry x="700" y="90" width="260" height="100" as="geometry" />
+          <mxGeometry x="700" y="110" width="260" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ReLBtTrDtoF5MdALBXYQ-3" value="&lt;b style=&quot;font-size: 20px;&quot;&gt;13&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="760" y="480" width="80" height="80" as="geometry" />
@@ -566,10 +566,10 @@
           <mxGeometry x="720" y="1120" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="RZfvssnfOAeaXdPqfNGs-1" value="3.父亲元素变成黑色" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=20;rounded=1;arcSize=50;position2=0.05;size=40;position=0.48;direction=east;rotation=40;" vertex="1" parent="1">
-          <mxGeometry x="880" y="1040" width="190" height="100" as="geometry" />
+          <mxGeometry x="876.79" y="1048.83" width="190" height="90" as="geometry" />
         </mxCell>
         <mxCell id="RZfvssnfOAeaXdPqfNGs-2" value="4.爷爷元素变成红色" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=20;rounded=1;arcSize=50;position2=0.37;size=40;position=0.48;direction=east;rotation=-5;" vertex="1" parent="1">
-          <mxGeometry x="860" y="750" width="210" height="120" as="geometry" />
+          <mxGeometry x="861.31" y="779.94" width="210" height="90" as="geometry" />
         </mxCell>
         <mxCell id="QL8h41aDKi6bTnIVSb8Q-2" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=20;" edge="1" parent="1" source="QL8h41aDKi6bTnIVSb8Q-4" target="QL8h41aDKi6bTnIVSb8Q-7">
           <mxGeometry relative="1" as="geometry" />
