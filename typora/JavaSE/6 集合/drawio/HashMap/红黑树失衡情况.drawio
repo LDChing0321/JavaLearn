@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-06-01T15:15:51.035Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36" etag="yf_IYp0mKpbHswO1yYc9" version="18.1.3" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-06-01T15:16:42.757Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36" etag="jlls0oSFUpK1J8NNbzQz" version="18.1.3" type="github" pages="2">
   <diagram id="JgPNVKbQDWaYk1uZFIfq" name="右右情况">
-    <mxGraphModel dx="2985" dy="1385" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2588" dy="1172" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -117,8 +117,8 @@
         <mxCell id="YeQxh2HBtWJbQ_9YZfCd-37" value="父亲是爷爷的&lt;b&gt;右孩子&lt;/b&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=20;rounded=1;arcSize=50;position2=0.19;size=40;position=0.48;direction=east;" vertex="1" parent="1">
           <mxGeometry x="590" y="390" width="210" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="YeQxh2HBtWJbQ_9YZfCd-38" value="这种情况属于右右" style="ellipse;whiteSpace=wrap;html=1;fontSize=15;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="700" y="490" width="140" height="80" as="geometry" />
+        <mxCell id="YeQxh2HBtWJbQ_9YZfCd-38" value="这种情况属于右右" style="ellipse;whiteSpace=wrap;html=1;fontSize=20;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="690" y="480" width="180" height="100" as="geometry" />
         </mxCell>
         <mxCell id="YeQxh2HBtWJbQ_9YZfCd-39" value="以爷爷节点左旋" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=20;rounded=1;arcSize=50;position2=0.19;size=40;position=0.48;direction=east;" vertex="1" parent="1">
           <mxGeometry x="40" y="1120" width="210" height="100" as="geometry" />
@@ -271,8 +271,8 @@
         <mxCell id="u15F6ag2bgrvFi-wP2GW-2" value="&lt;b style=&quot;font-size: 20px;&quot;&gt;2&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="320" y="600" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="SYepezX1vOY1MYyK5E8k-1" value="这种情况属于左左" style="ellipse;whiteSpace=wrap;html=1;fontSize=15;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="510" y="530" width="140" height="80" as="geometry" />
+        <mxCell id="SYepezX1vOY1MYyK5E8k-1" value="这种情况属于左左" style="ellipse;whiteSpace=wrap;html=1;fontSize=18;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="470" y="560" width="180" height="100" as="geometry" />
         </mxCell>
         <mxCell id="9Ik5pgOVSDd5iqZkWWlQ-1" value="父亲是爷爷的&lt;b&gt;左孩子&lt;/b&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=20;rounded=1;arcSize=50;position2=0.74;size=40;position=0.48;direction=east;" vertex="1" parent="1">
           <mxGeometry x="230" y="390" width="210" height="100" as="geometry" />
