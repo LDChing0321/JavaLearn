@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-01T15:50:13.048Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36" etag="WfS5wUZanF7tKLlPWp_I" version="18.1.3" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-06-01T15:50:18.555Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36" etag="xrupUNf90vM_OXg2uOX_" version="18.1.3" type="github" pages="4">
   <diagram id="JgPNVKbQDWaYk1uZFIfq" name="右右情况">
     <mxGraphModel dx="2588" dy="1172" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -516,7 +516,7 @@
           <mxGeometry x="120" y="1000" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="fbx-_dB5fvkMeIgCQNXx-1" value="1.以父亲元素左旋" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=20;rounded=1;arcSize=50;position2=0.05;size=40;position=0.48;direction=east;rotation=40;" vertex="1" parent="1">
-          <mxGeometry x="210" y="1010" width="210" height="100" as="geometry" />
+          <mxGeometry x="203.57" y="1027.66" width="210" height="80" as="geometry" />
         </mxCell>
         <mxCell id="gbRafn0SzFihTevaJ4WJ-1" value="&lt;b style=&quot;font-size: 20px;&quot;&gt;12&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="40" y="1120" width="80" height="80" as="geometry" />
