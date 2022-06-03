@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-03T02:27:23.587Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36" etag="cWOjs4LIYcutfgFQl8Kc" version="18.2.0" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2022-06-03T02:33:05.037Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36" etag="XcmiUmAt5V-qykGZUtAv" version="18.2.0" type="github" pages="5">
   <diagram id="JgPNVKbQDWaYk1uZFIfq" name="右右">
     <mxGraphModel dx="2266" dy="896" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -844,7 +844,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="SsNRtC7214NkSKP-Syr5" name="右右-伴有兄弟节点">
-    <mxGraphModel dx="1866" dy="96" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1678" dy="96" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -995,8 +995,16 @@
         <mxCell id="ug6gaPfPSrErkWMYMq5v-22" value="&lt;b style=&quot;font-size: 20px;&quot;&gt;11&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="560" y="2040" width="80" height="80" as="geometry" />
         </mxCell>
+        <mxCell id="ug6gaPfPSrErkWMYMq5v-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=57.5;exitDy=90;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="ug6gaPfPSrErkWMYMq5v-25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="1955" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="ug6gaPfPSrErkWMYMq5v-25" value="把元素10和8染成黑色，爷爷元素染成红色" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=20;rounded=1;arcSize=50;position2=0.25;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="520" y="1780" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ug6gaPfPSrErkWMYMq5v-29" value="引发一个问题，父亲元素9和元素7也破坏了性质" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="640" y="1970" width="220" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
