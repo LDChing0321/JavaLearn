@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-04T09:13:16.160Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36" etag="RC24Mj_am_No02Q5WH0x" version="18.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-04T09:14:52.747Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36" etag="QLEo5m0yMf-VMu2aGtuk" version="18.2.0" type="github">
   <diagram id="PuM2QEDBa-cXQWB-A6vJ" name="第 1 页">
     <mxGraphModel dx="1185" dy="635" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -47,6 +47,9 @@
           <mxGeometry x="461" y="538" as="geometry">
             <mxPoint x="72" y="76" as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="a2cnZ2QDwMQIBshHrTLa-15" value="新索引位计算方法：&lt;br&gt;该元素的hash &amp;amp;&amp;nbsp;新哈希表的槽位长度" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;rounded=1;arcSize=50;position2=0.5;" vertex="1" parent="1">
+          <mxGeometry x="590" y="507.5" width="130" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
