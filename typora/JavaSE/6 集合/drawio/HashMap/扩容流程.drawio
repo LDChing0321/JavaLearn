@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-04T09:20:23.232Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36" etag="1JsL3i0RRzxSAOO4fwom" version="18.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-04T09:20:30.902Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36" etag="2Ca6nomRUdtCqn0UI7nb" version="18.2.0" type="github">
   <diagram id="PuM2QEDBa-cXQWB-A6vJ" name="第 1 页">
     <mxGraphModel dx="1185" dy="635" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -93,7 +93,7 @@
           <mxGeometry x="377" y="1000" width="127" height="113" as="geometry" />
         </mxCell>
         <mxCell id="a2cnZ2QDwMQIBshHrTLa-28" value="这里其实就是将原有的链表根据这个条件分成两条链表" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;rounded=1;arcSize=50;position2=0.08;size=30;position=0.23;" vertex="1" parent="1">
-          <mxGeometry x="480" y="960" width="130" height="80" as="geometry" />
+          <mxGeometry x="470" y="950" width="130" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
