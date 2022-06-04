@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-04T09:20:30.902Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36" etag="2Ca6nomRUdtCqn0UI7nb" version="18.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-04T09:21:29.800Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36" etag="jcMP-RnyLh4RvT1xBl9u" version="18.2.0" type="github">
   <diagram id="PuM2QEDBa-cXQWB-A6vJ" name="第 1 页">
     <mxGraphModel dx="1185" dy="635" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -89,11 +89,22 @@
             <mxPoint x="72" y="76" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="a2cnZ2QDwMQIBshHrTLa-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;" edge="1" parent="1" source="a2cnZ2QDwMQIBshHrTLa-26" target="a2cnZ2QDwMQIBshHrTLa-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="a2cnZ2QDwMQIBshHrTLa-26" value="当前槽位的元素&lt;br&gt;的哈希&amp;amp;旧容量&lt;br&gt;等于0？" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="377" y="1000" width="127" height="113" as="geometry" />
         </mxCell>
         <mxCell id="a2cnZ2QDwMQIBshHrTLa-28" value="这里其实就是将原有的链表根据这个条件分成两条链表" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;rounded=1;arcSize=50;position2=0.08;size=30;position=0.23;" vertex="1" parent="1">
           <mxGeometry x="470" y="950" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="a2cnZ2QDwMQIBshHrTLa-29" value="构建&lt;b&gt;loHead&lt;/b&gt;链表" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="1036.62" width="100" height="39.75" as="geometry" />
+        </mxCell>
+        <mxCell id="a2cnZ2QDwMQIBshHrTLa-31" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="462" y="979" as="geometry">
+            <mxPoint x="72" y="76" as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
