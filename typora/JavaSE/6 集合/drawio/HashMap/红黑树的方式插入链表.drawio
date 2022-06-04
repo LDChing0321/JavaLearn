@@ -1,118 +1,266 @@
-<mxfile host="app.diagrams.net" modified="2021-12-27T12:13:05.140Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="uNDERkankTSyTPbXeQan" version="16.0.3" type="github">
-  <diagram id="zdUhX8Ku0VIpOmGv64NR" name="第 1 页">
-    <mxGraphModel dx="1038" dy="579" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+<mxfile host="app.diagrams.net" modified="2022-05-29T03:51:25.347Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="P3oaejDU0KciRiXVxcwH" version="18.1.2" type="github">
+  <diagram id="zdUhX8Ku0VIpOmGv64NR" name="以树的方式插入新节点">
+    <mxGraphModel dx="1422" dy="1162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="jCqdZaaTeLMqU4wdfYjT-2" target="jCqdZaaTeLMqU4wdfYjT-4">
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontColor=#000000;strokeColor=#000000;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-2" target="ToSzjQ9twE04Xiy9Cd_i-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-2" value="start" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;labelBorderColor=none;strokeColor=#82b366;perimeterSpacing=1;fillColor=#d5e8d4;shadow=1;fontSize=14;" vertex="1" parent="1">
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-2" value="start" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;labelBorderColor=none;strokeColor=#82b366;perimeterSpacing=1;fillColor=#d5e8d4;shadow=1;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="400" y="40" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jCqdZaaTeLMqU4wdfYjT-4" target="jCqdZaaTeLMqU4wdfYjT-14">
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-4" target="ToSzjQ9twE04Xiy9Cd_i-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-4" value="根据根节点作&lt;br&gt;自旋遍历" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=hexagon;perimeter=hexagonPerimeter2;arcSize=6;size=0.27;shadow=1;labelBorderColor=none;fontSize=12;strokeColor=#d6b656;strokeWidth=1;labelPosition=center;align=center;fillColor=#fff2cc;" vertex="1" parent="1">
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-4" value="从红黑树的根节点&lt;br&gt;开始遍历" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=hexagon;perimeter=hexagonPerimeter2;arcSize=6;size=0.27;shadow=1;labelBorderColor=none;fontSize=12;strokeColor=#d6b656;strokeWidth=1;labelPosition=center;align=center;fillColor=#fff2cc;" parent="1" vertex="1">
           <mxGeometry x="375" y="160" width="130" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="jCqdZaaTeLMqU4wdfYjT-14" target="jCqdZaaTeLMqU4wdfYjT-16">
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-9" target="ToSzjQ9twE04Xiy9Cd_i-14" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-11" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="jCqdZaaTeLMqU4wdfYjT-10">
-          <mxGeometry x="0.3056" relative="1" as="geometry">
-            <mxPoint x="-16" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jCqdZaaTeLMqU4wdfYjT-14" target="jCqdZaaTeLMqU4wdfYjT-21">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-13" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="jCqdZaaTeLMqU4wdfYjT-12">
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-6" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" parent="ToSzjQ9twE04Xiy9Cd_i-5" vertex="1" connectable="0">
           <mxGeometry x="0.2829" y="-2" relative="1" as="geometry">
             <mxPoint x="2" y="-19" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-14" value="判断当前节点的hash&lt;br&gt;&lt;b&gt;大于&lt;/b&gt;新节点hash？&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="320" width="140" height="117" as="geometry" />
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-9" target="ToSzjQ9twE04Xiy9Cd_i-18" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-16" value="将-1赋值给&lt;br&gt;临时变量dir" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="581" y="349.5" width="107" height="58" as="geometry" />
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-8" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" parent="ToSzjQ9twE04Xiy9Cd_i-7" vertex="1" connectable="0">
+          <mxGeometry x="-0.2231" y="1" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="jCqdZaaTeLMqU4wdfYjT-21" target="jCqdZaaTeLMqU4wdfYjT-61">
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-9" value="判断ph大于h" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="370" y="250" width="140" height="117" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-14" target="ToSzjQ9twE04Xiy9Cd_i-19" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-11" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" parent="ToSzjQ9twE04Xiy9Cd_i-10" vertex="1" connectable="0">
+          <mxGeometry x="-0.2472" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-14" target="ToSzjQ9twE04Xiy9Cd_i-24" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-13" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" parent="ToSzjQ9twE04Xiy9Cd_i-12" vertex="1" connectable="0">
+          <mxGeometry x="-0.2706" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-14" value="判断ph小于h" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="368.63" y="420" width="142.75" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#E6FFCC;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-16" target="ToSzjQ9twE04Xiy9Cd_i-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-16" value="&lt;b style=&quot;line-height: 2&quot;&gt;定义几个关键变量：&lt;br&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;dir：记录新节点该存到树的哪个方向，-1左边1右边&lt;br&gt;&lt;span style=&quot;&quot;&gt; p：遍历树的时候，记录树的当前节点&lt;br&gt;&lt;/span&gt;&lt;b style=&quot;line-height: 2;&quot;&gt;xpn：&lt;/b&gt;&lt;b style=&quot;line-height: 2;&quot;&gt;遍历树的时候，记录树的当前节点的next节点&lt;/b&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt; &lt;/span&gt;ph：遍历树的时候，记录树的当前节点的hash值&lt;br&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;pk：遍历树的时候，记录树的当前节点的key值&lt;br&gt;&amp;nbsp;h：新节点的hash值&lt;br&gt;&amp;nbsp;k：新节点的key值&lt;br&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;shadow=1;fontColor=#333333;align=left;spacingTop=0;spacingRight=3;spacingLeft=5;" parent="1" vertex="1">
+          <mxGeometry x="570" y="-23.75" width="290" height="207.5" as="geometry" />
+        </mxCell>
+        <mxCell id="60ou2k-gRf1tX57QMtze-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-18">
           <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="1120" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="529" y="556" />
-              <mxPoint x="529" y="556" />
+              <mxPoint x="1080" y="309" />
+              <mxPoint x="1080" y="1120" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-63" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="jCqdZaaTeLMqU4wdfYjT-62">
-          <mxGeometry x="0.6903" y="1" relative="1" as="geometry">
-            <mxPoint x="-30" as="offset" />
-          </mxGeometry>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-18" value="将-1赋值给变量dir" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="580" y="283.25" width="110" height="50.5" as="geometry" />
         </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="jCqdZaaTeLMqU4wdfYjT-21" target="jCqdZaaTeLMqU4wdfYjT-73">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-21" value="判断当前节点的hash&lt;br&gt;&lt;b&gt;小于&lt;/b&gt;新节点hash？&lt;span&gt;	&lt;/span&gt;" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="368.63" y="497" width="142.75" height="118" as="geometry" />
-        </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-59" value="-1指红黑树的左侧" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.loud_callout;strokeWidth=1;flipH=0;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="674" y="271" width="156" height="69" as="geometry" />
-        </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-61" value="将1赋值给&lt;br&gt;临时变量dir" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="581" y="526.5" width="107" height="58" as="geometry" />
-        </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-64" value="1指红黑树的右侧" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.loud_callout;strokeWidth=1;flipH=0;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="688" y="457.5" width="156" height="69" as="geometry" />
-        </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-81" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jCqdZaaTeLMqU4wdfYjT-67" target="jCqdZaaTeLMqU4wdfYjT-80">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-67" value="此时树节点和新节点&lt;br&gt;的key 的内存地址以及&lt;br&gt;两者的equals均不相等？" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="347.32" y="902" width="185.38" height="127" as="geometry" />
-        </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-72" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="440.01" y="647" as="geometry" />
-        </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-76" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jCqdZaaTeLMqU4wdfYjT-73" target="jCqdZaaTeLMqU4wdfYjT-75">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-77" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="jCqdZaaTeLMqU4wdfYjT-76">
-          <mxGeometry x="0.7062" y="-1" relative="1" as="geometry">
-            <mxPoint x="-33" y="-1" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-78" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jCqdZaaTeLMqU4wdfYjT-73" target="jCqdZaaTeLMqU4wdfYjT-67">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-73" value="当前节点和新节点&lt;br&gt;的key 以及equals&lt;br&gt;均相等？" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="347.32" y="684" width="185.38" height="127" as="geometry" />
-        </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-75" value="直接返回&lt;br&gt;当前的树节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="628" y="718.5" width="107" height="58" as="geometry" />
-        </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-79" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="440" y="851" as="geometry" />
-        </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-80" value="" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="642" y="936.5" width="107" height="58" as="geometry" />
-        </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-82" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="580.9999999999998" y="824" as="geometry">
-            <mxPoint x="1" y="140" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.04;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="jCqdZaaTeLMqU4wdfYjT-83">
+        <mxCell id="60ou2k-gRf1tX57QMtze-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-19">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="582.7999877929688" y="957.4000244140625" as="targetPoint" />
+            <mxPoint x="1080" y="479" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-19" value="将1赋值给变量dir" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="580" y="453.75" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-24" target="ToSzjQ9twE04Xiy9Cd_i-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-21" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" parent="ToSzjQ9twE04Xiy9Cd_i-20" vertex="1" connectable="0">
+          <mxGeometry x="-0.2647" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-24" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440.0050000000001" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-23" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" parent="ToSzjQ9twE04Xiy9Cd_i-22" vertex="1" connectable="0">
+          <mxGeometry x="-0.3137" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-24" value="判断pk==k&lt;br&gt;或者k.equals(pk)" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="368.63" y="600" width="142.75" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-25" value="找到相同的节点，&lt;br&gt;直接返回该节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="580" y="633.75" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-28" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="850.0344827586205" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-27" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" parent="ToSzjQ9twE04Xiy9Cd_i-26" vertex="1" connectable="0">
+          <mxGeometry x="-0.3103" y="-1" relative="1" as="geometry">
+            <mxPoint x="4" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-28" target="ToSzjQ9twE04Xiy9Cd_i-41" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-28" value="（判断新节点没有&lt;br&gt;实现Comparable接口&lt;br&gt;）&lt;br&gt;或者&lt;br&gt;（k和pk的compareTo&lt;br&gt;等于0&lt;br&gt;）" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="327.15999999999997" y="760" width="225.68" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-33" target="ToSzjQ9twE04Xiy9Cd_i-34" edge="1">
+          <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="583" y="885" />
+              <mxPoint x="790" y="850" />
+              <mxPoint x="790" y="850" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jCqdZaaTeLMqU4wdfYjT-83" value="1指红黑树的右侧" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.loud_callout;strokeWidth=1;flipH=0;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="649" y="803" width="206" height="82" as="geometry" />
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-30" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;true&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ToSzjQ9twE04Xiy9Cd_i-29" vertex="1" connectable="0">
+          <mxGeometry x="-0.2891" y="1" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-33" target="ToSzjQ9twE04Xiy9Cd_i-35" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-32" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;false&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ToSzjQ9twE04Xiy9Cd_i-31" vertex="1" connectable="0">
+          <mxGeometry x="-0.3194" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-33" value="调用find函数在&lt;br&gt;树上查找&lt;br&gt;是否有key与k相等&lt;br&gt;的节点" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="620" y="791" width="142.75" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-34" value="在树上找到相同的节点，直接返回该节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="840" y="824.75" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-35" target="ToSzjQ9twE04Xiy9Cd_i-41" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-35" value="调用tieBreakOrder函数返回-1或1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="636.38" y="960" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-36" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;这里最终能确定&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;插入的方向是在树的&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;左侧还是右侧&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;arcSize=50;" parent="1" vertex="1">
+          <mxGeometry x="505" y="900" width="130" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-37" value="&lt;span style=&quot;&quot;&gt;返回之后，&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;用新节点的值&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;覆盖旧节点的值&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.08;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.25;rounded=1;arcSize=50;" parent="1" vertex="1">
+          <mxGeometry x="670" y="550" width="130" height="83.75" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-38" value="&lt;span style=&quot;&quot;&gt;返回之后，&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;用新节点的值&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;覆盖旧节点的值&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=35;position=0.17;position2=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;arcSize=50;" parent="1" vertex="1">
+          <mxGeometry x="950" y="745" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-39" value="这里可以这样理解：&lt;br&gt;1. 通过前面的判断都为false，明确不了插入的方向。&lt;br&gt;2.&amp;nbsp;没有实现Comparable接口，说明判断不了大小。&lt;br&gt;3.&amp;nbsp;实现了Comparable接口，但是判断相等了。&lt;br&gt;&lt;br&gt;以上都是确认不了最后插入的方向的，需要进一步调用&lt;b&gt;find&lt;/b&gt;以及&lt;span style=&quot;font-size: 12px; text-align: center;&quot;&gt;&lt;b&gt;tieBreakOrder&lt;/b&gt;&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;perimeter=calloutPerimeter;rounded=1;position2=0.92;base=60;fontSize=8;align=left;html=1;spacingLeft=5;arcSize=50;" parent="1" vertex="1">
+          <mxGeometry x="101.37" y="635" width="258.63" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-40" value="先从左子树开始查找&lt;br&gt;左子树查不到再从右子树查找" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=35;position=0.17;position2=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;align=left;arcSize=50;" parent="1" vertex="1">
+          <mxGeometry x="690" y="710" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-41" target="ToSzjQ9twE04Xiy9Cd_i-9" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="1280" />
+              <mxPoint x="40" y="1280" />
+              <mxPoint x="40" y="309" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-48" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;false&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ToSzjQ9twE04Xiy9Cd_i-47" vertex="1" connectable="0">
+          <mxGeometry x="-0.8898" y="-4" relative="1" as="geometry">
+            <mxPoint x="-121" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-41" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="635" y="1280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="440" y="1280" />
+              <mxPoint x="600" y="1280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-54" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;true&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ToSzjQ9twE04Xiy9Cd_i-52" vertex="1" connectable="0">
+          <mxGeometry x="0.0543" y="-3" relative="1" as="geometry">
+            <mxPoint x="9" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-41" value="判断&lt;b&gt;P&lt;/b&gt;的子节点&lt;br&gt;是否是叶子节点" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="1050" width="150.01" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-63" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-53" target="ToSzjQ9twE04Xiy9Cd_i-62" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-53" value="创建树节点&lt;b&gt;X&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="640" y="1250" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-55" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;false&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="440.0094862884728" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-65" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-62" target="ToSzjQ9twE04Xiy9Cd_i-64" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-62" value="将&lt;b&gt;X&lt;/b&gt;节点设为&lt;br&gt;P的左子节点或&lt;br&gt;右子节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="810" y="1250" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-67" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-64" target="ToSzjQ9twE04Xiy9Cd_i-66" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-64" value="将p节点的next&lt;br&gt;指向&lt;b&gt;X&lt;/b&gt;节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="990" y="1250" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="qNMWkGHTYpmidPYAk0oT-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ToSzjQ9twE04Xiy9Cd_i-66" target="qNMWkGHTYpmidPYAk0oT-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ToSzjQ9twE04Xiy9Cd_i-66" value="&lt;b&gt;X&lt;/b&gt;节点的&lt;br&gt;parent、prev指针&lt;br&gt;均指向p节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="990" y="1360" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="RIEqcqRqiT2REE9FG_Aa-1" value="&lt;font color=&quot;#000000&quot;&gt;还没到叶子节点，继续遍历树。&lt;b&gt;注意这里是沿着dir的方向遍历子节点&lt;/b&gt;&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.48;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;size=31;position=0.34;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="230" y="1180" width="145" height="91" as="geometry" />
+        </mxCell>
+        <mxCell id="-W7lw1sjd2rW3jSuxHZ_-1" value="&lt;font color=&quot;#000000&quot;&gt;由dir变量决定&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.62;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="790" y="1180" width="106.38" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="qNMWkGHTYpmidPYAk0oT-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qNMWkGHTYpmidPYAk0oT-1" target="qNMWkGHTYpmidPYAk0oT-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qNMWkGHTYpmidPYAk0oT-1" value="将&lt;b&gt;xpn&lt;/b&gt;节点的prev&lt;br&gt;指针指向&lt;b&gt;X&lt;/b&gt;节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="1360" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="qNMWkGHTYpmidPYAk0oT-3" value="&lt;font color=&quot;#000000&quot;&gt;这里主要是要保持&lt;br&gt;双链表的结构&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.48;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;size=31;position=0.34;arcSize=50;direction=west;" vertex="1" parent="1">
+          <mxGeometry x="800" y="1420" width="137.5" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="yDkrHDWFnHSs4GKFZ4fX-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qNMWkGHTYpmidPYAk0oT-4" target="yDkrHDWFnHSs4GKFZ4fX-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qNMWkGHTYpmidPYAk0oT-4" value="插入后维护树的平衡" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="1360" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="xJHsxlTGz9r2ElkWNAb2-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yDkrHDWFnHSs4GKFZ4fX-1" target="xJHsxlTGz9r2ElkWNAb2-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yDkrHDWFnHSs4GKFZ4fX-1" value="将树的根节点设为&lt;br&gt;哈希表的首节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="1360" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="xJHsxlTGz9r2ElkWNAb2-1" value="end" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;labelBorderColor=none;strokeColor=#b85450;perimeterSpacing=1;fillColor=#f8cecc;shadow=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="485" y="1490" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="60ou2k-gRf1tX57QMtze-1" value="&lt;font color=&quot;#000000&quot;&gt;调用&lt;b&gt;moveRootToFront&lt;/b&gt;&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;size=31;position=0.34;direction=east;arcSize=50;base=35;" vertex="1" parent="1">
+          <mxGeometry x="353.43" y="1320" width="116.57" height="71" as="geometry" />
+        </mxCell>
+        <mxCell id="60ou2k-gRf1tX57QMtze-2" value="&lt;font color=&quot;#000000&quot;&gt;调用&lt;b&gt;balanceInsertion&lt;/b&gt;&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.49;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;rounded=1;size=31;position=0.34;direction=west;arcSize=50;base=35;" vertex="1" parent="1">
+          <mxGeometry x="633.4300000000001" y="1410.5" width="116.57" height="71" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
