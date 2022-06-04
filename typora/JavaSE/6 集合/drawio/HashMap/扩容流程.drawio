@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-06-04T09:08:48.365Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36" etag="EVN-zImp8nT-ilQRyM99" version="18.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-04T09:13:16.160Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36" etag="RC24Mj_am_No02Q5WH0x" version="18.2.0" type="github">
   <diagram id="PuM2QEDBa-cXQWB-A6vJ" name="第 1 页">
-    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1185" dy="635" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -10,11 +10,43 @@
         <mxCell id="a2cnZ2QDwMQIBshHrTLa-1" value="resize" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;labelBorderColor=none;strokeColor=#82b366;perimeterSpacing=1;fillColor=#d5e8d4;shadow=1;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="400" y="40" width="80" height="80" as="geometry" />
         </mxCell>
+        <mxCell id="a2cnZ2QDwMQIBshHrTLa-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="a2cnZ2QDwMQIBshHrTLa-2" target="a2cnZ2QDwMQIBshHrTLa-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="a2cnZ2QDwMQIBshHrTLa-2" value="确定扩容后的参数" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=hexagon;perimeter=hexagonPerimeter2;arcSize=6;size=0.27;shadow=1;labelBorderColor=none;fontSize=12;strokeColor=#d6b656;strokeWidth=1;labelPosition=center;align=center;fillColor=#fff2cc;" vertex="1" parent="1">
           <mxGeometry x="375" y="160" width="130" height="60" as="geometry" />
         </mxCell>
         <mxCell id="a2cnZ2QDwMQIBshHrTLa-4" value="主要确定这两个参数新的容量、新的阈值" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;rounded=1;arcSize=50;position2=0.96;" vertex="1" parent="1">
           <mxGeometry x="270" y="90" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="a2cnZ2QDwMQIBshHrTLa-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="a2cnZ2QDwMQIBshHrTLa-5" target="a2cnZ2QDwMQIBshHrTLa-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2cnZ2QDwMQIBshHrTLa-5" value="遍历原来的哈希表" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="386.5" y="280" width="107" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="a2cnZ2QDwMQIBshHrTLa-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="a2cnZ2QDwMQIBshHrTLa-7" target="a2cnZ2QDwMQIBshHrTLa-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2cnZ2QDwMQIBshHrTLa-7" value="当前槽位不为空" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="376.5" y="400" width="127" height="113" as="geometry" />
+        </mxCell>
+        <mxCell id="a2cnZ2QDwMQIBshHrTLa-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;" edge="1" parent="1" source="a2cnZ2QDwMQIBshHrTLa-9" target="a2cnZ2QDwMQIBshHrTLa-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2cnZ2QDwMQIBshHrTLa-9" value="当前槽位只有&lt;br&gt;一个元素" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="376.5" y="560" width="127" height="113" as="geometry" />
+        </mxCell>
+        <mxCell id="a2cnZ2QDwMQIBshHrTLa-11" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="440" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="a2cnZ2QDwMQIBshHrTLa-12" value="将该元素放到新哈希表对应的索引位上" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="587.5" width="130" height="52.5" as="geometry" />
+        </mxCell>
+        <mxCell id="a2cnZ2QDwMQIBshHrTLa-14" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="461" y="538" as="geometry">
+            <mxPoint x="72" y="76" as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
