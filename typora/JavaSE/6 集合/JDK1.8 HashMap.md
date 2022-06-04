@@ -6,14 +6,13 @@
 
 ## 前言
 
-​		相信看过HashMap1.7的朋友应该知道，1.7底层的设计是动态数组+链表的结构，而1.8基于它引入了红黑树的概念。为什么要引入红黑树？难道是多次一举？
-​		深究之后地我发现，里面暗藏玄机，逻辑一层套一层，原来小丑竟然是我......
+相信看过HashMap1.7的朋友应该知道，1.7底层的设计是动态数组+链表的结构，而1.8引入了红黑树的概念。为什么要引入红黑树？
 
-## HashMap的前身
+## HashMap的前世今生
 
-​		这个还得从之前版本说起，我们都知道1.8之前使用单链表解决hash冲突的问题。单链表，即链表中每个节点都有一个next指针，指向下一个节点，这样就形成单向的一个链表。试想，设这个链表的长度达到n，每当读取该链表中的其中一个节点时，就要从链表的首节点开始自旋，直到返回正确的节点，时间复杂度是O(n)。
+我们都知道1.7版本使用单链表解决哈希冲突的问题。单链表，即链表中每个节点都有一个next指针，指向下一个节点，这样就形成单向的一个链表。试想，设这个链表的长度达到n，每当读取该链表中的其中一个节点时，就要从链表的首节点开始自旋，直到返回正确的节点，时间复杂度是O(n)。
 
-​		而1.8后，采用双向链表+红黑树的方式。双向链表，即有前后两个指针分别指向对应的节点。而红黑树是一种自平衡二叉查找树，它结构看起来简单、清晰，它实现起来是比较复杂的，但是它有着比较可观的效率，可以在O(log n)的时间内完成增、删、查。
+而1.8后，采用双向链表+红黑树的方式，其实并不是一开始就使用双向链表，而是有个过渡期，中间会将单链表转换成双向链表，再由双向链表转成红黑树。双向链表，即有两个指针分别指向前后对应的节点。而红黑树是一种自平衡二叉查找树，它结构看起来简单、清晰，它实现起来算是比较复杂的😅，但是它有着比较可观的效率，可以在O(log n)的时间内完成增、删、查。
 
 ## 类层级关系
 
@@ -24,7 +23,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
 
 ## 成员属性
 
-​		相比1.7多了**TREEIFY_THRESHOLD**、**UNTREEIFY_THRESHOLD**、**MIN_TREEIFY_CAPACITY**这几个属性，也是红黑树几个关键的属性。
+相比1.7版本多了**TREEIFY_THRESHOLD**、**UNTREEIFY_THRESHOLD**、**MIN_TREEIFY_CAPACITY**这几个属性，也是红黑树的几个关键属性。
 
 ```java
 // 默认初始容量 - 必须是 2 的幂。
@@ -37,7 +36,7 @@ static final float DEFAULT_LOAD_FACTOR = 0.75f;
 static final int TREEIFY_THRESHOLD = 8;
 // 链表长度收缩到6后退化为链表。
 static final int UNTREEIFY_THRESHOLD = 6;
-// 红黑树的最小容量
+// 红黑树的最小容量，哈希表要达到这个阈值才会转成红黑树
 static final int MIN_TREEIFY_CAPACITY = 64;
 // 哈希表，在第一次使用时初始化，并根据需要调整大小。 分配时，长度始终是 2 的幂。 
 transient Node<K,V>[] table;
@@ -46,7 +45,10 @@ transient Set<Map.Entry<K,V>> entrySet;
 transient int size;
 // 该 HashMap 被结构修改的次数
 transient int modCount;
-// threshold = 容量 * 负载因子,达到该阈值后进行扩容
+// 这里有个细节，首次初始化或者容量小于16时，threshold是通过【容量 * 负载因子】计算的。
+// 后面扩容的时候，容量大于等于16时，则扩容后的threshold是 旧阈值的两倍，这是为什么？
+// 因为容量16之前【旧阈值 的 两倍】和 【容量 * 负载因子】 可能会有不相等的情况，直到容量大于等于16，它们两者计算结果相等。
+// 【一个数的两倍 = 这个数左移一位】比实际乘法运算效率要来得快些。
 int threshold;
 // 哈希表的负载因子。
 final float loadFactor;
@@ -54,11 +56,9 @@ final float loadFactor;
 
 ## 关键属性
 
-​		**DEFAULT_LOAD_FACTOR**（加载因子）：HashMap为什么默认加载因子选择0.75？其实， 它需要衡量时间和空间的成本，选取最折中的一个值作为因子。因子过高，比如1，则哈希表节点长度达到16才扩容，虽然可以节省空间成本（扩容频率少，扩容后容量是原本的两倍），提高了空间利用率，同时增加查询节点的时间成本，但冲突的机会就加大了；因子过低，比如0.5，则哈希表节点长度达到8就进行扩容，虽然可以节省查询成本，但是空间利用率低，因为才达到8就扩容（扩容频率高）。
+**DEFAULT_LOAD_FACTOR**（加载因子）：HashMap为什么默认加载因子选择0.75？作者给出答案是它需要衡量时间和空间的成本，选取最折中的一个值作为因子。假设哈希表长度为16，如果因子过高，比如1，则哈希表节点长度达到16才扩容，虽然可以节省空间成本（扩容频率少，扩容后容量是原本的两倍），提高了空间利用率，但同时增加查询节点的时间成本，冲突的机会也因此加大；因子过低，比如0.5，则哈希表节点长度达到8开始扩容，虽然可以节省查询成本，但是空间利用率相对来说并不是最优的，所以这里作者也是选取了0.75作为因子，这个值并不是固定的，开发者使用时可以自行修改。
 
-​		**DEFAULT_INITIAL_CAPACITY**（默认初始 容量1<<4）：HashMap为什么要保证容量是2的次幂？HashMap的key的索引位是根据（n-1）& hash 计算出来的，因此n永远是2的次幂
-
-
+**DEFAULT_INITIAL_CAPACITY**（默认初始 容量1<<4）：为什么要保证容量是2的次幂？首先换想一下，作者为什么使用 （n-1）& hash 的这种方式计算索引位置（**n是哈希表长度**）？hash值这里暂且理解成一个“**特征值**”，我们都知道两个数做 & 运算，最后结果不会超过较小的数，所以（n - 1）起到限制的作用，**这样能够保证计算出来的索引位不会超出哈希表的长度**。**且当n是2的次幂时 （n-1）& hash  与  n % hash式子算出的结果相同，为什么不用 n % hash 进行计算，是因为 & 比 % 效率略高一点**。![](../../../photo/JavaSE/集合/HashMap/&和%的计算耗时.png)
 
 ## 构造函数
 
@@ -66,13 +66,11 @@ final float loadFactor;
 // 构造一个具有指定初始容量和负载因子的空HashMap 。
 public HashMap(int initialCapacity, float loadFactor) {
     if (initialCapacity < 0)
-        throw new IllegalArgumentException("Illegal initial capacity: " +
-                                           initialCapacity);
+        throw new IllegalArgumentException("Illegal initial capacity: " + initialCapacity);
     if (initialCapacity > MAXIMUM_CAPACITY)
         initialCapacity = MAXIMUM_CAPACITY;
     if (loadFactor <= 0 || Float.isNaN(loadFactor))
-        throw new IllegalArgumentException("Illegal load factor: " +
-                                           loadFactor);
+        throw new IllegalArgumentException("Illegal load factor: " + loadFactor);
     this.loadFactor = loadFactor;
     // 初始化扩容阈值
     this.threshold = tableSizeFor(initialCapacity);
@@ -90,8 +88,10 @@ public HashMap(Map<? extends K, ? extends V> m) {
     this.loadFactor = DEFAULT_LOAD_FACTOR;
     putMapEntries(m, false);
 }
-// 返回给定目标容量的二次幂。
-// 假设给定7，则返回8。给定17，则返回32。
+// 返回首个大于或等于给定目标容量的二次幂数。
+// 假设给定7，则返回8。
+// 给定17，则返回32。
+// 给定16，则返回16。
 static final int tableSizeFor(int cap) {
     int n = cap - 1;
     n |= n >>> 1;
@@ -103,17 +103,47 @@ static final int tableSizeFor(int cap) {
 }
 ```
 
-## 常用方法
+**tableSizeFor**这个方法简单介绍一下，认真理解之后其实没那么难理解😏，这里就举个简单的例子吧。
 
-​		当我们进行put操作的时候，它会根据传入的key去做hash运算，hash运算步骤如下：
+1. 首先给定cap = 9，9的二进制是 **1001**【前面省略28个零，总共32位】。
+2. 临时变量 n = cap - 1 = 8，二进制是 **1000**。
+3. 【n】和【n 无符号右移 1位 】两个做或运算，结果赋予n。
+4. 重复第3步，不同的是当前右移的位数是上一次位数的两倍，结果继续赋予n。**n其实就是记录上一次运算的结果，等下一次运算时就用n作为基础的数值。**
 
-1. 取key的hashCode值（根据key的数据类型调用对应的hashCode方法，此处以String类型为例），**1.7版本的hash算法比1.8的稍微复杂点，而1.8之所以逻辑简单是因为作者已经引入了红黑树去解决效率问题了，考虑到两者效率平衡的问题，所以也就没必要去增加hash逻辑的复杂度**。
+$$
+①n = 1000|(1000 >>> 1)=1000|0100=1100
+$$
+
+$$
+②n = 1100|(1100 >>> 2)=1100|0110=1110
+$$
+
+$$
+③n = 1110|(1110 >>> 4)=1110|0111=1111
+$$
+
+计算到这一步再往下面计算结果都是**1111**，最后一步还要将结果n加1得到16，所以传入9函数将返回16。
+
+也可以这样理解：给定一个容量大小，将容量减去1得到一个二进制数，从这个二进制数最高位是1的位置开始，向最低位依次填充1。例如容量19，二进制是**10011**，减1之后是**10010**，依次填充1之后得到**11111**，然后再加上1，最终函数返回**32**。
+		总结一句话：**返回首个大于或等于给定目标容量的二次幂数**。
+
+## 插入元素过程
+
+我们先从最常见的put方法开始吧，当我们put一个元素的时候，首先它会根据传入的key去做hash运算，hash运算步骤如下：
+
+1. 取key的hashCode值（根据key的数据类型调用对应的hashCode方法，此处以String类型为例）。
 2. 将hashCode值进行无符号右移16位。
-3. 将原hashCode值与右移之后的结果进行异或运算得到hash值。
+3. 将 原hashCode值 与 右移之后的值 进行异或运算得到hash值（也就是第一步和第二步做异或运算）。
 
-​        右移16位的作用是为了减少碰撞，更好的避免hash冲突，其主要原因是能够保留hashcode的高16位与低16位各自的特征。那为什么需要将高16位也参与到运算中呢？我们可以看到HashMap源码是通过**(n-1)&hash** 去计算存储下标的，那如果**n**（数组大小）的值还不到16位呢？那是不是hash的高16位是没有参与运算的，所以让高16位参与运算主要是计算存储下标时能够更加均匀分布。
+**为什么要右移16位？**
 
-![](../../../photo/JavaSE/集合/HashMap/计算下标值.png)
+**主要是为了减少碰撞，更好的避免下标冲突**。这样设计主要原因是能够保留hashcode的**高16位**与**低16位**各自的特征。源码是通过**(n-1)&hash** 去计算索引下标的，有没有想过，如果**n-1**的值还不到16位呢？那是不是hash的高16位是没有参与运算的？例如n-1=2，2的二进制是0010，假设hash值是32并且是原始的hashcode（没有做高低位的运算），直接与0010做&运算，那么hash只有低16位参与了其中，高16位被忽略掉了，这样不利于计算下标时的均匀分布，作者想通过融合hash高低位的二进制特征，最后使得索引能够均匀分布。
+
+看过1.7版本的小伙伴应该知道，1.8版本的hash算法比1.7版本的逻辑稍微简单点，是因为作者已经引入了红黑树去解决冲突问题了，考虑到前后效率平衡的问题，所以也就没必要去增加hash逻辑的复杂度了。
+
+![](../../../photo/JavaSE/集合/HashMap/1.8版本hash算法.png)
+
+上面英文简述部分的大致意思大概就是上述所描述的那样了，不过这仅限于本人所思考的哦，不知道小伙伴们有没有其他不同看法😃
 
 ```java
 public V put(K key, V value) {
@@ -122,7 +152,6 @@ public V put(K key, V value) {
 
 static final int hash(Object key) {
     int h;
-    // h是key的hashcode值， 与它自身的hashcode无符号右移之后 做异或运算
     return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
 }
 // 此为String类的hashCode方法
@@ -131,6 +160,7 @@ public int hashCode() {
     if (h == 0 && value.length > 0) {
         char val[] = value;
         for (int i = 0; i < value.length; i++) {
+            // 一个数迭代运算的过程
             h = 31 * h + val[i];
         }
         hash = h;
@@ -139,7 +169,7 @@ public int hashCode() {
 } 
 ```
 
-​		我们具体来看看put的步骤
+我们具体来看看put的步骤
 
 ```java
 final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
@@ -155,17 +185,16 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
     if ((p = tab[i = (n - 1) & hash]) == null)
         tab[i] = newNode(hash, key, value, null);
     else {
-        // 如果该索引位上不为空，说明该位置上 已经存在一个节点或者一条链表
-        // 假如表中存在相同的key，则用e存储下来
+        // 如果该索引位上不为空，说明该位置上 已经存在一个节点或者一条链表或者一颗红黑树
+        // 假如表中存在相同的key，则用e记录下来
         Node<K,V> e; K k;
         // ① 该索引位上的hash值与新计算出来的hash值相等
         // ② 该索引位上的key与新的key相等
         // 满足①和②则进行覆盖
-        // 不管是一个节点或者一条链表都会覆盖
         if (p.hash == hash &&
             ((k = p.key) == key || (key != null && key.equals(k))))
             e = p;
-        // 如果索引位上的元素类型是TreeNode，即此时链表已经转换为红黑树了。
+        // 如果索引位上的元素类型是TreeNode，即此时链表已经是一颗红黑树了。
         else if (p instanceof TreeNode)
             // 使用红黑树的方式插入元素
             e = ((TreeNode<K,V>)p).putTreeVal(this, tab, hash, key, value);
@@ -216,23 +245,21 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
 }
 ```
 
-​		流程图：		
+如果源码和注释看得不够清晰的，还可以看下具体的流程图哦
 
 ![](../../../photo/JavaSE/集合/HashMap/put过程1.8.drawio.png)
 
+经过上面put的源码解析，可以简单总结1.7和1.8的不同之处：
 
-
-​		经过上面put的源码解析，可以总结1.7和1.8的不同之处。
-
- 1）**1.8**的底层数据结构是数组+链表+红黑树，链表长度达到8的时候会将链表转化为红黑树；1.7是数组+链表。
+ 1）**1.8**的底层数据结构是**数组+链表+红黑树**，链表长度达到8的时候会将链表转化为红黑树；1.7是数组+链表。
 
  2）**1.8**是先插入元素再扩容，**1.7**是先扩容再插入元素。
 
  3）**1.8**采用链表尾插法，**1.7**采用链表头插法。
 
- 4）hash运算不同。1.7使用了4次位运算和5次异或；1.8只用了2次扰动处理：1次位运算+1次异或。可以看出1.7更注重在hash算法层面去分配索引位，1.8则是增加红黑树结构去解决冲突问题。时间复杂度从O（n）变成O（nlogN）从而提高了效率。
+ 4）hash运算不同。1.7使用了4次位运算和5次异或；1.8只用了2次扰动处理：1次位运算+1次异或。可以看出1.7更注重在hash算法层面去分配索引位，1.8则是增加红黑树结构去解决冲突问题。时间复杂度从O（n）变成O（log n）从而提高了效率。
 
-​		当我们新增一个节点，计算出这个节点的索引位上已经有一个类型是红黑树的链表，这时候就要根据红黑树的方式插入节点了，看看具体是怎么实现的。
+如果当我们新增一个节点，计算出这个节点的索引位上已经有一颗是红黑树了，这个时候就不能再使用链表尾插了，要根据红黑树的方式插入节点。
 
 ```java
 final TreeNode<K,V> putTreeVal(HashMap<K,V> map, Node<K,V>[] tab,
@@ -259,8 +286,8 @@ final TreeNode<K,V> putTreeVal(HashMap<K,V> map, Node<K,V>[] tab,
                   (kc = comparableClassFor(k)) == null) ||
                  (dir = compareComparables(kc, k, pk)) == 0) {
 
-           	// 或者 
-            // 实现了Comparable接口 并与 新节点是同类（通过==比较后类相同）
+            //判断新节点没有实现Comparable接口 或者
+            //k和pk的compareTo等于0(即新节点和原本树节点的key通过compareTo比较后相等)
             
           	// 这里主要是搜寻树结构中是否有equals方法比较后相同的节点
 		   // 找到之后返回出去
@@ -276,7 +303,7 @@ final TreeNode<K,V> putTreeVal(HashMap<K,V> map, Node<K,V>[] tab,
             }
             // 走到这里，说明上一步没有search到相同的节点。 
             // 这个方法是最终确认要插入的节点是位于树的左侧还是右侧，
-            // 调用JNI接口生成hashcode再比较。
+            // 调用JNI接口生成hashcode再次比较，最终确认插入的方向。
             dir = tieBreakOrder(k, pk);
         }
 	    // 走到这一步， 插入的方向已经确定了。
@@ -309,37 +336,43 @@ final TreeNode<K,V> putTreeVal(HashMap<K,V> map, Node<K,V>[] tab,
 }
 ```
 
-转化为红黑树主要是这个方法**treeifyBin**，它的实现逻辑是怎样的呢？
+这个方法关键是确认插入树的方向是左侧还是右侧，并且是在树的尾部进行插入，插入之后要维护红黑树的平衡，以下是流程图：
+
+![](../../../photo/JavaSE/集合/HashMap/以树的方式插入新节点.png)
+
+从单链表转为双链表，再从双链表转为红黑树主要是这个方法**treeifyBin**，它的实现逻辑是怎样的呢？ 首先转成双链表。
 
 ```java
 final void treeifyBin(Node<K,V>[] tab, int hash) {
     int n, index; Node<K,V> e;
-    // 如果元素数组为空 或者 数组长度小于 树结构化的最小限制
-    // MIN_TREEIFY_CAPACITY 默认值64，对于这个值可以理解为：如果元素数组长度小于这个值，没有必要去进行结构转换
-    // 当一个数组位置上集中了多个键值对，那是因为这些key的hash值和数组长度取模之后结果相同。（并不是因为这些key的hash值相同）
-    // 因为hash值相同的概率不高，所以可以通过扩容的方式，来使得最终这些key的hash值在和新的数组长度取模之后，拆分到多个数组位置上。
+    // 当哈希表长度小于 MIN_TREEIFY_CAPACITY时，先利用扩容的方式去代替红黑树，可以理解还没达到转化红黑树的条件
     if (tab == null || (n = tab.length) < MIN_TREEIFY_CAPACITY)
         resize();
-    // 根据数组的长度和hash进行与运算后，得到链表的头节点
+    // 根据哈希表的长度和hash进行与运算后，得到链表的头节点
     else if ((e = tab[index = (n - 1) & hash]) != null) {
-        // 定义头尾节点
+        // 当哈希数组长度大于MIN_TREEIFY_CAPACITY时，这时会转换为红黑树，中间的过程也不是一步到位的，而是先将哈希表的当前索引位上的单链表转成双向链表，再由双向链表转成红黑树。
+        
+        // 首先，定义头尾节点，主要做辅助作用。
         TreeNode<K,V> hd = null, tl = null;
         do {
-            // 遍历链表，生成树节点
+            // 遍历单链表，每遍历一个链表节点就生成一个树节点
             TreeNode<K,V> p = replacementTreeNode(e, null);
-            // 如果尾节点为空，说明没有根节点
+            // 如果尾节点为空，说明没有根节点，第一次循环肯定为空
             if (tl == null)
-                // 头节点指向当前节点
+                // 头节点指向当前节点，这里是双链表的初始化工作，
+                // 先处理 头节点开始
                 hd = p;
             else {
-                // 尾节点不空，将当前节点的prev指向尾节点
+                // 这里说明尾节点不为空，因为已经做了初始化工作了
+                // 将当前遍历的链表节点的prev指向尾节点
                 p.prev = tl;
                 // 尾节点的next指向当前节点
                 tl.next = p;
             }
-            // 此时，尾节点指向当前节点
+            // 此时，尾节点指向当前节点，这里形成了一个闭环，因为是双链表
             tl = p;
-        } while ((e = e.next) != null); // 继续遍历链表
+        } while ((e = e.next) != null); // 指向下一个单链表节点，继续遍历链表
+        
         // 上面的步骤已经把单向链表转换为双向链表了
         if ((tab[index] = hd) != null)
             // 将双向链表树化
@@ -348,12 +381,12 @@ final void treeifyBin(Node<K,V>[] tab, int hash) {
 }
 ```
 
-​		以下是树化的过程
+​	这里是双链表转红黑树哦
 
 ```java
 final void treeify(Node<K,V>[] tab) {
     TreeNode<K,V> root = null;
-    // 此时的x是双向链表的头节点4
+    // 此时的x是双向链表的头节点，从头开始遍历。
     for (TreeNode<K,V> x = this, next; x != null; x = next) {
         // x的next节点
         next = (TreeNode<K,V>)x.next;
@@ -398,10 +431,7 @@ final void treeify(Node<K,V>[] tab) {
            		   	// 调用本地方法生成hashcode再比较。
                     dir = tieBreakOrder(k, pk);
 				
-                // 如果dir 小于等于0 ： 当前链表节点一定放置在当前树节点的左侧，但不一定是该树节点的左孩				子，也可能是左孩子的右孩子 或者 更深层次的节点。
-                // 如果dir 大于0 ： 当前链表节点一定放置在当前树节点的右侧，但不一定是该树节点的右孩子，也					可能是右孩子的左孩子 或者 更深层次的节点。
-                // 按上述方式逐层递归，直到找到要插入树节点的位置（即当前树节点的左或右子节点为空）
-                // 挂载之后，还需要重新把树进行平衡。平衡之后，就可以针对下一个链表节点进行处理了。
+                // 判断是否已经遍历到叶子节点了，因为最后是插入到树的尾部
                 TreeNode<K,V> xp = p;
                 if ((p = (dir <= 0) ? p.left : p.right) == null) {
                     x.parent = xp;
@@ -409,7 +439,7 @@ final void treeify(Node<K,V>[] tab) {
                         xp.left = x;
                     else
                         xp.right = x;
-                    // 插入平衡可以参考1.7的put方法
+                    // 插入后维护树平衡
                     root = balanceInsertion(root, x);
                     break;
                 }
@@ -417,11 +447,252 @@ final void treeify(Node<K,V>[] tab) {
         // 继续下一次循环
         }
     }
-	// 重新指定红黑树的root节点
 	// 用来将root节点放入到哈希槽中，保证其处于哈希桶的头部
     moveRootToFront(tab, root);
 }
 ```
+
+​	这里简述一下就是，将双链表的节点一个一个地插入到树中，中间需要判断hash值的大小知道插入的方向是在左侧还是右侧，根据方向然后插入到树的叶子节点处。
+
+![](../../../photo/JavaSE/集合/HashMap/将双链表树化的过程.png)
+
+​	下面的重头戏是树如何保持平衡？首先了解一下红黑树的一些特点，它是一种**自平衡二叉查找树**，主要有以下性质：
+
+1. 节点是红色或黑色。
+2. 根是黑色。
+3. 所有叶子节点都是黑色。
+4. 每个红色节点必须有两个黑色的子节点（或者说红色节点的父节点和子节点均是黑色的）。
+5. 从任一节点到其每个叶子的所有路径都包含相同数目的黑色节点。
+
+![](../../../photo/JavaSE/集合/HashMap/Red-black_tree.png)
+
+​	根据上面图可以看到，所有左子节点比它父节点都小，所有右子节点比它父节点都大。
+​			也正是因为上面的性质，才体现红黑树自平衡的特质，不会像普通二叉查找树一样出现瘸子的现象，**也同时保证了树从根到叶子结点最长路径不会超过最短路径的2倍**。
+
+​	下面介绍维护树的平衡就是要保证上面红黑树的性质，在此之前说说保持平衡的几种情况（暂且只讨论平衡的情况，颜色到后面再讨论）：
+
+​	① 失衡情况 - 右右：**需要以节点8进行左旋**
+
+![](../../../photo/JavaSE/集合/HashMap/红黑树失衡情况-右右1.png)
+
+![](../../../photo/JavaSE/集合/HashMap/红黑树失衡情况-右右2.png)
+
+② 失衡情况 - 左左：**需要以节点4进行右旋**
+
+![](../../../photo/JavaSE/集合/HashMap/红黑树失衡情况-左左1.png)
+
+![](../../../photo/JavaSE/集合/HashMap/红黑树失衡情况-左左2.png)
+
+③ 失衡情况 - 左右：
+
+![](../../../photo/JavaSE/集合/HashMap/红黑树失衡情况-左右1.png)
+
+![](../../../photo/JavaSE/集合/HashMap/红黑树失衡情况-左右2.png)
+
+④ 失衡情况 - 右左：
+
+![](../../../photo/JavaSE/集合/HashMap/红黑树失衡情况-右左1.png)
+
+![](../../../photo/JavaSE/集合/HashMap/红黑树失衡情况-右左2.png)
+
+以上都是**新元素**的父亲没有兄弟元素的情况下进行的平衡，如果有一个兄弟元素并且是红色，这时候又要分不同情况了：
+
+①右右情况-父亲元素有一个红色兄弟元素：
+
+![](../../../photo/JavaSE/集合/HashMap/红黑树失衡情况-右右伴有兄弟元素1.png)
+
+![](../../../photo/JavaSE/集合/HashMap/红黑树失衡情况-右右伴有兄弟元素2.png)
+
+![](../../../photo/JavaSE/集合/HashMap/红黑树失衡情况-右右伴有兄弟元素3.png)
+
+①左左情况-父亲元素有一个红色兄弟元素：
+
+![](../../../photo/JavaSE/集合/HashMap/红黑树失衡情况-左左伴有兄弟元素1.png)
+
+![](../../../photo/JavaSE/集合/HashMap/红黑树失衡情况-左左伴有兄弟元素2.png)
+
+![](../../../photo/JavaSE/集合/HashMap/红黑树失衡情况-左左伴有兄弟元素3.png)
+
+上面所有的情况基本上就是下面代码所有表达的内容了。
+
+```java
+static <K,V> TreeNode<K,V> balanceInsertion(TreeNode<K,V> root,
+                                            TreeNode<K,V> x) {
+    // 默认插入的元素是红色
+    x.red = true;
+    for (TreeNode<K,V> xp, xpp, xppl, xppr;;) {
+        // 初始化根节点
+        if ((xp = x.parent) == null) {
+            x.red = false;
+            return x;
+        }
+        // 父亲元素是黑色，没有破坏平衡
+        else if (!xp.red || (xpp = xp.parent) == null)
+            return root;
+        // 父亲是爷爷的左子元素
+        if (xp == (xppl = xpp.left)) {
+            // 父亲有一个红色的兄弟元素
+            if ((xppr = xpp.right) != null && xppr.red) {
+                xppr.red = false;
+                xp.red = false;
+                xpp.red = true;
+                x = xpp;
+            }
+            else {
+                // 如果这里不成立，那么就是左左情况，直接右旋即可。
+                if (x == xp.right) {
+                    // 成立的话就是左右情况，先左旋然后再右旋
+                    root = rotateLeft(root, x = xp);
+                    xpp = (xp = x.parent) == null ? null : xp.parent;
+                }
+                if (xp != null) {
+                    xp.red = false;
+                    if (xpp != null) {
+                        xpp.red = true;
+                        // 右旋
+                        root = rotateRight(root, xpp);
+                    }
+                }
+            }
+        }
+        // 父亲是爷爷的右子元素
+        else {
+            // 父亲有一个红色的兄弟元素
+            if (xppl != null && xppl.red) {
+                xppl.red = false;
+                xp.red = false;
+                xpp.red = true;
+                x = xpp;
+            }
+            else {
+                // 如果这里不成立，那么就是右右情况，直接左旋即可。
+                if (x == xp.left) {
+                    // 成立的话就是右左情况，先右旋然后再左旋
+                    root = rotateRight(root, x = xp);
+                    xpp = (xp = x.parent) == null ? null : xp.parent;
+                }
+                if (xp != null) {
+                    xp.red = false;
+                    if (xpp != null) {
+                        xpp.red = true;
+                        // 左旋
+                        root = rotateLeft(root, xpp);
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+插入完元素之后还要判断是否要进行扩容
+
+```java
+final Node<K,V>[] resize() {
+        Node<K,V>[] oldTab = table;
+        int oldCap = (oldTab == null) ? 0 : oldTab.length;
+        int oldThr = threshold;
+        int newCap, newThr = 0;
+    	// 旧容量>0
+        if (oldCap > 0) {
+            if (oldCap >= MAXIMUM_CAPACITY) {
+                threshold = Integer.MAX_VALUE;
+                return oldTab;
+            }
+            // 新容量是原来的两倍，并没有超过MAXIMUM_CAPACITY
+            // 并且旧容量要>=16
+            else if ((newCap = oldCap << 1) < MAXIMUM_CAPACITY &&
+                     oldCap >= DEFAULT_INITIAL_CAPACITY)
+                // 新的扩容阈值也是原来阈值的两倍
+                newThr = oldThr << 1; // double threshold
+        }
+    	// 旧阈值大于0
+        else if (oldThr > 0) // initial capacity was placed in threshold
+            // 新容量等于旧阈值
+            newCap = oldThr;
+        else {               // zero initial threshold signifies using defaults
+            // 采用默认值
+            newCap = DEFAULT_INITIAL_CAPACITY;
+            newThr = (int)(DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);
+        }
+    	// 新阈值等于0
+        if (newThr == 0) {
+            // 计算新阈值 -> 新容量 * 加载因子
+            float ft = (float)newCap * loadFactor;
+            newThr = (newCap < MAXIMUM_CAPACITY && ft < (float)MAXIMUM_CAPACITY ?
+                      (int)ft : Integer.MAX_VALUE);
+        }
+        threshold = newThr;
+        @SuppressWarnings({"rawtypes","unchecked"})
+        Node<K,V>[] newTab = (Node<K,V>[])new Node[newCap];
+        table = newTab;
+        if (oldTab != null) {
+            // 遍历旧的哈希表
+            for (int j = 0; j < oldCap; ++j) {
+                Node<K,V> e;
+                // 表的当前槽位不为空
+                if ((e = oldTab[j]) != null) {
+                    // 清空当前槽位，原来槽位的数据已经换成e来记录了，相当于一个临时变量
+                    oldTab[j] = null;
+                    // 当前槽位只有一个元素
+                    if (e.next == null)
+                        // 根据当前元素的hash 和 新哈希表的槽位数 做 & 运算，并将当前元素存储到新哈希表对应的索引位置
+                        newTab[e.hash & (newCap - 1)] = e;
+                    // 当前槽位是一颗红黑树
+                    else if (e instanceof TreeNode)
+                        ((TreeNode<K,V>)e).split(this, newTab, j, oldCap);
+                    // 当前槽位是一个链表
+                    else { // preserve order
+                        // 定义lo的头元素和尾元素
+                        Node<K,V> loHead = null, loTail = null;
+                        // 定义hi的头元素和尾元素
+                        Node<K,V> hiHead = null, hiTail = null;
+                        Node<K,V> next;
+                        // 遍历链表
+                        do {
+                            next = e.next;
+                            // 当前槽位的当前元素的hash 和 旧容量 做&运算等于0
+                            if ((e.hash & oldCap) == 0) {
+                                if (loTail == null)
+                                    // 初始化lohead元素
+                                    loHead = e;
+                                else
+                                    // loTail的下一个元素指向当前元素
+                                    loTail.next = e;
+                                // 尾元素自然也是当前元素
+                                loTail = e;
+                            }
+                            // 不等于0，和上面是一样的，只是不同变量存储而已
+                            else {
+                                if (hiTail == null)
+                                    hiHead = e;
+                                else
+                                    hiTail.next = e;
+                                hiTail = e;
+                            }
+                        } while ((e = next) != null);
+                        // 通过上面可以知道将原来链表进行分组
+						// 做&运算等于0的元素分成一条链表
+                        // 不等于0的分成另外一条链表
+                        if (loTail != null) {
+                            loTail.next = null;
+                            // 做&运算等于0的这条链表放在新哈希表的j索引位上，也就是在原来的索引位上。
+                            newTab[j] = loHead;
+                        }
+                        if (hiTail != null) {
+                            hiTail.next = null;
+                            // 做&运算不等于0的这条链表放在新哈希表的j + oldCap 索引位上。
+                            newTab[j + oldCap] = hiHead;
+                        }
+                    }
+                }
+            }
+        }
+        return newTab;
+    }
+```
+
+
 
 ### remove
 
