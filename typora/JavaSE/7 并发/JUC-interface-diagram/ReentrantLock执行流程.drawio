@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-16T06:20:40.850Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="kl4_5zkIA_yVwq07k6FP" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-16T06:21:11.672Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="RlBqNyl_JrzpEqolR5IF" version="20.0.1" type="github">
   <diagram id="3DekjfNhCCmHhPtTN9iT" name="lock">
     <mxGraphModel dx="1438" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -201,6 +201,9 @@
         </mxCell>
         <mxCell id="x7YFDtXw7JJySncnwOp_-77" value="返回当前线程节点" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.81;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.55;rounded=1;arcSize=50;base=9;spacing=3;" vertex="1" parent="1">
           <mxGeometry x="830" y="960" width="140" height="63.75" as="geometry" />
+        </mxCell>
+        <mxCell id="x7YFDtXw7JJySncnwOp_-78" value="这里形成双向链表" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.81;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.55;rounded=1;arcSize=50;base=9;spacing=3;" vertex="1" parent="1">
+          <mxGeometry x="650" y="972.13" width="140" height="63.75" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
