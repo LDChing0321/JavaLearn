@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-16T07:08:45.417Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="e9DlpdFYOBwY_E3eZNH6" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-16T07:16:01.973Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="v0KKbdvw9uJU4H8l11D-" version="20.0.1" type="github">
   <diagram id="3DekjfNhCCmHhPtTN9iT" name="lock">
     <mxGraphModel dx="1438" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -214,8 +214,8 @@
         <mxCell id="x7YFDtXw7JJySncnwOp_-79" value="这里CAS有可能失败，失败说明有其他线程抢先一步设置tail节点" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.55;rounded=1;arcSize=50;base=9;spacing=3;" vertex="1" parent="1">
           <mxGeometry x="300" y="930" width="182.75" height="93.75" as="geometry" />
         </mxCell>
-        <mxCell id="x7YFDtXw7JJySncnwOp_-81" value="将当前线程的prev指向队列的&lt;br&gt;tail节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="200" y="1240" width="170" height="50.5" as="geometry" />
+        <mxCell id="x7YFDtXw7JJySncnwOp_-81" value="调用enq函数" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="1240" width="90" height="50.5" as="geometry" />
         </mxCell>
         <mxCell id="x7YFDtXw7JJySncnwOp_-84" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="1">
           <mxGeometry x="523.6300000000002" y="1180" as="geometry">
@@ -229,6 +229,9 @@
         </mxCell>
         <mxCell id="x7YFDtXw7JJySncnwOp_-86" value="说明等待队列为空，&lt;br&gt;需要初始化队列" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=40;position=0.34;rounded=1;arcSize=50;base=19;spacing=3;" vertex="1" parent="1">
           <mxGeometry x="61.370000000000005" y="1138.1200000000001" width="148.63" height="83.75" as="geometry" />
+        </mxCell>
+        <mxCell id="x7YFDtXw7JJySncnwOp_-88" value="①初始化工作&lt;br&gt;②维护由于多线程竞争产生链表节点的错乱指向的问题" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.34;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=42;position=0.4;rounded=1;arcSize=50;base=19;spacing=3;align=left;" vertex="1" parent="1">
+          <mxGeometry x="241.37" y="1140" width="178.63" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
