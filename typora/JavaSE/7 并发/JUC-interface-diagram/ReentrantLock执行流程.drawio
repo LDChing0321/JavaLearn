@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-16T07:30:43.341Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="jYxBs1UEMv4h_NqgVc4s" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-16T07:34:22.843Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="tSalkTObJ6BFpdxRvj8N" version="20.0.1" type="github">
   <diagram id="3DekjfNhCCmHhPtTN9iT" name="lock">
     <mxGraphModel dx="1493" dy="576" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -251,8 +251,8 @@
         <mxCell id="x7YFDtXw7JJySncnwOp_-92" value="将node作为参数调用&lt;br&gt;acquireQueued函数" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="180" y="1520" width="150" height="50.5" as="geometry" />
         </mxCell>
-        <mxCell id="x7YFDtXw7JJySncnwOp_-95" value="维护等待队列的线程节点的生命状态" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.55;rounded=1;arcSize=50;base=9;spacing=3;" vertex="1" parent="1">
-          <mxGeometry x="60" y="1460" width="118.63" height="83.75" as="geometry" />
+        <mxCell id="x7YFDtXw7JJySncnwOp_-95" value="维护等待队列的线程节点的生命状态（node是当前线程及节点）" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.55;rounded=1;arcSize=50;base=9;spacing=3;" vertex="1" parent="1">
+          <mxGeometry y="1440" width="178.63" height="103.75" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
