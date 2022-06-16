@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-16T09:12:42.871Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="FoRsE07zdcB7FhqHa1Kl" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-16T09:13:40.405Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="IEVaQ2rL-i5cnBj7Zfn0" version="20.0.1" type="github">
   <diagram id="3DekjfNhCCmHhPtTN9iT" name="lock">
     <mxGraphModel dx="1493" dy="576" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -337,11 +337,8 @@
         <mxCell id="x7YFDtXw7JJySncnwOp_-129" value="LockSupport.park(this)" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=42;position=0.4;rounded=1;arcSize=50;base=19;spacing=3;align=center;direction=west;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="561.37" y="1919" width="150" height="79" as="geometry" />
         </mxCell>
-        <mxCell id="x7YFDtXw7JJySncnwOp_-132" value="返回当前线程是否中断" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;labelBorderColor=none;strokeColor=#b85450;perimeterSpacing=1;fillColor=#f8cecc;shadow=1;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="465.69" y="1998" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="x7YFDtXw7JJySncnwOp_-133" value="true&amp;nbsp;or&amp;nbsp;false" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=42;position=0.4;rounded=1;arcSize=50;base=19;spacing=3;align=center;direction=west;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="545.69" y="2040" width="104.31" height="80" as="geometry" />
+        <mxCell id="x7YFDtXw7JJySncnwOp_-134" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;判断当前线程&lt;br&gt;是否中断&lt;/span&gt;" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="436.37" y="1998" width="138.63" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
