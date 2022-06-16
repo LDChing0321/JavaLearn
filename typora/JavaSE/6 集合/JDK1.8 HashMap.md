@@ -145,6 +145,8 @@ $$
 
 上面英文简述部分的大致意思大概就是上述所描述的那样了，不过这仅限于本人所思考的哦，不知道小伙伴们有没有其他不同看法😃
 
+我们具体来看看put的步骤
+
 ```java
 public V put(K key, V value) {
     return putVal(hash(key), key, value, false, true);
@@ -169,7 +171,7 @@ public int hashCode() {
 } 
 ```
 
-我们具体来看看put的步骤
+
 
 ```java
 final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
@@ -251,13 +253,14 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
 
 经过上面put的源码解析，可以简单总结1.7和1.8的不同之处：
 
- 1）**1.8**的底层数据结构是**数组+链表+红黑树**，链表长度达到8的时候会将链表转化为红黑树；1.7是数组+链表。
+1.  **1.8**的底层数据结构是**数组+链表+红黑树**，链表长度达到8的时候会将链表转化为红黑树；1.7是数组+链表。
 
- 2）**1.8**是先插入元素再扩容，**1.7**是先扩容再插入元素。
+2.  **1.8**是先插入元素再扩容，**1.7**是先扩容再插入元素。
 
- 3）**1.8**采用链表尾插法，**1.7**采用链表头插法。
+3.  **1.8**采用链表尾插法，**1.7**采用链表头插法。
 
- 4）hash运算不同。1.7使用了4次位运算和5次异或；1.8只用了2次扰动处理：1次位运算+1次异或。可以看出1.7更注重在hash算法层面去分配索引位，1.8则是增加红黑树结构去解决冲突问题。时间复杂度从O（n）变成O（log n）从而提高了效率。
+4.  hash运算不同。1.7使用了4次位运算和5次异或；1.8只用了2次扰动处理：1次位运算+1次异或。可以看出1.7更注重在hash算法层面去分配索引位，1.8则是增加红黑树结构去解决冲突问题。时间复杂度从O（n）变成O（log n）从而提高了效率。
+
 
 如果当我们新增一个节点，计算出这个节点的索引位上已经有一颗是红黑树了，这个时候就不能再使用链表尾插了，要根据红黑树的方式插入节点。
 
@@ -381,7 +384,7 @@ final void treeifyBin(Node<K,V>[] tab, int hash) {
 }
 ```
 
-​	这里是双链表转红黑树哦
+​	然后就是双链表转红黑树
 
 ```java
 final void treeify(Node<K,V>[] tab) {
@@ -469,7 +472,7 @@ final void treeify(Node<K,V>[] tab) {
 ​	根据上面图可以看到，所有左子节点比它父节点都小，所有右子节点比它父节点都大。
 ​			也正是因为上面的性质，才体现红黑树自平衡的特质，不会像普通二叉查找树一样出现瘸子的现象，**也同时保证了树从根到叶子结点最长路径不会超过最短路径的2倍**。
 
-​	下面介绍维护树的平衡就是要保证上面红黑树的性质，在此之前说说保持平衡的几种情况（暂且只讨论平衡的情况，颜色到后面再讨论）：
+​	下面介绍维护树的平衡就是要保证上面红黑树的性质，在此之前说说保持平衡的几种情况：
 
 ​	① 失衡情况 - 右右：**需要以节点8进行左旋**
 
@@ -589,117 +592,294 @@ static <K,V> TreeNode<K,V> balanceInsertion(TreeNode<K,V> root,
 
 ```java
 final Node<K,V>[] resize() {
-        Node<K,V>[] oldTab = table;
-        int oldCap = (oldTab == null) ? 0 : oldTab.length;
-        int oldThr = threshold;
-        int newCap, newThr = 0;
-    	// 旧容量>0
-        if (oldCap > 0) {
-            if (oldCap >= MAXIMUM_CAPACITY) {
-                threshold = Integer.MAX_VALUE;
-                return oldTab;
-            }
-            // 新容量是原来的两倍，并没有超过MAXIMUM_CAPACITY
-            // 并且旧容量要>=16
-            else if ((newCap = oldCap << 1) < MAXIMUM_CAPACITY &&
-                     oldCap >= DEFAULT_INITIAL_CAPACITY)
-                // 新的扩容阈值也是原来阈值的两倍
-                newThr = oldThr << 1; // double threshold
+    Node<K,V>[] oldTab = table;
+    int oldCap = (oldTab == null) ? 0 : oldTab.length;
+    int oldThr = threshold;
+    int newCap, newThr = 0;
+    // 旧容量>0
+    if (oldCap > 0) {
+        if (oldCap >= MAXIMUM_CAPACITY) {
+            threshold = Integer.MAX_VALUE;
+            return oldTab;
         }
-    	// 旧阈值大于0
-        else if (oldThr > 0) // initial capacity was placed in threshold
-            // 新容量等于旧阈值
-            newCap = oldThr;
-        else {               // zero initial threshold signifies using defaults
-            // 采用默认值
-            newCap = DEFAULT_INITIAL_CAPACITY;
-            newThr = (int)(DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);
-        }
-    	// 新阈值等于0
-        if (newThr == 0) {
-            // 计算新阈值 -> 新容量 * 加载因子
-            float ft = (float)newCap * loadFactor;
-            newThr = (newCap < MAXIMUM_CAPACITY && ft < (float)MAXIMUM_CAPACITY ?
-                      (int)ft : Integer.MAX_VALUE);
-        }
-        threshold = newThr;
-        @SuppressWarnings({"rawtypes","unchecked"})
-        Node<K,V>[] newTab = (Node<K,V>[])new Node[newCap];
-        table = newTab;
-        if (oldTab != null) {
-            // 遍历旧的哈希表
-            for (int j = 0; j < oldCap; ++j) {
-                Node<K,V> e;
-                // 表的当前槽位不为空
-                if ((e = oldTab[j]) != null) {
-                    // 清空当前槽位，原来槽位的数据已经换成e来记录了，相当于一个临时变量
-                    oldTab[j] = null;
-                    // 当前槽位只有一个元素
-                    if (e.next == null)
-                        // 根据当前元素的hash 和 新哈希表的槽位数 做 & 运算，并将当前元素存储到新哈希表对应的索引位置
-                        newTab[e.hash & (newCap - 1)] = e;
-                    // 当前槽位是一颗红黑树
-                    else if (e instanceof TreeNode)
-                        ((TreeNode<K,V>)e).split(this, newTab, j, oldCap);
-                    // 当前槽位是一个链表
-                    else { // preserve order
-                        // 定义lo的头元素和尾元素
-                        Node<K,V> loHead = null, loTail = null;
-                        // 定义hi的头元素和尾元素
-                        Node<K,V> hiHead = null, hiTail = null;
-                        Node<K,V> next;
-                        // 遍历链表
-                        do {
-                            next = e.next;
-                            // 当前槽位的当前元素的hash 和 旧容量 做&运算等于0
-                            if ((e.hash & oldCap) == 0) {
-                                if (loTail == null)
-                                    // 初始化lohead元素
-                                    loHead = e;
-                                else
-                                    // loTail的下一个元素指向当前元素
-                                    loTail.next = e;
-                                // 尾元素自然也是当前元素
-                                loTail = e;
-                            }
-                            // 不等于0，和上面是一样的，只是不同变量存储而已
-                            else {
-                                if (hiTail == null)
-                                    hiHead = e;
-                                else
-                                    hiTail.next = e;
-                                hiTail = e;
-                            }
-                        } while ((e = next) != null);
-                        // 通过上面可以知道将原来链表进行分组
-						// 做&运算等于0的元素分成一条链表
-                        // 不等于0的分成另外一条链表
-                        if (loTail != null) {
-                            loTail.next = null;
-                            // 做&运算等于0的这条链表放在新哈希表的j索引位上，也就是在原来的索引位上。
-                            newTab[j] = loHead;
+        // 新容量是原来的两倍，并没有超过MAXIMUM_CAPACITY
+        // 并且旧容量要>=16
+        else if ((newCap = oldCap << 1) < MAXIMUM_CAPACITY &&
+                 oldCap >= DEFAULT_INITIAL_CAPACITY)
+            // 新的扩容阈值也是原来阈值的两倍
+            newThr = oldThr << 1; // double threshold
+    }
+    // 旧阈值大于0
+    else if (oldThr > 0) // initial capacity was placed in threshold
+        // 新容量等于旧阈值
+        newCap = oldThr;
+    else {               // zero initial threshold signifies using defaults
+        // 采用默认值
+        newCap = DEFAULT_INITIAL_CAPACITY;
+        newThr = (int)(DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);
+    }
+    // 新阈值等于0
+    if (newThr == 0) {
+        // 计算新阈值 -> 新容量 * 加载因子
+        float ft = (float)newCap * loadFactor;
+        newThr = (newCap < MAXIMUM_CAPACITY && ft < (float)MAXIMUM_CAPACITY ?
+                  (int)ft : Integer.MAX_VALUE);
+    }
+    threshold = newThr;
+    @SuppressWarnings({"rawtypes","unchecked"})
+    Node<K,V>[] newTab = (Node<K,V>[])new Node[newCap];
+    table = newTab;
+    if (oldTab != null) {
+        // 遍历旧的哈希表
+        for (int j = 0; j < oldCap; ++j) {
+            Node<K,V> e;
+            // 表的当前槽位不为空
+            if ((e = oldTab[j]) != null) {
+                // 清空当前槽位，原来槽位的数据已经换成e来记录了，相当于一个临时变量
+                oldTab[j] = null;
+                // 当前槽位只有一个元素
+                if (e.next == null)
+                    // 根据当前元素的hash 和 新哈希表的槽位数 做 & 运算，并将当前元素存储到新哈希表对应的索引位置
+                    newTab[e.hash & (newCap - 1)] = e;
+                // 当前槽位是一颗红黑树
+                else if (e instanceof TreeNode)
+                    ((TreeNode<K,V>)e).split(this, newTab, j, oldCap);
+                // 当前槽位是一个链表
+                else { // preserve order
+                    // 定义lo的头元素和尾元素
+                    Node<K,V> loHead = null, loTail = null;
+                    // 定义hi的头元素和尾元素
+                    Node<K,V> hiHead = null, hiTail = null;
+                    Node<K,V> next;
+                    // 遍历链表
+                    do {
+                        next = e.next;
+                        // 当前槽位的当前元素的hash 和 旧容量 做&运算等于0
+                        if ((e.hash & oldCap) == 0) {
+                            if (loTail == null)
+                                // 初始化lohead元素
+                                loHead = e;
+                            else
+                                // loTail的下一个元素指向当前元素
+                                loTail.next = e;
+                            // 尾元素自然也是当前元素
+                            loTail = e;
                         }
-                        if (hiTail != null) {
-                            hiTail.next = null;
-                            // 做&运算不等于0的这条链表放在新哈希表的j + oldCap 索引位上。
-                            newTab[j + oldCap] = hiHead;
+                        // 不等于0，和上面是一样的，只是不同变量存储而已
+                        else {
+                            if (hiTail == null)
+                                hiHead = e;
+                            else
+                                hiTail.next = e;
+                            hiTail = e;
                         }
+                    } while ((e = next) != null);
+                    // 通过上面可以知道将原来链表进行分组
+                    // 做&运算等于0的元素分成一条链表
+                    // 不等于0的分成另外一条链表
+                    if (loTail != null) {
+                        loTail.next = null;
+                        // 做&运算等于0的这条链表放在新哈希表的j索引位上，也就是在原来的索引位上。
+                        newTab[j] = loHead;
+                    }
+                    if (hiTail != null) {
+                        hiTail.next = null;
+                        // 做&运算不等于0的这条链表放在新哈希表的j + oldCap 索引位上。
+                        newTab[j + oldCap] = hiHead;
                     }
                 }
             }
         }
-        return newTab;
     }
+    return newTab;
+}
 ```
 
+流程图：
+
+![](../../../photo/JavaSE/集合/HashMap/扩容流程.drawio.png)
+
+基本链表的扩容比较简单，这里我们主要看看红黑树是怎么扩容的。
+
+```java
+// map -> 当前HashMap对象
+// tab -> 新的哈希表
+// index -> 旧的哈希表的当前槽位
+// bit -> 旧的哈希表的容量
+final void split(HashMap<K,V> map, Node<K,V>[] tab, int index, int bit) {
+    // 用临时变量b指向当前红黑树
+    TreeNode<K,V> b = this;
+    // Relink into lo and hi lists, preserving order
+    // 可以看到这里是对这颗红黑树进行分组，分成两条双链表
+    // loHead/loTail 为一条双链表
+    // hiHead/hiTail 为另外一条双链表
+    TreeNode<K,V> loHead = null, loTail = null;
+    TreeNode<K,V> hiHead = null, hiTail = null;
+    int lc = 0, hc = 0;
+    // 遍历红黑树的每一个元素
+    for (TreeNode<K,V> e = b, next; e != null; e = next) {
+        next = (TreeNode<K,V>)e.next;
+        // 清空当前元素的next指向
+        // 我们知道一颗红黑树 它既是双链表结构也是树形结构
+        // 这里主要是清空 针对双链表而言的
+        e.next = null;
+        // 这里开始对树进行条件分组,形成双链表
+        if ((e.hash & bit) == 0) {
+            if ((e.prev = loTail) == null)
+                // 初始化loHead双链表的头元素
+                loHead = e;
+            else
+                // 构建loHead双链表的body部分
+                loTail.next = e;
+            loTail = e;
+            // 统计loHead双链表的元素个数
+            ++lc;
+        }
+        else {
+            if ((e.prev = hiTail) == null)
+                // 初始化hiHead双链表的头元素
+                hiHead = e;
+            else
+                // 构建hiHead双链表的body部分
+                hiTail.next = e;
+            hiTail = e;
+            // 统计hiHead双链表的元素个数
+            ++hc;
+        }
+    }
+    if (loHead != null) {
+        // loHead链表个数小于6的话就要解除红黑树结构
+        if (lc <= UNTREEIFY_THRESHOLD)
+            tab[index] = loHead.untreeify(map);
+        else {
+            // 否则就将loHead链表放到新的哈希表的index索引中
+            // 还是保持在原本哈希表的索引位中，只是换成了新的哈希表
+            tab[index] = loHead;
+            // 如果两条链表都不为空，则将loHead树化
+            if (hiHead != null) // (else is already treeified)
+                loHead.treeify(tab);
+        }
+    }
+    // 下面逻辑差不多，只是在新哈希表的索引位和上面不同
+    // 这里的索引位是index + bit
+    if (hiHead != null) {
+        if (hc <= UNTREEIFY_THRESHOLD)
+            tab[index + bit] = hiHead.untreeify(map);
+        else {
+            tab[index + bit] = hiHead;
+            if (loHead != null)
+                hiHead.treeify(tab);
+        }
+    }
+}
+```
+
+![](../../../photo/JavaSE/集合/HashMap/扩容流程-split.drawio.png)
+
+将双链表树化的过程上面讲述过了，这里还涉及到将红黑树结构转化为链表，主要是untreeify这个方法，通过上面源码的解读这里就显得很简单了。
+
+```java
+final Node<K,V> untreeify(HashMap<K,V> map) {
+    Node<K,V> hd = null, tl = null;
+    // 遍历红黑树，这里的this就是红黑树
+    for (Node<K,V> q = this; q != null; q = q.next) {
+        // 将红黑树元素替换成链表元素
+        Node<K,V> p = map.replacementNode(q, null);
+        // 维护链表元素之间的前后关系
+        if (tl == null)
+            hd = p;
+        else
+            tl.next = p;
+        tl = p;
+    }
+    return hd;
+}
+```
+
+## 获取元素过程
+
+读取元素这里比较简单，通过参数key计算出hash值，调用getNode方法获取元素。
+
+```java
+public V get(Object key) {
+    Node<K,V> e;
+    return (e = getNode(hash(key), key)) == null ? null : e.value;
+}
+```
+
+以下有几种情况：
+
+1. 该元素的哈希槽只有一个元素，直接返回。
+2. 该元素的哈希槽是一条链表，遍历链表找到key相同的元素返回。
+3. 该元素的哈希槽是一颗红黑树，遍历树中元素比较hash值直到找到key相同的元素。
+
+```java
+final Node<K,V> getNode(int hash, Object key) {
+    Node<K,V>[] tab; Node<K,V> first, e; int n; K k;
+    if ((tab = table) != null && (n = tab.length) > 0 &&
+        (first = tab[(n - 1) & hash]) != null) {
+        if (first.hash == hash && // always check first node
+            ((k = first.key) == key || (key != null && key.equals(k))))
+            return first;
+        if ((e = first.next) != null) {
+            if (first instanceof TreeNode)
+                return ((TreeNode<K,V>)first).getTreeNode(hash, key);
+            do {
+                if (e.hash == hash &&
+                    ((k = e.key) == key || (key != null && key.equals(k))))
+                    return e;
+            } while ((e = e.next) != null);
+        }
+    }
+    return null;
+}
+
+// 获取红黑树结构元素
+final TreeNode<K,V> getTreeNode(int h, Object k) {
+    return ((parent != null) ? root() : this).find(h, k, null);
+}
+// 调用find函数搜寻红黑树元素，这里主要就是遍历树的元素以及比较元素之间的hash大小，直到找到相同的元素
+// 这里就不详细说了， 上面有类似的逻辑
+final TreeNode<K,V> find(int h, Object k, Class<?> kc) {
+    TreeNode<K,V> p = this;
+    do {
+        int ph, dir; K pk;
+        TreeNode<K,V> pl = p.left, pr = p.right, q;
+        if ((ph = p.hash) > h)
+            p = pl;
+        else if (ph < h)
+            p = pr;
+        else if ((pk = p.key) == k || (k != null && k.equals(pk)))
+            return p;
+        else if (pl == null)
+            p = pr;
+        else if (pr == null)
+            p = pl;
+        else if ((kc != null ||
+                  (kc = comparableClassFor(k)) != null) &&
+                 (dir = compareComparables(kc, k, pk)) != 0)
+            p = (dir < 0) ? pl : pr;
+        else if ((q = pr.find(h, k, kc)) != null)
+            return q;
+        else
+            p = pl;
+    } while (p != null);
+    return null;
+}
+```
+
+## 删除元素过程
+
+对于添加元素而言，如果槽位上是一颗红黑树添加完之后需要对树进行维护；那对于删除元素，在红黑树上删除一个元素之后也要考虑需不需要维护树的平衡。
+
+我们这里也分为几种情况：
 
 
-### remove
 
 ```java
 public V remove(Object key) {
     Node<K,V> e;
-    // 删除之前先计算key的hash值
+    // 这里先计算key的hash值作为参数调用removeNode方法
     return (e = removeNode(hash(key), key, null, false, true)) == null ?
         null : e.value;
 }
@@ -707,37 +887,40 @@ public V remove(Object key) {
 final Node<K,V> removeNode(int hash, Object key, Object value,
                            boolean matchValue, boolean movable) {
     // tab -> 当前的数组
-    // p -> 存放该key在数组的索引位上的链表
-    // n -> 记录数组的大小
+    // p -> 存放该key在哈希表的索引位上的元素，可以是链表、红黑树
+    // n -> 记录哈希表的大小
     // index -> 索引下标
     Node<K,V>[] tab; Node<K,V> p; int n, index;
     if ((tab = table) != null && (n = tab.length) > 0 &&
-        // 此时p指向的是对应索引位上的链表
+        // 此时p指向的是对应索引位上的元素
+        // 对应索引位上不为空
         (p = tab[index = (n - 1) & hash]) != null) {
         // node -> 要删除的元素
         // k -> 作为一个临时变量去存储元素的key
-        // v -> 记录要删除元素的value
+        // v -> 记录要删除元素的value，后面要return出去
         Node<K,V> node = null, e; K k; V v;
-        // ① 链表首元素的hash和形参的hash相同
-        // ② 链表首元素的key相同
-        // 同时满足①、②，则链表的首元素就是我们要删除的元素
+        // 当索引位上只有一个元素时
+        // 索引位上的元素的hash和参数的hash相同
+        // 以及两者的key也相同
+        // 则索引位上的元素就是我们要删除的元素
         if (p.hash == hash &&
             ((k = p.key) == key || (key != null && key.equals(k))))
+            // 记录这个元素，后面要进行删除
             node = p;
-        // 首元素的next元素不为空
+        // 当前索引位的next元素不为空
         else if ((e = p.next) != null) {
-            // 如果此时的p（即首元素）属于TreeNode类型，即此时的链表是红黑树的结构
+            // 如果此时的p（即首元素）属于TreeNode类型，即是红黑树结构时
             if (p instanceof TreeNode)
-                // 采用红黑树的方式来获取要删除的元素
+                // 采用红黑树的方式来获取要删除的元素，后面要进行删除
                 node = ((TreeNode<K,V>)p).getTreeNode(hash, key);
             else {
-                // 如果不是红黑树的结构，只是单纯的双向链表结构。
-                // 则正常的遍历链表来找到要删除的元素
-                // 以下do-while循环就是遍历链表去定位要删除的元素
+                // 如果不是红黑树的结构，是双链表结构是。
+                // 则遍历链表来找到要删除的元素
                 do {
                     if (e.hash == hash &&
                         ((k = e.key) == key ||
                          (key != null && key.equals(k)))) {
+                        // 记录这个元素，后面要进行删除
                         node = e;
                         break;
                     }
@@ -745,6 +928,7 @@ final Node<K,V> removeNode(int hash, Object key, Object value,
                 } while ((e = e.next) != null);
             }
         }
+        // 这里说明已经找到要删除的元素了，也或者哈希表没有要删除的元素。
         if (node != null && (!matchValue || (v = node.value) == value ||
                              (value != null && value.equals(v)))) {
             // 如果要删除的元素属于TreeNode类型
@@ -753,8 +937,7 @@ final Node<K,V> removeNode(int hash, Object key, Object value,
                 ((TreeNode<K,V>)node).removeTreeNode(this, tab, movable);
             else if (node == p)
                 // 如果要删除的元素刚好是链表的头元素
-                // 直接将该数组索引位上的链表往下挪一个元素
-                // 即断开头元素的引用
+                // 将索引位上的链表往下挪一个元素
                 tab[index] = node.next;
             else
                 // 以上两种情况都不是，即说明此时要删除的元素处于链表的非头元素位置上。
@@ -768,7 +951,11 @@ final Node<K,V> removeNode(int hash, Object key, Object value,
     }
     return null;
 }
+```
 
+重头戏又来了哈，删除红黑树的元素
+
+```java
 // 关键还是要看 要删除的元素处于红黑树 的结构状态下，该如何删除
 final void removeTreeNode(HashMap<K,V> map, Node<K,V>[] tab,
                           boolean movable) {
@@ -776,9 +963,9 @@ final void removeTreeNode(HashMap<K,V> map, Node<K,V>[] tab,
     int n;
     if (tab == null || (n = tab.length) == 0)
         return;
-    // 计算要删除的元素在数组中的索引
+    // 计算要删除的元素在哈希表中的索引
     int index = (n - 1) & hash;
-    // first -> 获取对应索引的链表
+    // first -> 获取对应索引的链表，同时具有红黑树属性
     // root -> 指向first，起到一个游标的作用
     // rl -> 临时变量
     TreeNode<K,V> first = (TreeNode<K,V>)tab[index], root = first, rl;
@@ -802,7 +989,8 @@ final void removeTreeNode(HashMap<K,V> map, Node<K,V>[] tab,
     // 定位链表的根节点
     if (root.parent != null)
         root = root.root();
-    // 从红黑树退化成链表
+    // 这里就是判断树中的元素是不是小于等于6
+    // 条件成立就从红黑树退化成链表
     if (root == null
         || (movable
             && (root.right == null
@@ -811,13 +999,13 @@ final void removeTreeNode(HashMap<K,V> map, Node<K,V>[] tab,
         tab[index] = first.untreeify(map);  // too small
         return;
     }
-    // 还没达到退化链表的条件
-    // p -> 待删除元素
-    // pl -> 待删除元素的左子元素
-    // pr -> 待删除元素的右子元素
+    // 如果还没达到退化链表的条件
+    // p -> 要删除的元素
+    // pl -> 要删除元素的左子元素
+    // pr -> 要删除元素的右子元素
     // replacement -> 替换元素
     TreeNode<K,V> p = this, pl = left, pr = right, replacement;
-    // 待删除元素有左右子元素
+    // 要删除元素有左右子元素
     if (pl != null && pr != null) {
         TreeNode<K,V> s = pr, sl;
         // 找到后继元素
@@ -864,7 +1052,7 @@ final void removeTreeNode(HashMap<K,V> map, Node<K,V>[] tab,
         // 修改后继节点的父节点值，如果其为null，说明后继节点现在变成了root节点
         if ((s.parent = pp) == null)
             root = s;
-         // 当前节点是其父节点的左孩子
+        // 当前节点是其父节点的左孩子
         else if (p == pp.left)
             pp.left = s;
         // 当前节点是其父节点的右孩子
@@ -880,49 +1068,47 @@ final void removeTreeNode(HashMap<K,V> map, Node<K,V>[] tab,
         else
             replacement = p;
     }
-    // 删除节点有一个左子节点，左子节点作为替代节点
+    // 要删除的元素有一个左子元素，替换元素指向pl
     else if (pl != null)
         replacement = pl;
-    // 删除节点有一个右子节点，右子节点作为替代节点
+    // 要删除的元素有一个右子元素，替换元素指向pr
     else if (pr != null)
         replacement = pr;
-    // 删除节点没有子节点，直接删除当前节点
+    // 要删除的元素没有子元素，替换元素指向p
     else
         replacement = p;
-    /**
-    * 如果删除节点存在两个孩子节点，最终与后继节点交换后，删除的节点的位置位于后继节点的位置，那么此时删除节点所处的位置演变成：
-    * a、只有一个孩子节点：(replacement = p.right) != p
-    * b、没有孩子节点：replacement == p
-    * 只有当删除节点与替换节点不相等的时候，才对删除节点进行删除操作
-    */
+   
+    // 这里分情况：
+    // 1.要删除的元素没有子元素
+    // 2.有子元素
+    
+    // 首先这里是有子元素，replacement就是要删除元素的子元素
     if (replacement != p) {
-        // 从红黑树中将待删除节点（即当前节点移除）
+        // 子元素的父亲指针指向要删除元素的父亲
         TreeNode<K,V> pp = replacement.parent = p.parent;
-         // 是否为根节点
         if (pp == null)
+            // 如果pp等于空，说明要删除元素是根元素
+            // 根元素都删除了，只能是它的子元素晋升为根元素了
             root = replacement;
-         // 其父节点的左子节点
+        // 要删除元素不是根元素，是pp的左子元素
         else if (p == pp.left)
+            // 那就把pp的左子元素指向replacement
             pp.left = replacement;
-        // 其父节点的右子节点
         else
+            // 那就把pp的右子元素指向replacement
             pp.right = replacement;
-        // 节点的指向全部置NULL
+        // 正式删除p元素
         p.left = p.right = p.parent = null;
     }
-        /**
-        * 如果删除节点的颜色是红色，不会影响整棵树的黑色高度，毋需自平衡，根节点不会变化，如果是黑色，则需要进行自平衡，重新获取根节点
-        * 注意：
-        * 自平衡的时候 替代节点可能与删除节点相等：replacement == p
-        * 自平衡的时候 替代节点可能与删除节点不相等：replacement ！= p
-        */
+    // 如果删除的元素是红色则不会影响树的黑色数量平衡
+    // 如果是黑色，则需要维护平衡。
     TreeNode<K,V> r = p.red ? root : balanceDeletion(root, replacement);
-        /**
+    /**
         * 当 replacement == p 时，是先进行了红黑树的进行了平衡操作，再将这个节点从红黑树中移除
         * 这个地方我也没明白原理是什么，但是我按照这个步骤去走了一遍，确实这样操作来完成平衡，如果有哪位大神明白的，麻烦指导一下，谢谢！
         */
     if (replacement == p) {  // detach
-         // pp-存储当前节点的父节点值
+        // pp-存储当前节点的父节点值
         TreeNode<K,V> pp = p.parent;
         // 当前节点的父节点指向NULL
         p.parent = null;
@@ -940,31 +1126,12 @@ final void removeTreeNode(HashMap<K,V> map, Node<K,V>[] tab,
 }
 ```
 
+
+
 ```java
-/**
-* 红黑树删除节点后，平衡红黑树的方法
-*
-* @param root 根节点
-* @param x    节点删除后，替代其位置的节点，这个节点可能是一个节点，也可能是一棵平衡的红黑树，在此处就当作一个节点，在该节点以上部分需要自平衡
-* @return 返回新的根节点
-*/
 static <K, V> HashMap.TreeNode<K, V> balanceDeletion(HashMap.TreeNode<K, V> root, HashMap.TreeNode<K, V> x) {
-    /**
-    * 进入这个方法，说明被替代的节点之前是黑色的，如果是红色的不会影响黑色高度，黑色的会影响以其作为根节点子树的黑色高度
-    * xp-父节点,xpl-父节点的左孩子,xpr-父节点的右孩子节点
-    * 注意：
-    *    进入该方法的时候 替代节点可能与删除节点相等：x == replacement == p
-    *                  替代节点可能与删除节点不相等：x == replacement ！= p
-    */
+ 	// 进入这个方法，说明被删除的节点是黑色的
     for (HashMap.TreeNode<K, V> xp, xpl, xpr; ; ) {
-        /**
-        * 1、x == null，当 replacement == p 时，删除节点不存在，返回；
-        *      因为当 replacement ！= p 时，replacement 肯定不会为null.在移除节点的方法中有三个地方对 replacement 进行赋值。
-        *          1、if (sr != null) replacement = sr;
-        *          2、if (pl != null) replacement = pl;
-        *          3、if (pr != null) replacement = pr;
-        * 2、x == root，如果替代完成后，该节点就是整棵红黑树的根节点，本身就是平衡的，直接返回
-        */
         if (x == null || x == root)
             return root;
         else if ((xp = x.parent) == null) {
@@ -972,12 +1139,8 @@ static <K, V> HashMap.TreeNode<K, V> balanceDeletion(HashMap.TreeNode<K, V> root
             x.red = false;
             return x;
         } else if (x.red) {
-            /**
-            * 被替换节点（删除节点）的颜色是黑色的，删除之后黑色高度减1，如果替换节点是红色，将其设置为黑色，可以保证
-            * 1、与替换之前的黑色高度相等
-            * 2、满足红黑树的所有特性
-            * 达到平衡返回
-            */
+			// 被删除的节点是黑色的，删除之后破坏黑色节点数量
+            // 将替换节点设为黑色，达到黑色数量平衡之后返回
             x.red = false;
             return root;
             /**
@@ -1118,6 +1281,6 @@ static <K, V> HashMap.TreeNode<K, V> balanceDeletion(HashMap.TreeNode<K, V> root
                 }
             }
         }
-    
+
 ```
 
