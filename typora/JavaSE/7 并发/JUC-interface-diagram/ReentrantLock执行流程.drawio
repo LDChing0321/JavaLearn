@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-16T08:58:01.898Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="1oycb-ikEQGKvTJVHNCd" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-16T08:59:35.267Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="bwWt5wsT9XaQwU-dq1OR" version="20.0.1" type="github">
   <diagram id="3DekjfNhCCmHhPtTN9iT" name="lock">
     <mxGraphModel dx="1493" dy="576" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -307,13 +307,16 @@
         <mxCell id="x7YFDtXw7JJySncnwOp_-119" value="return&lt;br&gt;&amp;nbsp;interrupted" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;labelBorderColor=none;strokeColor=#b85450;perimeterSpacing=1;fillColor=#f8cecc;shadow=1;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="687.5" y="1840" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="x7YFDtXw7JJySncnwOp_-121" value="前继节点的等待状态是&lt;br&gt;&lt;b&gt;Node.SIGNAL&lt;/b&gt;" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;" vertex="1" parent="1">
+        <mxCell id="x7YFDtXw7JJySncnwOp_-121" value="前继节点的等待状态是&lt;br&gt;&lt;b&gt;Node.SIGNAL？&lt;/b&gt;" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="168.41" y="1840" width="173.19" height="120" as="geometry" />
         </mxCell>
         <mxCell id="x7YFDtXw7JJySncnwOp_-123" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="1">
           <mxGeometry x="267.0000000000002" y="1806.5" as="geometry">
             <mxPoint x="-12" y="-1" as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="x7YFDtXw7JJySncnwOp_-124" value="&lt;b&gt;Node.SIGNAL&lt;/b&gt;表示处于等待状态。&lt;br&gt;既然前面一个节点都在等，&lt;br&gt;那当前线程节点也乖乖等去吧" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.55;rounded=1;arcSize=50;base=9;spacing=3;" vertex="1" parent="1">
+          <mxGeometry x="-10.219999999999999" y="1800" width="178.63" height="103.75" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
