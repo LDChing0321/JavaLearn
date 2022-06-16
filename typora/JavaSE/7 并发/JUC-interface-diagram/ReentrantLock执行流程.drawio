@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-16T07:45:33.994Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="gbJzFQ0Zm5iuihuiEAHT" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-16T08:13:21.389Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="56zu2EsEZXgkgES6OK44" version="20.0.1" type="github">
   <diagram id="3DekjfNhCCmHhPtTN9iT" name="lock">
     <mxGraphModel dx="1493" dy="576" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -263,16 +263,37 @@
         <mxCell id="x7YFDtXw7JJySncnwOp_-96" value="当前node的前继节点&lt;br&gt;是头节点&lt;br&gt;并且&lt;br&gt;当前线程CAS抢占成功" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="156.81" y="1620" width="196.38" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="x7YFDtXw7JJySncnwOp_-98" value="将当前头节点置空，相当于&lt;br&gt;&lt;b&gt;head=new&amp;nbsp;Node()&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+        <mxCell id="x7YFDtXw7JJySncnwOp_-103" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;" edge="1" parent="1" source="x7YFDtXw7JJySncnwOp_-98" target="x7YFDtXw7JJySncnwOp_-102">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x7YFDtXw7JJySncnwOp_-98" value="断开head的next指向和&lt;br&gt;断开当前node的prev指向&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="438.63" y="1674.75" width="150" height="50.5" as="geometry" />
         </mxCell>
-        <mxCell id="x7YFDtXw7JJySncnwOp_-100" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="1">
+        <mxCell id="x7YFDtXw7JJySncnwOp_-100" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="1">
           <mxGeometry x="410.0000000000002" y="1700" as="geometry">
             <mxPoint x="-12" y="-1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="x7YFDtXw7JJySncnwOp_-101" value="说明等待队列里面已经清空了，没有其他线程在排队了" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.5;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.55;rounded=1;arcSize=50;base=9;spacing=3;" vertex="1" parent="1">
-          <mxGeometry x="424.32" y="1590" width="175.68" height="84.75" as="geometry" />
+        <mxCell id="x7YFDtXw7JJySncnwOp_-102" value="将当前node升级为head节点，相当于&lt;b&gt;head=new Node()&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="645" y="1674.75" width="165" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="x7YFDtXw7JJySncnwOp_-115" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="339.44" y="1630" width="117.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="x7YFDtXw7JJySncnwOp_-112" value="head" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=14;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="x7YFDtXw7JJySncnwOp_-115">
+          <mxGeometry width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="x7YFDtXw7JJySncnwOp_-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;fontSize=13;" edge="1" parent="x7YFDtXw7JJySncnwOp_-115" source="x7YFDtXw7JJySncnwOp_-114" target="x7YFDtXw7JJySncnwOp_-112">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x7YFDtXw7JJySncnwOp_-114" value="当前node" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=13;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="x7YFDtXw7JJySncnwOp_-115">
+          <mxGeometry x="77.5" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="x7YFDtXw7JJySncnwOp_-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;fontSize=13;" edge="1" parent="x7YFDtXw7JJySncnwOp_-115" source="x7YFDtXw7JJySncnwOp_-112" target="x7YFDtXw7JJySncnwOp_-114">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x7YFDtXw7JJySncnwOp_-116" value="当前等待队列是这样的：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1590" width="100" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
