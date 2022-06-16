@@ -1,1 +1,40 @@
-<mxfile host="app.diagrams.net" modified="2022-06-15T06:15:36.909Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" version="19.0.0" etag="aUnmH0uVgtDz6TRxKXWn" type="github"><diagram id="3DekjfNhCCmHhPtTN9iT">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-06-16T03:12:21.734Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="lbhFoww8U7efjTYBqltH" version="20.0.1" type="github">
+  <diagram id="3DekjfNhCCmHhPtTN9iT" name="lock">
+    <mxGraphModel dx="1438" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="x7YFDtXw7JJySncnwOp_-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="x7YFDtXw7JJySncnwOp_-1" target="x7YFDtXw7JJySncnwOp_-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x7YFDtXw7JJySncnwOp_-1" value="start" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;labelBorderColor=none;strokeColor=#82b366;perimeterSpacing=1;fillColor=#d5e8d4;shadow=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry y="40" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="x7YFDtXw7JJySncnwOp_-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="x7YFDtXw7JJySncnwOp_-2" target="x7YFDtXw7JJySncnwOp_-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x7YFDtXw7JJySncnwOp_-2" value="创建ReentrantLock对象&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%E5%B0%86-1%E8%B5%8B%E5%80%BC%E7%BB%99%E5%8F%98%E9%87%8Fdir%22%20style%3D%22rounded%3D1%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BabsoluteArcSize%3D1%3BarcSize%3D14%3BstrokeWidth%3D1%3BfillColor%3D%23dae8fc%3BstrokeColor%3D%236c8ebf%3Bshadow%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22580%22%20y%3D%22283.25%22%20width%3D%22110%22%20height%3D%2250.5%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="-15" y="160" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="x7YFDtXw7JJySncnwOp_-3" value="默认实现非公平锁" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.08;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.25;rounded=1;arcSize=50;spacing=3;" vertex="1" parent="1">
+          <mxGeometry x="90" y="86.25" width="110" height="73.75" as="geometry" />
+        </mxCell>
+        <mxCell id="x7YFDtXw7JJySncnwOp_-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="x7YFDtXw7JJySncnwOp_-5" target="x7YFDtXw7JJySncnwOp_-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x7YFDtXw7JJySncnwOp_-5" value="t1线程lock" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="-15" y="240" width="110" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="x7YFDtXw7JJySncnwOp_-7" value="" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="-350" y="42" width="142.75" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="x7YFDtXw7JJySncnwOp_-9" value="CAS设置state成功？" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="-31.370000000000005" y="320" width="142.75" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="x7YFDtXw7JJySncnwOp_-11" value="state为0则没有线程占用，1相反" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.55;rounded=1;arcSize=50;base=9;spacing=3;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="290.5" width="148.63" height="83.75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
