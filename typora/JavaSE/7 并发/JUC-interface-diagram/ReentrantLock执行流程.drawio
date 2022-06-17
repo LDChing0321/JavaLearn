@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-17T02:33:55.022Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="8BhJKar5aeKdrRtlflYH" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-17T02:34:09.442Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="zaJErR20Oc7qpwVW8cPJ" version="20.0.1" type="github">
   <diagram id="3DekjfNhCCmHhPtTN9iT" name="lock">
     <mxGraphModel dx="1438" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -339,7 +339,7 @@
           <mxGeometry x="424.32" y="1919" width="178.63" height="88" as="geometry" />
         </mxCell>
         <mxCell id="KSQAQQI_uKKp0eyfQpXI-2" value="最终导致所有在队列里的正常等待的线程的状态都是&amp;nbsp;SIGNAL" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.55;rounded=1;arcSize=50;base=9;spacing=3;" vertex="1" parent="1">
-          <mxGeometry x="8.629999999999999" y="1780" width="178.63" height="103.75" as="geometry" />
+          <mxGeometry x="8.63" y="1810" width="181.37" height="73.75" as="geometry" />
         </mxCell>
         <mxCell id="KSQAQQI_uKKp0eyfQpXI-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KSQAQQI_uKKp0eyfQpXI-3" target="KSQAQQI_uKKp0eyfQpXI-7">
           <mxGeometry relative="1" as="geometry" />
