@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-17T03:19:53.553Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="OlMsriuDtzIaWstta9Ma" version="20.0.1" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-06-17T03:20:10.694Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="gqsPzUbpdP-19NY36WiB" version="20.0.1" type="github" pages="2">
   <diagram id="3DekjfNhCCmHhPtTN9iT" name="nonfair-lock">
     <mxGraphModel dx="1265" dy="456" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -461,6 +461,9 @@
         </mxCell>
         <mxCell id="CJr1yhcCO_qTbwGdaquj-4" value="抛出IllegalMonitorStateException" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="180" y="313.75" width="170" height="50.5" as="geometry" />
+        </mxCell>
+        <mxCell id="CrM5OBfat_q3nhXeDkpP-1" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="139.99666666666684" y="339.0033333333334" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
