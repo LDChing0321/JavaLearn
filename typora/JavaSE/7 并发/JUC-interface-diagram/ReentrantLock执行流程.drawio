@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-17T02:03:16.135Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="-FYH_KE20O9gwPPi0ysq" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-17T02:32:05.104Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="0AD_qFyNLwDjdREVJxX2" version="20.0.1" type="github">
   <diagram id="3DekjfNhCCmHhPtTN9iT" name="lock">
     <mxGraphModel dx="1438" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -278,7 +278,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="x7YFDtXw7JJySncnwOp_-102" value="将当前node升级为head节点，相当于&lt;b&gt;head=new Node()&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="645" y="1674.75" width="165" height="50.5" as="geometry" />
+          <mxGeometry x="790" y="1674.75" width="165" height="50.5" as="geometry" />
         </mxCell>
         <mxCell id="x7YFDtXw7JJySncnwOp_-115" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="339.44" y="1630" width="117.5" height="40" as="geometry" />
@@ -302,10 +302,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="x7YFDtXw7JJySncnwOp_-117" value="将failed变量设置为false" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="645" y="1760" width="165" height="50.5" as="geometry" />
+          <mxGeometry x="790" y="1760" width="165" height="50.5" as="geometry" />
         </mxCell>
         <mxCell id="x7YFDtXw7JJySncnwOp_-119" value="return&lt;br&gt;&amp;nbsp;interrupted" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;labelBorderColor=none;strokeColor=#b85450;perimeterSpacing=1;fillColor=#f8cecc;shadow=1;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="687.5" y="1840" width="80" height="80" as="geometry" />
+          <mxGeometry x="832.5" y="1861.38" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="x7YFDtXw7JJySncnwOp_-126" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=13;" parent="1" source="x7YFDtXw7JJySncnwOp_-121" target="x7YFDtXw7JJySncnwOp_-125" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -324,7 +324,7 @@
         <mxCell id="x7YFDtXw7JJySncnwOp_-124" value="&lt;b&gt;Node.SIGNAL&lt;/b&gt;表示处于等待状态。&lt;br&gt;既然前面一个节点都在等，&lt;br&gt;那当前线程节点也乖乖等去吧" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.51;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.55;rounded=1;arcSize=50;base=9;spacing=3;" parent="1" vertex="1">
           <mxGeometry x="308.88" y="1780" width="191.12" height="103.75" as="geometry" />
         </mxCell>
-        <mxCell id="KSQAQQI_uKKp0eyfQpXI-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="x7YFDtXw7JJySncnwOp_-125" target="x7YFDtXw7JJySncnwOp_-134">
+        <mxCell id="KSQAQQI_uKKp0eyfQpXI-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="x7YFDtXw7JJySncnwOp_-125" target="KSQAQQI_uKKp0eyfQpXI-19">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="x7YFDtXw7JJySncnwOp_-125" value="阻塞当前线程" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
@@ -335,11 +335,8 @@
             <mxPoint x="-12" y="-1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="x7YFDtXw7JJySncnwOp_-129" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;最终在队列正常等待的线程都会被阻塞，直到锁被释放后依次唤醒这些线程才能获取到锁&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=42;position=0.4;rounded=1;arcSize=50;base=19;spacing=3;align=center;direction=west;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="561.37" y="1910" width="178.63" height="88" as="geometry" />
-        </mxCell>
-        <mxCell id="x7YFDtXw7JJySncnwOp_-134" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;判断当前线程&lt;br&gt;是否中断&lt;/span&gt;" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="436.37" y="1960" width="138.63" height="90" as="geometry" />
+        <mxCell id="x7YFDtXw7JJySncnwOp_-129" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;最终在队列正常等待的线程都会被阻塞，直到锁被释放后依次唤醒这些线程才能获取到锁&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.55;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=42;position=0.4;rounded=1;arcSize=50;base=19;spacing=3;align=center;direction=west;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="424.32" y="1919" width="178.63" height="88" as="geometry" />
         </mxCell>
         <mxCell id="KSQAQQI_uKKp0eyfQpXI-2" value="最终导致所有在队列里的正常等待的线程的状态都是&amp;nbsp;SIGNAL" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.55;rounded=1;arcSize=50;base=9;spacing=3;" vertex="1" parent="1">
           <mxGeometry x="8.629999999999999" y="1780" width="178.63" height="103.75" as="geometry" />
@@ -392,6 +389,18 @@
           <mxGeometry x="267.0000000000002" y="2220" as="geometry">
             <mxPoint x="-12" y="-1" as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="KSQAQQI_uKKp0eyfQpXI-16" value="这里有个自旋的动作，跳出自旋的条件是：&lt;br&gt;这里某个步骤抛出异常&lt;br&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.55;rounded=1;arcSize=50;base=9;spacing=3;" vertex="1" parent="1">
+          <mxGeometry x="-210" y="2153.81" width="165.01" height="83.75" as="geometry" />
+        </mxCell>
+        <mxCell id="KSQAQQI_uKKp0eyfQpXI-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KSQAQQI_uKKp0eyfQpXI-19" target="x7YFDtXw7JJySncnwOp_-119">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KSQAQQI_uKKp0eyfQpXI-19" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;判断当前线程&lt;br&gt;是否中断&lt;/span&gt;" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="1856.38" width="138.63" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="KSQAQQI_uKKp0eyfQpXI-22" value="线程节点被唤醒之后判断线程有没有中断" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.51;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.55;rounded=1;arcSize=50;base=9;spacing=3;fontStyle=0;direction=west;" vertex="1" parent="1">
+          <mxGeometry x="638.63" y="1946.38" width="131.37" height="73.62" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
