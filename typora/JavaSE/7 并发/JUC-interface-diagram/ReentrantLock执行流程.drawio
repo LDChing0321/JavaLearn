@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-17T02:35:32.942Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="npCR_L65PX5U0kOlAIG-" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-17T02:40:09.031Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="Q5SmCeF1o7MaXnL0ESHh" version="20.0.1" type="github">
   <diagram id="3DekjfNhCCmHhPtTN9iT" name="lock">
     <mxGraphModel dx="1438" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -280,8 +280,8 @@
         <mxCell id="x7YFDtXw7JJySncnwOp_-102" value="将当前node升级为head节点，相当于&lt;b&gt;head=new Node()&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="790" y="1674.75" width="165" height="50.5" as="geometry" />
         </mxCell>
-        <mxCell id="x7YFDtXw7JJySncnwOp_-116" value="如果能走到这里，当前等待队列是样的：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
-          <mxGeometry x="570" y="1590" width="140" height="30" as="geometry" />
+        <mxCell id="x7YFDtXw7JJySncnwOp_-116" value="如果能走到这里，当前等待队列是样的，当前线程节点的prev是head" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="510.57" y="1570.5" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="x7YFDtXw7JJySncnwOp_-120" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=13;" parent="1" source="x7YFDtXw7JJySncnwOp_-117" target="x7YFDtXw7JJySncnwOp_-119" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -384,11 +384,11 @@
         <mxCell id="KSQAQQI_uKKp0eyfQpXI-19" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;判断当前线程&lt;br&gt;是否中断&lt;/span&gt;" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="630" y="1856.38" width="138.63" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="KSQAQQI_uKKp0eyfQpXI-22" value="线程节点被唤醒之后判断线程有没有中断" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.51;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.55;rounded=1;arcSize=50;base=9;spacing=3;fontStyle=0;direction=west;" vertex="1" parent="1">
-          <mxGeometry x="638.63" y="1946.38" width="131.37" height="73.62" as="geometry" />
+        <mxCell id="KSQAQQI_uKKp0eyfQpXI-22" value="线程节点被唤醒之后判断线程有没有中断，如果中断了，下一步会返回true" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.51;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.55;rounded=1;arcSize=50;base=9;spacing=3;fontStyle=0;direction=west;" vertex="1" parent="1">
+          <mxGeometry x="624.76" y="1946.38" width="161.37" height="90" as="geometry" />
         </mxCell>
         <mxCell id="x7YFDtXw7JJySncnwOp_-112" value="head" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=14;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
-          <mxGeometry x="619.44" y="1630" width="40" height="40" as="geometry" />
+          <mxGeometry x="573.07" y="1610.5" width="40" height="40" as="geometry" />
         </mxCell>
         <mxCell id="x7YFDtXw7JJySncnwOp_-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;fontSize=13;" parent="1" source="x7YFDtXw7JJySncnwOp_-114" target="x7YFDtXw7JJySncnwOp_-112" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -397,7 +397,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="x7YFDtXw7JJySncnwOp_-114" value="当前node" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=13;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="696.94" y="1630" width="40" height="40" as="geometry" />
+          <mxGeometry x="650.57" y="1610.5" width="40" height="40" as="geometry" />
         </mxCell>
         <mxCell id="x7YFDtXw7JJySncnwOp_-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;fontSize=13;" parent="1" source="x7YFDtXw7JJySncnwOp_-112" target="x7YFDtXw7JJySncnwOp_-114" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -409,13 +409,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="KSQAQQI_uKKp0eyfQpXI-28" value="next1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=13;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="760" y="1630" width="40" height="40" as="geometry" />
+          <mxGeometry x="713.63" y="1610.5" width="40" height="40" as="geometry" />
         </mxCell>
         <mxCell id="KSQAQQI_uKKp0eyfQpXI-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="KSQAQQI_uKKp0eyfQpXI-29" target="KSQAQQI_uKKp0eyfQpXI-28">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="KSQAQQI_uKKp0eyfQpXI-29" value="next2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=13;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="832.5" y="1630" width="40" height="40" as="geometry" />
+          <mxGeometry x="786.13" y="1610.5" width="40" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
