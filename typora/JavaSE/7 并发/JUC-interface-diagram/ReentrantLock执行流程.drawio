@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-17T03:25:00.936Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="0jn38EzIkJjwr9kTkrw2" version="20.0.1" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-06-17T03:27:08.907Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="i2o3P5bJYJ03Npog3Xon" version="20.0.1" type="github" pages="2">
   <diagram id="3DekjfNhCCmHhPtTN9iT" name="nonfair-lock">
     <mxGraphModel dx="1265" dy="456" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -500,7 +500,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="RtK4Z1TKJlfRuKBW71mj-3" value="将free赋值为true并&lt;br&gt;将当前独占执行权的线程置为null" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="200" y="474.87" width="180" height="60.25" as="geometry" />
+          <mxGeometry x="200" y="485" width="200" height="40" as="geometry" />
         </mxCell>
         <mxCell id="RtK4Z1TKJlfRuKBW71mj-5" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="1">
           <mxGeometry x="149.99666666666684" y="357.0033333333334" as="geometry">
