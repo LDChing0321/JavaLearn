@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-17T01:59:37.449Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="ioJfOvQZuorHqjx40sHd" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-17T02:03:16.135Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="-FYH_KE20O9gwPPi0ysq" version="20.0.1" type="github">
   <diagram id="3DekjfNhCCmHhPtTN9iT" name="lock">
     <mxGraphModel dx="1438" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -358,12 +358,28 @@
             <mxPoint x="-12" y="-1" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="KSQAQQI_uKKp0eyfQpXI-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="KSQAQQI_uKKp0eyfQpXI-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="255" y="1580" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="514" y="2360" />
+              <mxPoint x="-40" y="2360" />
+              <mxPoint x="-40" y="1580" />
+              <mxPoint x="157" y="1580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="KSQAQQI_uKKp0eyfQpXI-7" value="将标记为删除状态的线程节点从队列中清除" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="443.63" y="2106.18" width="140" height="47.63" as="geometry" />
         </mxCell>
         <mxCell id="KSQAQQI_uKKp0eyfQpXI-9" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="1">
           <mxGeometry x="410.0000000000002" y="2130" as="geometry">
             <mxPoint x="-12" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KSQAQQI_uKKp0eyfQpXI-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="KSQAQQI_uKKp0eyfQpXI-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="255" y="2360" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="KSQAQQI_uKKp0eyfQpXI-10" value="将前继节点的等待状态&lt;br&gt;设置为&lt;b&gt;Node.SIGNAL&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
