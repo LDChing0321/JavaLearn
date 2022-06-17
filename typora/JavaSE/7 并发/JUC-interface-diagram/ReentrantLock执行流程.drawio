@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-17T01:59:27.599Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="8axyBMgB29EIYAAv_6Pb" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-17T01:59:37.449Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="ioJfOvQZuorHqjx40sHd" version="20.0.1" type="github">
   <diagram id="3DekjfNhCCmHhPtTN9iT" name="lock">
     <mxGraphModel dx="1438" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -371,6 +371,11 @@
         </mxCell>
         <mxCell id="KSQAQQI_uKKp0eyfQpXI-12" value="因为只有标记为&lt;b style=&quot;color: rgb(0, 0, 0);&quot;&gt;Node.SIGNAL&lt;/b&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;的线程才会被阻塞&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.55;rounded=1;arcSize=50;base=9;spacing=3;" vertex="1" parent="1">
           <mxGeometry x="20" y="2200" width="165.01" height="83.75" as="geometry" />
+        </mxCell>
+        <mxCell id="KSQAQQI_uKKp0eyfQpXI-13" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="267.0000000000002" y="2220" as="geometry">
+            <mxPoint x="-12" y="-1" as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
