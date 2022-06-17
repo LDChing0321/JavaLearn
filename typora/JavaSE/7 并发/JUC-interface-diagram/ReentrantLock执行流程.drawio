@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-17T02:32:05.104Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="0AD_qFyNLwDjdREVJxX2" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-17T02:33:55.022Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="8BhJKar5aeKdrRtlflYH" version="20.0.1" type="github">
   <diagram id="3DekjfNhCCmHhPtTN9iT" name="lock">
     <mxGraphModel dx="1438" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -281,7 +281,7 @@
           <mxGeometry x="790" y="1674.75" width="165" height="50.5" as="geometry" />
         </mxCell>
         <mxCell id="x7YFDtXw7JJySncnwOp_-115" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="339.44" y="1630" width="117.5" height="40" as="geometry" />
+          <mxGeometry x="619.44" y="1630" width="117.5" height="40" as="geometry" />
         </mxCell>
         <mxCell id="x7YFDtXw7JJySncnwOp_-112" value="head" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=14;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="x7YFDtXw7JJySncnwOp_-115" vertex="1">
           <mxGeometry width="40" height="40" as="geometry" />
@@ -295,8 +295,8 @@
         <mxCell id="x7YFDtXw7JJySncnwOp_-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;fontSize=13;" parent="x7YFDtXw7JJySncnwOp_-115" source="x7YFDtXw7JJySncnwOp_-112" target="x7YFDtXw7JJySncnwOp_-114" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="x7YFDtXw7JJySncnwOp_-116" value="当前等待队列是这样的：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
-          <mxGeometry x="300" y="1590" width="100" height="30" as="geometry" />
+        <mxCell id="x7YFDtXw7JJySncnwOp_-116" value="如果能走到这里，当前等待队列是样的：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="570" y="1590" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="x7YFDtXw7JJySncnwOp_-120" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=13;" parent="1" source="x7YFDtXw7JJySncnwOp_-117" target="x7YFDtXw7JJySncnwOp_-119" edge="1">
           <mxGeometry relative="1" as="geometry" />
