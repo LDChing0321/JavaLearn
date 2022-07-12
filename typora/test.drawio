@@ -1,1 +1,39 @@
-<mxfile host="app.diagrams.net" modified="2022-07-12T07:31:59.689Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" version="20.0.1" etag="etGijNU_Wo9kqjOpXbwU" type="github"><diagram id="Xt5Gjg28Pb3kbLRgFndh">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-07-12T07:41:02.456Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="Tu49vTqOx9tcqoPybFdp" version="20.0.1" type="github">
+  <diagram id="Xt5Gjg28Pb3kbLRgFndh" name="第 1 页">
+    <mxGraphModel dx="716" dy="1546" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YX-VT2X1yxg7q8TfdjIT-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YX-VT2X1yxg7q8TfdjIT-1" target="YX-VT2X1yxg7q8TfdjIT-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YX-VT2X1yxg7q8TfdjIT-1" value="新需求确认" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;labelBorderColor=none;strokeColor=#82b366;perimeterSpacing=1;fillColor=#d5e8d4;shadow=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="400" y="-80" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YX-VT2X1yxg7q8TfdjIT-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YX-VT2X1yxg7q8TfdjIT-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YX-VT2X1yxg7q8TfdjIT-2" value="修改sso-web&lt;br&gt;对应前端代码" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=hexagon;perimeter=hexagonPerimeter2;arcSize=6;size=0.27;shadow=1;labelBorderColor=none;fontSize=12;strokeColor=#d6b656;strokeWidth=1;labelPosition=center;align=center;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="367.5" y="40" width="145" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="YX-VT2X1yxg7q8TfdjIT-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;" edge="1" parent="1" source="YX-VT2X1yxg7q8TfdjIT-6" target="YX-VT2X1yxg7q8TfdjIT-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YX-VT2X1yxg7q8TfdjIT-6" value="编译、打包前端工程" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=hexagon;perimeter=hexagonPerimeter2;arcSize=6;size=0.27;shadow=1;labelBorderColor=none;fontSize=12;strokeColor=#d6b656;strokeWidth=1;labelPosition=center;align=center;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="367.5" y="160" width="145" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="YX-VT2X1yxg7q8TfdjIT-7" value="打包生成&lt;br&gt;sso-server-webapp-res-5.2.1.jar" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.08;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.15;rounded=1;base=21;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="490" y="100" width="180" height="83.75" as="geometry" />
+        </mxCell>
+        <mxCell id="YX-VT2X1yxg7q8TfdjIT-8" value="替换sso.jar&lt;br&gt;对应的前端jar文件" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=hexagon;perimeter=hexagonPerimeter2;arcSize=6;size=0.27;shadow=1;labelBorderColor=none;fontSize=12;strokeColor=#d6b656;strokeWidth=1;labelPosition=center;align=center;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="367.5" y="280" width="145" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="YX-VT2X1yxg7q8TfdjIT-10" value="这里是替换&lt;br&gt;sso-server-webapp-res-5.2.1.jar" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.08;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.15;rounded=1;base=21;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="490" y="220" width="180" height="83.75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
