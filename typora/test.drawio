@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-12T09:42:16.369Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="9WvNm-VdqHmgd5_G-r2r" version="20.0.1" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-07-12T09:46:39.569Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="rDvwjfCiB6hJiQf-ruyF" version="20.0.1" type="github" pages="2">
   <diagram id="Xt5Gjg28Pb3kbLRgFndh" name="SSO登录页调整">
     <mxGraphModel dx="1038" dy="947" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -71,11 +71,22 @@
         <mxCell id="bS53FIqdK8RB0QmQP6MG-2" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="260" y="40" width="40" height="80" as="geometry" />
         </mxCell>
+        <mxCell id="M-s9yzabpQPz8e1wt4Ml-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;" edge="1" parent="1" source="bS53FIqdK8RB0QmQP6MG-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="bS53FIqdK8RB0QmQP6MG-4" value="OA动态生成&lt;br&gt;鉴权参数" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="540" y="62.5" width="110" height="35" as="geometry" />
         </mxCell>
         <mxCell id="M-s9yzabpQPz8e1wt4Ml-1" value="参数包括用户的身份加密信息&lt;br&gt;以及秘钥等信息" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.08;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.15;rounded=1;base=21;arcSize=50;" vertex="1" parent="1">
           <mxGeometry x="580" y="-21.25" width="160" height="83.75" as="geometry" />
+        </mxCell>
+        <mxCell id="ZMeoyKiC6fxWKNZzkeFZ-1" value="扩展接口主要是这个工程&lt;br&gt;sso-server-support-oasingle" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.08;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.15;rounded=1;base=21;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="800" y="-21.25" width="160" height="83.75" as="geometry" />
+        </mxCell>
+        <mxCell id="ZMeoyKiC6fxWKNZzkeFZ-2" value="&lt;span style=&quot;&quot;&gt;OA带上参数调用&lt;br&gt;SSO扩展接口&lt;/span&gt;" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=hexagon;perimeter=hexagonPerimeter2;arcSize=6;size=0.27;shadow=1;labelBorderColor=none;fontSize=12;strokeColor=#d6b656;strokeWidth=1;labelPosition=center;align=center;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="700" y="55" width="130" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
