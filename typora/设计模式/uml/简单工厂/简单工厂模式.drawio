@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-19T06:22:36.829Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="SmTAiEJF8p8xIeIGyPMR" version="20.1.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-07-19T06:24:19.602Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="oehRGWSaO6rFyJ7o0-AQ" version="20.1.1" type="github" pages="3">
   <diagram id="zVpmOitBaODcWo5x5MOA" name="简单工厂模式">
     <mxGraphModel dx="1328" dy="1008" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -64,7 +64,7 @@
         <mxCell id="qj-JnBcPy4llwm3oIY3C-15" value="Developer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontSize=15;" vertex="1" parent="1">
           <mxGeometry x="1200" width="80" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="qj-JnBcPy4llwm3oIY3C-16" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=15;" edge="1" parent="1" source="qj-JnBcPy4llwm3oIY3C-15">
+        <mxCell id="qj-JnBcPy4llwm3oIY3C-16" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=15;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="qj-JnBcPy4llwm3oIY3C-15">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1160" y="79.41" as="sourcePoint" />
             <mxPoint x="1040" y="79.41000000000008" as="targetPoint" />
@@ -123,8 +123,8 @@
         <mxCell id="weggV7xRZX8KXrxvJomQ-15" value="Developer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontSize=15;" vertex="1" parent="1">
           <mxGeometry x="1440" y="-40" width="120" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="weggV7xRZX8KXrxvJomQ-17" value="根据开发者传入的type&lt;br&gt;创建对应的Chart" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.08;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.15;rounded=1;base=21;arcSize=50;" vertex="1" parent="1">
-          <mxGeometry x="1260" y="-180" width="180" height="83.75" as="geometry" />
+        <mxCell id="weggV7xRZX8KXrxvJomQ-17" value="开发者按需使用不同的工厂" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.08;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.15;rounded=1;base=21;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="-130" width="180" height="83.75" as="geometry" />
         </mxCell>
         <mxCell id="stvrk_4_gdJYJsOynog8-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" edge="1" parent="1" source="XTNHjpj1qfJQcYXHxmSI-1" target="weggV7xRZX8KXrxvJomQ-4">
           <mxGeometry relative="1" as="geometry" />
