@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-19T06:55:57.102Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="l3NChCNlBjk_RTmW6Izz" version="20.1.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-07-19T06:57:31.736Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="kFTVba2B5OFukL6dmOgt" version="20.1.1" type="github" pages="3">
   <diagram id="zVpmOitBaODcWo5x5MOA" name="简单工厂模式">
     <mxGraphModel dx="1328" dy="1008" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -171,7 +171,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="CJiIWoEj-iM2HzIIIQSU" name="抽象工厂模式">
-    <mxGraphModel dx="1595" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1995" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -202,6 +202,37 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="HIN7UnXOwiw6hMKLiH5v-4" value="implements" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" vertex="1" connectable="0" parent="HIN7UnXOwiw6hMKLiH5v-3">
+          <mxGeometry x="-0.1384" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HIN7UnXOwiw6hMKLiH5v-5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;TextField&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+&amp;nbsp;display(): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-360" y="80" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="HIN7UnXOwiw6hMKLiH5v-6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;SpringTextField&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ :&amp;nbsp;dispay(): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-600" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="HIN7UnXOwiw6hMKLiH5v-7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;SummerTextField&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ :&amp;nbsp;dispay(): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-600" y="160" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="HIN7UnXOwiw6hMKLiH5v-8" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="HIN7UnXOwiw6hMKLiH5v-6" target="HIN7UnXOwiw6hMKLiH5v-5">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="360" y="-120" as="sourcePoint" />
+            <mxPoint x="-180" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HIN7UnXOwiw6hMKLiH5v-9" value="implements" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" vertex="1" connectable="0" parent="HIN7UnXOwiw6hMKLiH5v-8">
+          <mxGeometry x="-0.1384" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HIN7UnXOwiw6hMKLiH5v-10" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="HIN7UnXOwiw6hMKLiH5v-7" target="HIN7UnXOwiw6hMKLiH5v-5">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-120" y="70" as="sourcePoint" />
+            <mxPoint x="-240" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HIN7UnXOwiw6hMKLiH5v-11" value="implements" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" vertex="1" connectable="0" parent="HIN7UnXOwiw6hMKLiH5v-10">
           <mxGeometry x="-0.1384" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
