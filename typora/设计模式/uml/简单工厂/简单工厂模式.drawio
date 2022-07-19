@@ -1,5 +1,5 @@
-<mxfile host="app.diagrams.net" modified="2022-07-19T03:28:02.340Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="cnupHNyaAnLp8SY48A91" version="20.1.1" type="github">
-  <diagram id="zVpmOitBaODcWo5x5MOA" name="第 1 页">
+<mxfile host="app.diagrams.net" modified="2022-07-19T03:29:01.983Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="BmhcIbjXJ3qEDz2QE3lH" version="20.1.1" type="github" pages="3">
+  <diagram id="zVpmOitBaODcWo5x5MOA" name="简单工厂模式">
     <mxGraphModel dx="1153" dy="1008" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -73,6 +73,22 @@
         <mxCell id="qj-JnBcPy4llwm3oIY3C-17" value="根据开发者传入的type&lt;br&gt;构建对应的Chart" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.08;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;size=34;position=0.15;rounded=1;base=21;arcSize=50;" vertex="1" parent="1">
           <mxGeometry x="930" y="-83.75" width="180" height="83.75" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="CJiIWoEj-iM2HzIIIQSU" name="抽象工厂模式">
+    <mxGraphModel dx="1038" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="wjQC7-GsaiSAdKB9Sn5V" name="工厂方法模式">
+    <mxGraphModel dx="1038" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
