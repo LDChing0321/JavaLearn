@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-06-05T15:49:25.367Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36" etag="lxXOJqA7UBcPILqR7y0P" version="18.2.0" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-11-19T06:36:21.840Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="Z4R6kBkGeTPrpwyRHVjY" version="20.5.3" type="github" pages="6">
   <diagram id="JgPNVKbQDWaYk1uZFIfq" name="右右">
-    <mxGraphModel dx="2188" dy="896" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1822" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -37,7 +37,7 @@
         <mxCell id="YeQxh2HBtWJbQ_9YZfCd-11" value="已是平衡状态" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=20;rounded=1;arcSize=50;position2=0.95;" parent="1" vertex="1">
           <mxGeometry x="-190" y="110" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="YeQxh2HBtWJbQ_9YZfCd-12" value="新增元素6，导致破坏性质4" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=20;rounded=1;arcSize=50;position2=0.25;" parent="1" vertex="1">
+        <mxCell id="YeQxh2HBtWJbQ_9YZfCd-12" value="新增元素10，导致破坏性质4" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=20;rounded=1;arcSize=50;position2=0.25;" parent="1" vertex="1">
           <mxGeometry x="620" y="80" width="260" height="80" as="geometry" />
         </mxCell>
         <mxCell id="YeQxh2HBtWJbQ_9YZfCd-13" value="&lt;b style=&quot;font-size: 20px;&quot;&gt;9&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" parent="1" vertex="1">
