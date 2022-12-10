@@ -6,13 +6,13 @@
 
 ## 前言
 
-相信看过HashMap1.7的朋友应该知道，1.7底层的设计是动态数组+链表的结构，而1.8引入了红黑树的概念。为什么要引入红黑树？
+相信看过HashMap1.7的朋友应该知道，1.7底层的设计是动态数组+链表的结构，而1.8引入了红黑树的概念。而为什么要引入红黑树，我们就来探讨一下。
 
 ## HashMap的前世今生
 
-我们都知道1.7版本使用单链表解决哈希冲突的问题。单链表，即链表中每个节点都有一个next指针，指向下一个节点，这样就形成单向的一个链表。试想，设这个链表的长度达到n，当读取链表中的某个节点时，就要从链表的首节点开始遍历，直到返回正确的节点，时间复杂度是O(n)。
+我们都知道1.7版本使用单链表解决哈希冲突的问题。单链表，即链表中每个节点都有一个next指针，指向下一个节点，这样就形成单向的一个链表。试想，这个链表的长度达到n，当读取链表中的某个节点时，就要从链表的首节点开始遍历，直到返回要查找的节点，时间复杂度是O(n)。
 
-而1.8后，采用双向链表+红黑树的方式，其实并不是一开始就使用双向链表，而是有个过渡期，中间会将单链表转换成双向链表，再由双向链表转成红黑树。双向链表，即有两个指针分别指向前后对应的节点。而红黑树是一种自平衡二叉查找树，它结构看起来简单、清晰，它实现起来算是比较复杂的😅，但是它有着比较可观的查询效率，时间复杂度为O(log n)。
+而1.8后，采用双向链表+红黑树的方式，其实并不是一开始就使用双向链表，中间会将单链表转换成双向链表，再由双向链表转成红黑树。双向链表，即有两个指针分别指向前后对应的节点。而红黑树是一种自平衡二叉查找树，它结构看起来简单、清晰，它实现起来算是比较复杂的😅，但是它有着比较可观的查询效率，时间复杂度为O(log n)。
 
 ## 类层级关系
 
@@ -26,7 +26,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
 相比1.7版本多了**TREEIFY_THRESHOLD**、**UNTREEIFY_THRESHOLD**、**MIN_TREEIFY_CAPACITY**这几个属性，也是红黑树的几个关键属性。
 
 ```java
-// 默认初始容量 - 必须是 2 的幂。
+// 默认初始容量  必须是 2 的幂。
 static final int DEFAULT_INITIAL_CAPACITY = 1 << 4;
 // 最大容量, 必须是 2 的幂 而且要小于 1<<30。
 static final int MAXIMUM_CAPACITY = 1 << 30;
@@ -685,6 +685,8 @@ final Node<K,V>[] resize() {
                     // 通过上面可以知道将原来链表进行分组
                     // 做&运算等于0的元素分成一条链表
                     // 不等于0的分成另外一条链表
+                    // 在扩容的时候将一条链表分成两条链表并且放在不同的索引位上
+                    // 这样做可以降低单个索引槽上链表长度过长
                     if (loTail != null) {
                         loTail.next = null;
                         // 做&运算等于0的这条链表放在新哈希表的j索引位上，也就是在原来的索引位上。
@@ -707,7 +709,7 @@ final Node<K,V>[] resize() {
 
 ![](../../../photo/JavaSE/集合/HashMap/扩容流程.drawio.png)
 
-基本链表的扩容比较简单，这里我们主要看看红黑树是怎么扩容的。
+这里我们主要看看索引槽上是一颗红黑树是怎么扩容的，也就是调用TreeNode的 **split**方法，可以知道这是将红黑树拆解的方法，大致拆解的思路就是：**在扩容之后，发现索引槽上是红黑树，通过遍历将树拆解成两条双链表。一条还是放在原本槽位上，另一条则是放在 index+bit 槽位上，然后判断两条链表是否达到退化或进化树的条件，最后完成退化树或进化树。**
 
 ```java
 // map -> 当前HashMap对象
@@ -728,10 +730,11 @@ final void split(HashMap<K,V> map, Node<K,V>[] tab, int index, int bit) {
     for (TreeNode<K,V> e = b, next; e != null; e = next) {
         next = (TreeNode<K,V>)e.next;
         // 清空当前元素的next指向
-        // 我们知道一颗红黑树 它既是双链表结构也是树形结构
-        // 这里主要是清空 针对双链表而言的
+        // 我们知道一颗红黑树 它可以同时具有双链表和红黑树的特性
+        // 这里主要是清空双链表的next指针
         e.next = null;
-        // 这里开始对树进行条件分组,形成双链表
+        // 这里开始对树进行条件拆解,拆成两条双链表来分散链表长度
+        // 分别是hiHead和loHead
         if ((e.hash & bit) == 0) {
             if ((e.prev = loTail) == null)
                 // 初始化loHead双链表的头元素
@@ -756,7 +759,7 @@ final void split(HashMap<K,V> map, Node<K,V>[] tab, int index, int bit) {
         }
     }
     if (loHead != null) {
-        // loHead链表个数小于6的话就要解除红黑树结构
+        // loHead链表个数小于等于6的话就要解除红黑树结构
         if (lc <= UNTREEIFY_THRESHOLD)
             tab[index] = loHead.untreeify(map);
         else {
@@ -764,6 +767,9 @@ final void split(HashMap<K,V> map, Node<K,V>[] tab, int index, int bit) {
             // 还是保持在原本哈希表的索引位中，只是换成了新的哈希表
             tab[index] = loHead;
             // 如果两条链表都不为空，则将loHead树化
+            // hiHead不为空，说明通过(e.hash & bit) == 0 这个条件没有拆分出两条链表
+            // 而是所有节点都聚集在loHead链表中，并且当前lc是超过UNTREEIFY_THRESHOLD的，即超过6
+            // 所以，当所有节点都聚集在同一链表时，这里是不会进行树化的，因为已经是树形结构了。
             if (hiHead != null) // (else is already treeified)
                 loHead.treeify(tab);
         }
@@ -784,19 +790,20 @@ final void split(HashMap<K,V> map, Node<K,V>[] tab, int index, int bit) {
 
 ![](../../../photo/JavaSE/集合/HashMap/扩容流程-split.drawio.png)
 
-将双链表树化的过程上面讲述过了，这里还涉及到将红黑树结构转化为链表，主要是untreeify这个方法，通过上面源码的解读这里就显得很简单了。
+将双链表树化的过程上面讲述过了，这里还涉及到将红黑树结构转化为单链表，主要是untreeify这个方法，通过上面源码的解读这里就显得很简单了。
 
 ```java
 final Node<K,V> untreeify(HashMap<K,V> map) {
     Node<K,V> hd = null, tl = null;
     // 遍历红黑树，这里的this就是红黑树
     for (Node<K,V> q = this; q != null; q = q.next) {
-        // 将红黑树元素替换成链表元素
+        // 将红黑树元素替换成链表元素Node，Node是单链表
         Node<K,V> p = map.replacementNode(q, null);
-        // 维护链表元素之间的前后关系
+        // 初始化单链表头节点
         if (tl == null)
             hd = p;
         else
+            // 单链表的body部分
             tl.next = p;
         tl = p;
     }
@@ -806,7 +813,7 @@ final Node<K,V> untreeify(HashMap<K,V> map) {
 
 ## 获取元素过程
 
-读取元素这里比较简单，通过参数key计算出hash值，调用getNode方法获取元素。
+通过参数key计算出hash值，调用getNode方法获取元素。
 
 ```java
 public V get(Object key) {
@@ -878,11 +885,7 @@ final TreeNode<K,V> find(int h, Object k, Class<?> kc) {
 
 ## 删除元素过程
 
-对于添加元素而言，如果槽位上是一颗红黑树添加完之后需要对树进行维护；那对于删除元素，在红黑树上删除一个元素之后也要考虑需不需要维护树的平衡。
-
-我们这里也分为几种情况：
-
-
+对于添加元素而言，如果槽位上是一颗红黑树添加完之后需要对树进行维护；那对于删除元素，在红黑树上删除一个元素之后也要考虑维护树的平衡。
 
 ```java
 public V remove(Object key) {
@@ -894,7 +897,7 @@ public V remove(Object key) {
 
 final Node<K,V> removeNode(int hash, Object key, Object value,
                            boolean matchValue, boolean movable) {
-    // tab -> 当前的数组
+    // tab -> 当前的哈希数组
     // p -> 存放该key在哈希表的索引位上的元素，可以是链表、红黑树
     // n -> 记录哈希表的大小
     // index -> 索引下标
@@ -905,7 +908,7 @@ final Node<K,V> removeNode(int hash, Object key, Object value,
         (p = tab[index = (n - 1) & hash]) != null) {
         // node -> 要删除的元素
         // k -> 作为一个临时变量去存储元素的key
-        // v -> 记录要删除元素的value，后面要return出去
+        // v -> 记录要删除元素的value
         Node<K,V> node = null, e; K k; V v;
         // 当索引位上只有一个元素时
         // 索引位上的元素的hash和参数的hash相同
@@ -922,7 +925,7 @@ final Node<K,V> removeNode(int hash, Object key, Object value,
                 // 采用红黑树的方式来获取要删除的元素，后面要进行删除
                 node = ((TreeNode<K,V>)p).getTreeNode(hash, key);
             else {
-                // 如果不是红黑树的结构，是双链表结构是。
+                // 如果不是红黑树的结构，是链表结构时。
                 // 则遍历链表来找到要删除的元素
                 do {
                     if (e.hash == hash &&
@@ -949,7 +952,8 @@ final Node<K,V> removeNode(int hash, Object key, Object value,
                 tab[index] = node.next;
             else
                 // 以上两种情况都不是，即说明此时要删除的元素处于链表的非头元素位置上。
-                // 这种情况直接将头元素的next指针指向要删除的元素的next域即可。
+                // 这种情况直接将p元素的next指针指向要删除的元素的next即可。
+                // 注意此时的p元素是 要删除元素的上一个元素，可以看上面的do-while循环
                 p.next = node.next;
             ++modCount;
             --size;
@@ -961,10 +965,9 @@ final Node<K,V> removeNode(int hash, Object key, Object value,
 }
 ```
 
-重头戏又来了哈，删除红黑树的元素
+在红黑树上找到要删除的元素这里就不介绍了，关键还是要看 要删除的元素处于红黑树 的结构状态下，该如何删除
 
 ```java
-// 关键还是要看 要删除的元素处于红黑树 的结构状态下，该如何删除
 final void removeTreeNode(HashMap<K,V> map, Node<K,V>[] tab,
                           boolean movable) {
     // 定义n记录数组的长度
@@ -973,7 +976,7 @@ final void removeTreeNode(HashMap<K,V> map, Node<K,V>[] tab,
         return;
     // 计算要删除的元素在哈希表中的索引
     int index = (n - 1) & hash;
-    // first -> 获取对应索引的链表，同时具有红黑树属性
+    // first -> 获取对应索引的的红黑树
     // root -> 指向first，起到一个游标的作用
     // rl -> 临时变量
     TreeNode<K,V> first = (TreeNode<K,V>)tab[index], root = first, rl;
@@ -981,6 +984,7 @@ final void removeTreeNode(HashMap<K,V> map, Node<K,V>[] tab,
     // pred -> 要删除元素的上一个元素
     TreeNode<K,V> succ = (TreeNode<K,V>)next, pred = prev;
     // pred为空说明要删除的元素是链表的头元素
+    // 这里的if-else主要是维护TreeNode的双链表属性
     if (pred == null)
         // 将succ赋值给此时的索引位和first
         tab[index] = first = succ;
@@ -991,7 +995,6 @@ final void removeTreeNode(HashMap<K,V> map, Node<K,V>[] tab,
     // 如果succ不空，succ的上一个元素指向pred
     if (succ != null)
         succ.prev = pred;
-    // 
     if (first == null)
         return;
     // 定位链表的根节点
@@ -1013,20 +1016,20 @@ final void removeTreeNode(HashMap<K,V> map, Node<K,V>[] tab,
     // pr -> 要删除元素的右子元素
     // replacement -> 替换元素
     TreeNode<K,V> p = this, pl = left, pr = right, replacement;
-    // 要删除元素有左右子元素
+    // 要删除的元素有左右子元素
     if (pl != null && pr != null) {
         TreeNode<K,V> s = pr, sl;
         // 找到后继元素
         while ((sl = s.left) != null) // find successor
             s = sl;
         // c -> 后继元素的颜色
-        // 交换后继节点和删除节点的颜色，最终的删除是后继节点，故平衡是否是以后继节点的颜色来判断的
+        // 交换后继节点和删除节点的颜色，最终删除的是后继节点，所以是否平衡是以后继节点的颜色来判断的
         boolean c = s.red; s.red = p.red; p.red = c; // swap colors
         // sr -> 后继元素的右子元素（后继元素肯定不存在左子元素）
         TreeNode<K,V> sr = s.right;
         // pp -> p的父元素，待删除元素的父元素
         TreeNode<K,V> pp = p.parent; 
-        // 如果后继节点与待删除元素的右孩子相等，类似于待删除元素有一个右子元素，右子元素没有任何子元素
+        // 如果后继节点与待删除元素的右子元素相等，说明待删除元素有一个右子元素，且右子元素没有任何子元素
         if (s == pr) { // p was s's direct parent
             // 待删除元素的父元素和右子元素位置互换
             p.parent = s;
